@@ -259,16 +259,18 @@ section.glimpsesection {
 .modalinnr input::placeholder {
     color: #fff;
 }
-.modalinnr .formbutton button {
+.modalinnr .formbutton input {
     background-image: linear-gradient(to right, #00d7ad , #0092c8);
     font-size: 2.5rem;
     padding: 1.2rem 2.5rem;
     margin-top: 1rem;
     border-radius: 40px;
     color: #fff;
+    width: auto;
+    height: auto;
     cursor: pointer;
 }
-.modalinnr .formbutton button:hover {
+.modalinnr .formbutton input:hover {
     background: #0092c8;
 }
 .modalinnr .formbutton {
