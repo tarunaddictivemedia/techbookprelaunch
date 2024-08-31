@@ -157,14 +157,14 @@ ul  {
     display: block;
 }
 .arrivingsoon .buttonBox {
-    margin-top: 6rem;
+    margin-top: 8rem;
     text-align: center;
 }
 .buttonBox a.btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 30rem;
+    max-width: 26rem;
     height: 7rem;
     background-size: contain;
     background-position: center;
@@ -173,7 +173,6 @@ ul  {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
-    margin: 0 auto;
 }
 .mainbanner .row {
     align-items: center;
