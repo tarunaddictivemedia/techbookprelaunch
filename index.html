@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Techbook Prelaunch: home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<!-- Main Banner Start -->
+	 <section class="mainbanner bgstyle" style="background-image: url(images/banner1.jpg);">
+		<div class="container">
+			<div class="row">
+				<div class="inner">
+					<div class="headingBox">
+						<h1>Turn the Page to Future</h1>
+					</div>
+					<div class="arrivingsoon">
+						<h3>
+							Arriving Soon 
+						</h3>
+						<div class="countdown-container">
+							<div class="countdown">
+								<div class="time-box">
+									<span id="days"  style="background-image: url(images/daybg.png);">00</span>
+									<label>Days</label>
+								</div>
+								<div class="time-box">
+									<span id="hours" style="background-image: url(images/hourbg.png);">00</span>
+									<label>Hours</label>
+								</div>
+								<div class="time-box">
+									<span id="minutes" style="background-image: url(images/minbg.png);">00</span>
+									<label>Minutes</label>
+								</div>
+								<div class="time-box">
+									<span id="seconds" style="background-image: url(images/secbg.png);">00</span>
+									<label>Seconds</label>
+								</div>
+							</div>
+						</div>
+						<div class="buttonBox">
+							<a href="" class="btn" style="background-image: url(images/buttonbg.png);">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Main Banner End -->
+	<!-- A Glimpse into the Future Start -->
+	 <section class="glimpsesection" style="background-color: #000b16;">
+		<div class="container">
+			<div class="headingBox">
+				<h2>A Glimpse into the Future</h2>
+			</div>
+			<div class="videos" style="display: none;">
+				<video id="video" width="100%" height="100%" preload="auto" controls="controls">
+					<source src="images/video.mp4">
+				</video>
+			</div>
+		</div>
+	 </section>
+	<!-- A Glimpse into the Future End -->
+	<!-- Learn more Social Link Start -->
+	 <section class="learnsocial bgstyle" style="background-image: url(images/banner2.jpg);">
+		<div class="container">
+			<div class="headingBox">
+				<div class="boxinnr">
+					<div class="buttonBox"><a href="javascript:;" class="btn" style="background-image: url(images/buttonbg.png);">Learn more</a></div>
+					<ul class="sociallink">
+						<li>
+							<div class="linnr"><a href=""><img src="images/fb.png" alt="facebook"></a></div>
+						</li>
+						<li>
+							<div class="linnr"><a href=""><img src="images/insta.png" alt="instagram"></a></div>
+						</li>
+						<li>
+							<div class="linnr"><a href=""><img src="images/tw.png" alt="twitter"></a></div>
+						</li>
+						<li>
+							<div class="linnr"><a href=""><img src="images/li.png" alt="linkedin"></a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Learn more Social Link End -->
+	 <div class="popupscreen" style="background-color: #000b16; display: none;">
+		<div class="container">
+			<div class="modalpopupinnr">
+				<div class="modalform" style="background-image: url(images/formbg.png); display: block;">
+					<div class="modalinnr">
+						<div class="input"><input type="text" placeholder="Name"></div>
+						<div class="input"><input type="text" placeholder="Phone Number"></div>
+						<div class="input"><input type="text" placeholder="School Name"></div>
+						<div class="input"><input type="text" placeholder="Role"></div>
+						<div class="input"><input type="text" placeholder="Email ID"></div>
+						<div class="formbutton">
+							<button type="submit">Upload</button>
+						</div>
+					</div>
+				</div>
+				<div class="sucessmsg" style="background-image: url(images/msgbg.png); display: none;">
+					<div class="msginnr">
+						<p>CHECK YOUR EMAIL <br>FOR AN INVITE TO<br>THE FUTURE OF LEARNING.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </div>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		// JavaScript for countdown timer
+		// Set the date and time we're counting down to
+		const targetDate = new Date("September 10, 2024 23:59:59").getTime();
+
+		// Update the countdown every 1 second
+		const countdownFunction = setInterval(function() {
+			// Get today's date and time
+			const now = new Date().getTime();
+
+			// Find the time difference between now and the target date
+			const timeDifference = targetDate - now;
+
+			// Time calculations for days, hours, minutes, and seconds
+			const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+			// Display the results in the corresponding elements
+			document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+			document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+			document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+			document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+
+			// If the countdown is over, display a message
+			if (timeDifference < 0) {
+				clearInterval(countdownFunction);
+				document.querySelector('.countdown').innerHTML = "<h1>Countdown Ended!</h1>";
+			}
+		}, 1000);
+		$(window).on('scroll', function() {
+			var video = $('#video').get(0);
+			var nextSection = $('.learnsocial'); // Replace with the actual next section ID
+			
+			// Check if the next section is in view
+			var sectionTop = nextSection.offset().top;
+			var scrollTop = $(window).scrollTop();
+			var windowHeight = $(window).height();
+
+			// Pause the video if the next section comes into view
+			if (scrollTop + windowHeight > sectionTop) {
+				video.pause();
+			}
+		});
+		$(".learnsocial .btn").on('click', function() {
+			$('.popupscreen').show();
+		});
+	</script>
+	
+</body>
+</html>
