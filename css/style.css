@@ -173,6 +173,7 @@ ul  {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
 }
 .learnsocial .buttonBox a.btn { 
     margin: 0 auto;
@@ -265,6 +266,10 @@ section.glimpsesection {
     margin-top: 1rem;
     border-radius: 40px;
     color: #fff;
+    cursor: pointer;
+}
+.modalinnr .formbutton button:hover {
+    background: #0092c8;
 }
 .modalinnr .formbutton {
     text-align: center;

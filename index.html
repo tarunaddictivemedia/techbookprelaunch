@@ -96,11 +96,21 @@
 				<div class="modalform" style="background-image: url(images/formbg.png); display: block;">
 					<div class="modalinnr">
 						<form action="" name="contact-form" method="post" class="contact__form">
-						<div class="input"><input type="text" placeholder="Name" name="Name" required></div>
-						<div class="input"><input type="text" placeholder="Phone Number" name="Phone" required></div>
-						<div class="input"><input type="text" placeholder="School Name" name="SchoolName" required></div>
-						<div class="input"><input type="text" placeholder="Role" name="Role" required></div>
-						<div class="input"><input type="text" placeholder="Email ID" name="EmailId" required></div>
+						<div class="input">
+							<input type="text" placeholder="Name" name="Name" required>
+						</div>
+						<div class="input">
+							<input type="tel" placeholder="Phone Number" name="Phone" required maxlength="10" minlength="10" pattern="\d{10,15}">
+						</div>
+						<div class="input">
+							<input type="text" placeholder="School Name" name="SchoolName" required>
+						</div>
+						<div class="input">
+							<input type="text" placeholder="Role" name="Role" required>
+						</div>
+						<div class="input">
+							<input type="email" placeholder="Email ID" name="EmailId" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+						</div>
 						<div class="formbutton">
 							<button type="submit">Upload</button>
 						</div>
