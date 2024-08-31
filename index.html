@@ -159,6 +159,7 @@
 				document.querySelector('.countdown').innerHTML = "<h1>Countdown Ended!</h1>";
 			}
 		}, 1000);
+
 		$(window).on('scroll', function() {
 			var video = $('#video').get(0);
 			var nextSection = $('.learnsocial'); // Replace with the actual next section ID
@@ -177,12 +178,10 @@
 			$('.popupscreen').show();
 		});
 	</script>
+	<!-- https://docs.google.com/spreadsheets/d/1YFxYnwuMiQwf8Gv5Kr6KpSKxgv4OLsSpNuWa-eSzXKU/edit?gid=0#gid=0 google sheet -->
 	<script type="text/javascript">
-
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbya1tb4TsN-A8qMTWbLT5pETZVkc9-NMIvDS-qiYu8OT0KIBQyXl3cNVh0kY69-0Vgqmg/exec';
-
 		const form = document.forms['contact-form'];
-
 		form.addEventListener('submit', e => {
 		e.preventDefault();
 		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
