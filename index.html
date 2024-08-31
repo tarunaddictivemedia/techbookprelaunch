@@ -95,14 +95,16 @@
 			<div class="modalpopupinnr">
 				<div class="modalform" style="background-image: url(images/formbg.png); display: block;">
 					<div class="modalinnr">
-						<div class="input"><input type="text" placeholder="Name"></div>
-						<div class="input"><input type="text" placeholder="Phone Number"></div>
-						<div class="input"><input type="text" placeholder="School Name"></div>
-						<div class="input"><input type="text" placeholder="Role"></div>
-						<div class="input"><input type="text" placeholder="Email ID"></div>
+						<form action="" name="contact-form" method="post" class="contact__form">
+						<div class="input"><input type="text" placeholder="Name" name="Name" required></div>
+						<div class="input"><input type="text" placeholder="Phone Number" name="Phone" required></div>
+						<div class="input"><input type="text" placeholder="School Name" name="SchoolName" required></div>
+						<div class="input"><input type="text" placeholder="Role" name="Role" required></div>
+						<div class="input"><input type="text" placeholder="Email ID" name="EmailId" required></div>
 						<div class="formbutton">
 							<button type="submit">Upload</button>
 						</div>
+						</form>
 					</div>
 				</div>
 				<div class="sucessmsg" style="background-image: url(images/msgbg.png); display: none;">
@@ -165,6 +167,33 @@
 			$('.popupscreen').show();
 		});
 	</script>
+	<script type="text/javascript">
+
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbya1tb4TsN-A8qMTWbLT5pETZVkc9-NMIvDS-qiYu8OT0KIBQyXl3cNVh0kY69-0Vgqmg/exec';
+
+		const form = document.forms['contact-form'];
+
+		form.addEventListener('submit', e => {
+		e.preventDefault();
+		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response => {
+			// Check if the response is successful
+			if (response.ok) {
+			// Show the .smgmsg div if the response is OK
+			document.querySelector('.sucessmsg').style.display = 'block';
+			document.querySelector('.modalform').style.display = 'none';
+			
+			// Optionally, clear the form after submission
+			form.reset();
+			} else {
+			// Handle other response scenarios if needed
+			console.error('Error:', response.statusText);
+			}
+		})
+		.catch(error => console.error('Error!', error.message));
+		});
+
+</script>
 	
 </body>
 </html>
