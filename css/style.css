@@ -444,4 +444,7 @@ section.glimpsesection {
     .learnsocial .container .headingBox .boxinnr ul.sociallink li {
         margin: 0 1rem;
     }
+    .arrivingsoon .buttonBox a.btn.formtarget {
+        margin: 0 auto;
+    }
 }
