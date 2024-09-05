@@ -371,6 +371,11 @@ section.glimpsesection {
         background-size: cover;
     }
 }
+@media(max-width: 1000px ) {
+    html {
+        font-size: 30%;
+    }
+}
 @media(max-width: 768px) {
     html {
         font-size: 65%;
@@ -399,10 +404,19 @@ section.glimpsesection {
         text-align: center;
     }
 }
+@media(max-width: 750px ) {
+    html {
+        font-size: 30%;
+    }
+    .arrivingsoon .buttonBox a.btn.formtarget {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 @media(max-width: 500px) {
     html {
-        font-size: 46%;
+        font-size: 48%;
     }
     .container {
         padding: 0 2rem;
