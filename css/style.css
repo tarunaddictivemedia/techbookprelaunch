@@ -23,7 +23,6 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0 auto !important;
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
-    max-width: 100%;
 }
 a, a img, img {
     transition: all .2s linear;
