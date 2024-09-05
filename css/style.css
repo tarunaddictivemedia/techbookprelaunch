@@ -404,9 +404,7 @@ section.glimpsesection {
         text-align: center;
     }
 }
-@media only screen and (min-device-width: 393px) 
-                   and (max-device-width: 750px) 
-                   and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3){
+@media only screen and (max-width: 1020px)  and (orientation:landscape) {
     html {
         font-size: 30%;
     }
