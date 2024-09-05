@@ -404,13 +404,16 @@ section.glimpsesection {
         text-align: center;
     }
 }
-@media(max-width: 750px ) {
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
     html {
         font-size: 30%;
     }
     .arrivingsoon .buttonBox a.btn.formtarget {
         margin-left: auto;
         margin-right: auto;
+    }
+    section.mainbanner.bgstyle {
+        height: 400px;
     }
 }
 
