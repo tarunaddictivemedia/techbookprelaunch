@@ -466,4 +466,7 @@ section.glimpsesection {
     .arrivingsoon .buttonBox a.btn.formtarget {
         margin: 0 auto;
     }
+    section.learnsocial.bgstyle {
+        background-position: 80% 100%;
+    }
 }
