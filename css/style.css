@@ -415,7 +415,7 @@ section.glimpsesection {
         margin-right: auto;
     }
     section.mainbanner.bgstyle {
-        height: 400px;
+        height: 400px;display: none;
     }
 }
 
