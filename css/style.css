@@ -244,11 +244,11 @@ section.glimpsesection {
 .modalpopupinnr {
     width: 100%;
 }
-.modalinnr input {
+.modalinnr input, .modalinnr select {
     background: #1a0f22;
     color: #fff;
     height: 6rem;
-    padding: 2.5rem;
+    padding: 0 2.5rem;
     border-radius: 8px;
     width: 100%;
     font-size: 2.5rem;
