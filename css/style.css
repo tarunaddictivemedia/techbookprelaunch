@@ -406,7 +406,7 @@ section.glimpsesection {
 }
 @media only screen and (min-device-width: 480px) 
                    and (max-device-width: 750px) 
-                   and (orientation: landscape) {
+                   and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2){
     html {
         font-size: 30%;
     }
