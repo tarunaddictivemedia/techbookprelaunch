@@ -469,4 +469,10 @@ section.glimpsesection {
     section.learnsocial.bgstyle {
         background-position: 80% 100%;
     }
+    .mobile {
+        display: block !important;
+    }
+    .desktop {
+        display: none;
+    }
 }
