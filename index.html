@@ -189,6 +189,9 @@
 		$(".formtarget").on('click', function() {
 			$('.popupscreen').show();
 		});
+		$(".close").on('click', function() {
+			$('.popupscreen').hide();
+		});
 		jQuery(document).ready(function($) {
 			// Hide .popupscreen when the Esc key is pressed
 			$(document).keydown(function(event) {
