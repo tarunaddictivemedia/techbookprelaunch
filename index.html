@@ -106,7 +106,12 @@
 							<input type="text" placeholder="School Name" name="schoolname" required>
 						</div>
 						<div class="input">
-							<input type="text" placeholder="Role" name="role" required>
+							<!-- <input type="text" placeholder="Role" name="role" required> -->
+							 <Select name="role">
+								<option value="Admin">Admin</option>
+								<option value="Developer">Developer</option>
+								<option value="Teacher">Teacher</option>
+							 </Select>
 						</div>
 						<div class="input">
 							<input type="email" placeholder="Email ID" name="emailid" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
@@ -131,7 +136,7 @@
 	<script>
 		// JavaScript for countdown timer
 		// Set the date and time we're counting down to
-		const targetDate = new Date("September 10, 2024 23:59:59").getTime();
+		const targetDate = new Date("September 14, 2024 11:00:00").getTime();
 
 		// Update the countdown every 1 second
 		const countdownFunction = setInterval(function() {
