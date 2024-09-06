@@ -475,4 +475,7 @@ section.glimpsesection {
     .desktop {
         display: none;
     }
+    section.glimpsesection {
+        height: 80vh;
+    }
 }
