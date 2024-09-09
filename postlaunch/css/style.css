@@ -381,7 +381,8 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 }
 @media(max-width: 767px) {
     .humburgur {
-        display: block;
+        display: block !important;
+        float: right;
     }
     .menu {
         display: none;
@@ -404,19 +405,36 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     }
     
     .bookFeature ul li {
-        font-size: 23px;
+        font-size: 16px;
         text-align: center;
     }
-    
-    .productslide .buttonBox .btn {
-        font-size: 24px;
-        max-width: 28rem;
-        height: 10rem;
-        margin: 0 auto;
+    .demorequestsec {
+        height: auto;
+        padding: 6rem 0;
     }
-    
+    .productslide .buttonBox .btn {
+        margin: 40px auto 0;
+    }
+    .mainbanner {
+        height: 500px;
+    }
+    .productslide .buttonBox .btn, .curiouslearnsec a.btn {
+        font-size: 18px;
+        max-width: 36rem;
+        height: 7rem;
+    }
+    .curiouslearnsec h2 {
+        font-size: 30px;
+    }
+    .curiouslearnsec {
+        height: 250px;
+    }
     .productslide .image img {
         height: 40rem;
         margin: 0 auto;
+    }
+    .headingBox h1 {
+        text-align: center;
+        font-size: 34px;
     }
 }
