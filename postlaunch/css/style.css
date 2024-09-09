@@ -91,6 +91,9 @@ ul  {
 .col-65 {
     width: 65%;
 }
+.blockbookjourney {
+    display: flex;align-items: center;justify-content: center;height: 100%;
+}
 .mainbanner .row {
     align-items: center;
     margin-top: revert-layer;
@@ -124,19 +127,43 @@ img {
 .mainbanner .container {
     height: 100%;
 }
-.mainbanner .headingBox {
+/* .mainbanner .headingBox {
     padding-top: 12.5rem;
+} */
+.threetechbook ul li img {
+    height: 60rem;
+    object-fit: contain;
+}
+.blockbookjourney {
+    padding-top: 14rem;
 }
 .headingBox h1 {
     text-transform: uppercase;
+    text-align: center;
     line-height: 1.2;
-    font-size: 4.42rem;
+    font-size: 3.42rem;
     font-weight: 400;
     background: linear-gradient(187deg, rgba(117,62,150,1) 0%, rgba(56,56,144,1) 100%);
     -webkit-background-clip: text; /* Required for WebKit */
     -webkit-text-fill-color: transparent; /* Ensures the text itself is transparent */
     background-clip: text; /* Standard background-clip */
     color: transparent; /* Makes the text itself transparent */margin-bottom: 2.5rem;
+}
+.image img {
+    height: 38rem;
+}
+.middlebook li img {
+    height: 50rem;
+    object-fit: contain;
+}
+.middlebook {
+    margin-top: -14rem;
+}
+.mainbanner .buttonBox .btn {
+    margin: 0 auto;
+}
+.threetechbook ul {
+    justify-content: center;
 }
 header.siteheader {
     position: absolute;
@@ -195,25 +222,26 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 }
 .mainbanner .buttonBox {
     padding-bottom: 5rem;
+    margin-top: -4rem;
 }
 .middlebook ul {
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
-.middlebook {
+/* .middlebook {
     display: flex;
     align-items: flex-end;
     height: 100%;
-}
+} */
 .middlebook li:nth-child(2) {
-    width: 40%;
-    margin: 0 -12rem 0 -12rem;
+    width: 50%;
+    margin: 0 -15rem 0 -12rem;
     z-index: 1;
     position: relative;
 }
 .middlebook li:nth-child(1), .middlebook li:nth-child(3) {
-    width: 22%;
+    width: 35%;
 }
 .middlebook li {
     position: relative;
@@ -294,21 +322,32 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 .slideinnr img {
     height: 40rem;
     margin: 0 auto;
+    object-fit: contain;
 }
 .bookpdf {
-    padding-top: 10rem;
+    margin-top: -10rem;
+}
+.bookpdf {
+    padding-top: 0rem;
+}
+.bookslider {
+    width: 100%; /* Ensure slider takes full width */
+}
+.slick-slide {
+    display: block; /* Override default display style */
+    overflow: hidden; /* Prevent overflow issues */
 }
 .bookpdfinnr .close {
     position: absolute;
     top: 10px;
-    right: 10rem;
+    right: 0rem;
     cursor: pointer;
     z-index: 2;
 }
 
 .bookpdfrow {
     position: relative;
-    max-width: 80rem;
+    /* max-width: 80rem; */
     margin: 0 auto;
 }
 .bookslider button.slick-arrow:before {
@@ -343,9 +382,24 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 }
 /* Responsive Css */
 
+@media(max-width: 2560px) {
+    .threetechbook ul li img {
+        height: 40rem;
+    }
+}
 @media(max-width: 1920px) {
     html {
         font-size: 85%;
+    }
+    .threetechbook ul li img {
+        height: 30rem;
+    }
+    .middlebook li img {
+        height: 42rem;
+        object-fit: contain;
+    }
+    .middlebook {
+        margin-top: -10rem;
     }
 }
 @media(max-width: 1600px ) {
@@ -357,10 +411,17 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     html {
         font-size: 75%;
     }
+    .middlebook li img {
+        height: 38rem;
+        object-fit: contain;
+    }
 }
 @media(max-width: 1360px ) {
     html {
         font-size: 70%;
+    }
+    .threetechbook ul li img {
+        height: 26rem;
     }
 }
 @media(max-width: 1024px) {
