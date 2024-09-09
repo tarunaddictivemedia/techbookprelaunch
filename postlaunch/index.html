@@ -26,11 +26,11 @@
 					</div>
 					<div class="menu">
 						<ul>
-							<li class="active"><a href="">Home</a></li>
-							<li><a href="">Product</a></li>
-							<li><a href="">Pre-book</a></li>
-							<li><a href="">Demo Request</a></li>
-							<li><a href="">Contact Us</a></li>
+							<li class="active" data-id="mainbanner"><a href="">Home</a></li>
+							<li data-id="productsection"><a href="javascript:;">Product</a></li>
+							<li data-id="curiouslearnsec"><a href="javascript:;">Pre-book</a></li>
+							<li data-id="demorequestsec"><a href="javascript:;">Demo Request</a></li>
+							<li data-id=""><a href="javascript:;">Contact Us</a></li>
 							<li><a href="">FAQ's</a></li>
 						</ul>
 					</div>
@@ -39,10 +39,10 @@
 		</div>
 	</header>
 	<!-- Main Banner Start -->
-	 <section class="mainbanner bgstyle" style="background-image: url(images/background.png);">
+	 <section class="mainbanner bgstyle" id="mainbanner" style="background-image: url(images/background.png);">
 		<div class="container">
 			<div class="blockbookjourney">
-				<div class="bookthreeblock" style="display: none;">
+				<div class="bookthreeblock">
 					<div class="bookthreeblockinnr">
 						<div class="headingBox">
 							<h1>The intelligent books for the new-age schools</h1>
@@ -61,7 +61,7 @@
 							</ul>
 						</div>								
 						<div class="buttonBox">
-							<a href="javascript:;" class="btn formtarget" style="background-image: url(images/buttonbg.png);">Requuest a 
+							<a href="javascript:;" class="btn formtarget" style="background-image: url(images/buttonbg.png);">Request a 
 								Demo
 							</a>
 						</div>
@@ -111,27 +111,27 @@
 						</div>
 					</div>
 				</div>
-				<div class="bookpdf" id="bluebookpdf" style="display: flex;">
-					<div class="bookpdfinnr">
-						<div class="bookpdfrow">
-							<div class="close"><img src="images/cross.png" alt="cross"></div>
-							<div class="bookslider">
-								<div class="slide">
-									<div class="slideinnr">
-										<img src="images/Open-Blue-Book.png" alt="">
-										<div class="btnbox">
-											<a href="" class="posurl">
-											</a>
-										</div>
+			</div>
+			<div class="bookpdf" id="bluebookpdf" style="display: none;">
+				<div class="bookpdfinnr">
+					<div class="bookpdfrow">
+						<div class="close"><img src="images/cross.png" alt="cross"></div>
+						<div class="bookslider">
+							<div class="slide">
+								<div class="slideinnr">
+									<img src="images/Open-Blue-Book.png" alt="">
+									<div class="btnbox">
+										<a href="" class="posurl">
+										</a>
 									</div>
 								</div>
-								<div class="slide">
-									<div class="slideinnr">
-										<img src="images/Open-Green-Book.png" alt="">
-										<div class="btnbox">
-											<a href="" class="posurl">
-											</a>
-										</div>
+							</div>
+							<div class="slide">
+								<div class="slideinnr">
+									<img src="images/Open-Green-Book.png" alt="">
+									<div class="btnbox">
+										<a href="" class="posurl">
+										</a>
 									</div>
 								</div>
 							</div>
@@ -144,7 +144,7 @@
 	<!-- Main Banner End -->
 	 
 	<!-- Product Section Start -->
-	 <section class="productsection bgstyle" style="background-image: url(images/background.png);">
+	 <section class="productsection bgstyle" id="productsection" style="background-image: url(images/background.png);">
 		<div class="container">
 			<div class="productblock">
 				<div class="productslider">
@@ -216,7 +216,7 @@
 	<!-- Product Section End -->
 
 	<!-- Curious to learn more? Start -->
-	 <section class="curiouslearnsec bgstyle" style="background-image: url(images/background.png);">
+	 <section class="curiouslearnsec bgstyle" id="curiouslearnsec" style="background-image: url(images/background.png);">
 		<div class="container">
 			<div class="row">
 				<div class="content">
@@ -231,7 +231,7 @@
 	<!-- Curious to learn more? End -->
 
 	<!-- Demo Request Form Start -->
-	 <section class="demorequestsec bgstyle" style="background-image: url(images/background.png);">
+	 <section class="demorequestsec bgstyle" id="demorequestsec" style="background-image: url(images/background.png);">
 		<div class="container">
 			<div class="row">
 				<div class="formdata">					
@@ -291,6 +291,26 @@
 			});
 		});
 		$(document).ready(function () {
+		// Attach click event listener to all li elements within .menu
+		$('.menu li').click(function () {
+			// Remove active class from all li elements
+			$('.menu li').removeClass('active');
+			
+			// Add active class to the clicked li element
+			$(this).addClass('active');
+
+			// Get the data-id attribute of the clicked li
+			var sectionToShow = $(this).attr('data-id');
+
+			// Hide all sections
+			// Optionally, scroll to the section (smooth scroll effect)
+			$('html, body').animate({
+				scrollTop: $('#' + sectionToShow).offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+	});
+
+		$(document).ready(function () {
 			$(".productslider").slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -315,7 +335,7 @@
 				$('#bluebookpdf').show();
 				$(".bluebookactive").hide();
 				$('.bookslider').slick('refresh');
-				$('.your-slider-class').slick('setPosition'); 
+				$('.blockbookjourney').hide(); 
 				
 			});
 			$('.redactive').click(function() {
@@ -332,6 +352,7 @@
 			$('.bookpdfrow .close').click(function() {
 				$('.bookpdf').hide();
 				$('.bookthreeblock').show();
+				$('.blockbookjourney').css('display', 'flex');
 			});
 			
 
