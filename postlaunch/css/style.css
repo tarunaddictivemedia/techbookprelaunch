@@ -150,7 +150,7 @@ img {
     color: transparent; /* Makes the text itself transparent */margin-bottom: 2.5rem;
 }
 .image img {
-    height: 38rem;
+    height: 36rem;
 }
 .middlebook li img {
     height: 50rem;
@@ -395,7 +395,7 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 }
 @media(max-width: 1920px) {
     html {
-        font-size: 85%;
+        font-size: 110%;
     }
     .threetechbook ul li img {
         height: 30rem;
@@ -524,5 +524,8 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     }
     .blockbookjourney {
         padding-top: 4rem;
+    }
+    .middlebook {
+        margin-top: 0rem;
     }
 }
