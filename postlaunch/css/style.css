@@ -347,7 +347,7 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 }
 .bookpdfinnr .close {
     position: absolute;
-    top: 10px;
+    top: 45px;
     right: 0rem;
     cursor: pointer;
     z-index: 2;
@@ -397,10 +397,13 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     #bluebookpdf {
         padding-top: 24rem;
     }
+    .mainbanner {
+        height: 120vh;
+    }
 }
 @media(max-width: 1920px) {
     html {
-        font-size: 110%;
+        font-size: 105%;
     }
     .threetechbook ul li img {
         height: 30rem;
@@ -415,9 +418,6 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     #bluebookpdf .slideinnr img {
         height: 32rem;
     }
-    .mainbanner {
-        height: 120vh;
-    }
     #bluebookpdf {
         padding-top: 20rem;
     }
@@ -425,10 +425,13 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
         width: 50%;
         margin: 0 auto;
     }
+    .headingBox h1 {
+        font-size: 3rem;
+    }
 }
-@media(max-width: 1600px ) {
+@media(max-width: 1700px ) {
     html {
-        font-size: 80%;
+        font-size: 70%;
     }
 }
 @media(max-width: 1440px ) {
@@ -464,7 +467,7 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
         padding: 10rem 0;
     }
 }
-@media(max-width: 767px) {
+@media(max-width: 768px) {
     .humburgur {
         display: block !important;
         float: right;
@@ -472,6 +475,26 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     .menu {
         display: none;
     }
+    header.siteheader .menu {
+        border-radius: 0;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        z-index: 9;
+    }
+    
+    header.siteheader .menu ul {
+        display: block;
+    }
+    
+    header.siteheader .menu ul li a {
+        font-size: 20px;
+        margin-bottom: 13px;
+        display: block;
+    }
+}
+@media(max-width: 767px) {
     .mainbanner .col-3, .mainbanner .col-65 {
         width: 100%;
         text-align: center;
@@ -523,7 +546,13 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
         font-size: 30px;
     }
     .curiouslearnsec {
-        height: 250px;
+        height: 300px;
+    }
+    .curiouslearnsec a.btn {
+        max-width: unset;
+        width: 252px;
+        height: 90px;
+        margin-top: 20px;
     }
     .productslide .image img {
         height: 40rem;
@@ -539,5 +568,34 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     }
     .middlebook {
         margin-top: 0rem;
+    }
+    .productslide.columnreverse .row {
+        flex-direction: column-reverse;
+    }
+    .bookpdf {
+        padding-top: 11rem;
+    }
+    #bluebookpdf .bookpdfrow {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #bluebookpdf .slideinnr img {
+        height: 20rem;
+    }
+    #bluebookpdf {
+        padding-top: 16rem;
+    }
+    #bluebookpdf .close {
+        right: -10px;
+        top: 22px;
+    }
+    .bookpdfinnr .close {
+        position: absolute;
+        top: 25px;
+    }
+    .slideinnr img {
+        height: 20rem;
+        margin: 0 auto;
+        object-fit: contain;
     }
 }
