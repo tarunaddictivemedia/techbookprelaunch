@@ -363,3 +363,19 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
         font-size: 70%;
     }
 }
+@media(max-width: 1024px) {
+    .mainbanner {
+        height: auto;
+    }
+    .productsection {
+        height: auto;
+        padding: 5rem 0;
+    }
+    .curiouslearnsec {
+        height: 500px;
+    }
+    .demorequestsec {
+        height: auto;
+        padding: 10rem 0;
+    }
+}
