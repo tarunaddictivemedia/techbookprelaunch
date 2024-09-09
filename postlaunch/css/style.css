@@ -379,3 +379,38 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
         padding: 10rem 0;
     }
 }
+@media(max-width: 767px) {
+    .mainbanner .col-3, .mainbanner .col-65 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .headingBox h1 {
+        text-align: center;
+    }
+    
+    .mainbanner .buttonBox a.btn.formtarget {
+        margin: 0 auto;
+    }
+    
+    .productslide .col-5 {
+        width: 100%;
+    }
+    
+    .bookFeature ul li {
+        font-size: 23px;
+        text-align: center;
+    }
+    
+    .productslide .buttonBox .btn {
+        font-size: 24px;
+        max-width: 28rem;
+        height: 10rem;
+        margin: 0 auto;
+    }
+    
+    .productslide .image img {
+        height: 40rem;
+        margin: 0 auto;
+    }
+}
