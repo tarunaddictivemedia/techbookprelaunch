@@ -519,6 +519,10 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     }
     .headingBox h1 {
         text-align: center;
-        font-size: 34px;
+        font-size: 25px;
+        margin-bottom: -40px;
+    }
+    .blockbookjourney {
+        padding-top: 4rem;
     }
 }
