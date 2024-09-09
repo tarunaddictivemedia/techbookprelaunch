@@ -325,6 +325,11 @@
 				$('.bookslider').slick('refresh');
 
 			});
+			$('.humburgur').click(function() {
+				$('.menu').slideToggle();
+				$(this).toggleClass('active');
+
+			});
 			$('.bookpdfrow .close').click(function() {
 				$('.bookpdf').hide();
 				$('.bookthreeblock').show();
