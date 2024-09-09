@@ -380,6 +380,12 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     }
 }
 @media(max-width: 767px) {
+    .humburgur {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
     .mainbanner .col-3, .mainbanner .col-65 {
         width: 100%;
         text-align: center;
