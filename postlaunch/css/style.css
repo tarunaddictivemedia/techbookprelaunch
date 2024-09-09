@@ -399,11 +399,22 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     .mainbanner .buttonBox a.btn.formtarget {
         margin: 0 auto;
     }
-    
+    .middlebook ul {
+        width: 100%;
+    }
+    .middlebook li:nth-child(2) {
+        width: 100%;
+        margin: 0 -6rem 0 -6rem;
+    }
+    .middlebook li:nth-child(1), .middlebook li:nth-child(3) {
+        width: 40%;
+    }
     .productslide .col-5 {
         width: 100%;
     }
-    
+    .mainbanner .headingBox {
+        padding-top: 10rem;
+    }
     .bookFeature ul li {
         font-size: 16px;
         text-align: center;
