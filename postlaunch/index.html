@@ -245,7 +245,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="formdata">					
-					<form action="" name="request-form" method="post" class="contact__form">
+					<form action="" name="contact-form" method="post" class="contact__form">
 						<div class="input">
 							<input type="text" placeholder="Name" name="name" required>
 						</div>
@@ -380,52 +380,27 @@
 	</script>
 	<script type="text/javascript">
 		// https://docs.google.com/spreadsheets/d/13RjdPDjx-SmoYRjMFm0pdnfvUSmy2YZO7QXnJYBdNes/edit?gid=0#gid=0 sheet
-		// Define the URL of the Google Apps Script web app
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxMjL32hhMNgSVAmi9OiPPpmwKVbNsWelCtU3mP_TJOLbcxhpH97mXJWbAOVR2HR5XoOg/exec';
-const form = document.forms['request-form'];
-
-// Event listener for form submission
-form.addEventListener('submit', e => {
-    e.preventDefault(); // Prevent the default form submission
-
-    // Optionally disable the submit button and show a loading indicator
-    const submitButton = form.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-    submitButton.textContent = 'Submitting...';
-
-    // Send form data to the Google Apps Script using Fetch API
-    fetch(scriptURL, { 
-        method: 'POST', 
-        body: new FormData(form) 
-    })
-    .then(response => {
-        if (response.ok) {
-            // Show the success message
-            document.querySelector('.sucessmsg').style.display = 'block';
-            
-            // Hide the form
-            document.querySelector('.contact__form').style.display = 'none';
-            
-            // Reset the form fields
-            form.reset();
-        } else {
-            // Handle non-OK responses (e.g., server errors)
-            console.error('Error:', response.statusText);
-            alert('There was an error submitting your form. Please try again.');
-        }
-    })
-    .catch(error => {
-        // Handle fetch errors (e.g., network issues)
-        console.error('Error!', error.message);
-        alert('A network error occurred. Please try again later.');
-    })
-    .finally(() => {
-        // Re-enable the submit button and reset its text
-        submitButton.disabled = false;
-        submitButton.textContent = 'Submit';
-    });
-});
-
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbya1tb4TsN-A8qMTWbLT5pETZVkc9-NMIvDS-qiYu8OT0KIBQyXl3cNVh0kY69-0Vgqmg/exec';
+		const form = document.forms['contact-form'];
+		form.addEventListener('submit', e => {
+		e.preventDefault();
+		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response => {
+			// Check if the response is successful
+			if (response.ok) {
+			// Show the .smgmsg div if the response is OK
+			document.querySelector('.sucessmsg').style.display = 'block';
+			document.querySelector('.contact__form').style.display = 'none';
+			
+			// Optionally, clear the form after submission
+			form.reset();
+			} else {
+			// Handle other response scenarios if needed
+			console.error('Error:', response.statusText);
+			}
+		})
+		.catch(error => console.error('Error!', error.message));
+		});
 
 </script>
 	
