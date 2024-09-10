@@ -245,7 +245,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="formdata">					
-					<form action="" name="contact-form" method="post" class="contact__form">
+					<form action="" name="request-form" method="post" class="contact__form">
 						<div class="input">
 							<input type="text" placeholder="Name" name="name" required>
 						</div>
@@ -275,6 +275,9 @@
 							<input type="submit" value="Send" id="submit">
 						</div>
 					</form>
+					<div class="sucessmsg" style="display: none;">
+						<p style="text-align: center;color: green;font-weight: 500;">Thanks for your Techbook demo request! We'll contact you soon to schedule.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -378,7 +381,7 @@
 	<script type="text/javascript">
 		// https://docs.google.com/spreadsheets/d/13RjdPDjx-SmoYRjMFm0pdnfvUSmy2YZO7QXnJYBdNes/edit?gid=0#gid=0 sheet
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbxMjL32hhMNgSVAmi9OiPPpmwKVbNsWelCtU3mP_TJOLbcxhpH97mXJWbAOVR2HR5XoOg/exec';
-		const form = document.forms['contact-form'];
+		const form = document.forms['request-form'];
 		form.addEventListener('submit', e => {
 		e.preventDefault();
 		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
@@ -387,7 +390,7 @@
 			if (response.ok) {
 			// Show the .smgmsg div if the response is OK
 			document.querySelector('.sucessmsg').style.display = 'block';
-			document.querySelector('.modalform').style.display = 'none';
+			document.querySelector('.contact__form').style.display = 'none';
 			
 			// Optionally, clear the form after submission
 			form.reset();
