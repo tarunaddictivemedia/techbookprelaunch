@@ -166,12 +166,11 @@ img {
     justify-content: center;
 }
 header.siteheader {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1.688rem 0;
-    z-index: 4;
 }
 header.siteheader .logo img {
     max-width: 14rem;
