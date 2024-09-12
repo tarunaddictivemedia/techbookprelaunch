@@ -35,8 +35,8 @@
 									<li class="mathbook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> Math</a></li>
 								</ul>
 							</li>
-							<li class="curiouslearnsec"><a href="javascript:;">Pre-book</a></li>
-							<li class="demorequestsec"><a href="javascript:;">Demo Request</a></li>
+							<li class="curiouslearn"><a href="javascript:;">Pre-book</a></li>
+							<li class="demorequest"><a href="javascript:;">Demo Request</a></li>
 							<li><a href="javascript:;">Contact Us</a></li>
 							<li class="faq"><a href="">FAQ's</a></li>
 						</ul>
@@ -341,24 +341,6 @@
 				$('#' + bookType).show();
 			});
 		});
-		$(document).ready(function () {
-		// Attach click event listener to all li elements within .menu
-		$('.menu li').click(function () {
-			// Remove active class from all li elements
-			$('.menu li').removeClass('active');
-			
-			// Add active class to the clicked li element
-			$(this).addClass('active');
-
-			// Get the data-id attribute of the clicked li
-			var sectionToShow = $(this).attr('data-id');
-
-			// Hide all sections
-			// Optionally, scroll to the section (smooth scroll effect)
-			$('html, body').animate({
-				scrollTop: $('#' + sectionToShow).offset().top
-			}, 500); // 500ms for smooth scroll
-		});
 		// Attach click event listener to all li elements within .menu
 		$('.requestaquote').click(function () {
 			$('html, body').animate({
@@ -380,12 +362,12 @@
 				scrollTop: $('#mathbook').offset().top
 			}, 500); // 500ms for smooth scroll
 		});
-		$('.curiouslearnsec').click(function () {
+		$('.curiouslearn').click(function () {
 			$('html, body').animate({
 				scrollTop: $('#curiouslearnsec').offset().top
 			}, 500); // 500ms for smooth scroll
 		});
-		$('.demorequestsec').click(function () {
+		$('.demorequest').click(function () {
 			$('html, body').animate({
 				scrollTop: $('#demorequestsec').offset().top
 			}, 500); // 500ms for smooth scroll
@@ -395,7 +377,6 @@
 				scrollTop: $('#faqsection').offset().top
 			}, 500); // 500ms for smooth scroll
 		});
-	});
 
 		$(document).ready(function () {
 			// $(".productslider").slick({
