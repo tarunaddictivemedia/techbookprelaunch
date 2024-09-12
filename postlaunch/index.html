@@ -27,18 +27,18 @@
 					<div class="menu">
 						<ul>
 							<!-- <li class="active" data-id="mainbanner"><a href="">Home</a></li> -->
-							<li data-id="productsection" class="dropdown">
+							<li class="dropdown">
 								<a href="javascript:;">Product</a>
 								<ul class="submenu">
-									<li><a href="javascript:;"><img src="images/logo.png" alt="logo"> Science</a></li>
-									<li><a href="javascript:;"><img src="images/logo.png" alt="logo"> English</a></li>
-									<li><a href="javascript:;"><img src="images/logo.png" alt="logo"> Math</a></li>
+									<li class="sciencebook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> Science</a></li>
+									<li class="englishbook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> English</a></li>
+									<li class="mathbook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> Math</a></li>
 								</ul>
 							</li>
-							<li data-id="curiouslearnsec"><a href="javascript:;">Pre-book</a></li>
-							<li data-id="demorequestsec"><a href="javascript:;">Demo Request</a></li>
-							<li data-id=""><a href="javascript:;">Contact Us</a></li>
-							<li><a href="">FAQ's</a></li>
+							<li class="curiouslearnsec"><a href="javascript:;">Pre-book</a></li>
+							<li class="demorequestsec"><a href="javascript:;">Demo Request</a></li>
+							<li><a href="javascript:;">Contact Us</a></li>
+							<li class="faq"><a href="">FAQ's</a></li>
 						</ul>
 					</div>
 				</div>
@@ -165,7 +165,7 @@
 		<div class="container">
 			<div class="productblock">
 				<div class="productslider">
-					<div class="productslide">
+					<div id="englishbook" class="productslide">
 						<div class="row">
 							<div class="col-5">
 								<div class="image"><img src="images/Red-Book-3.png" alt="Red book"></div>
@@ -186,7 +186,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="productslide columnreverse">
+					<div id="sciencebook" class="productslide columnreverse">
 						<div class="row">
 							<div class="col-5">
 								<div class="bookFeature">
@@ -206,7 +206,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="productslide">
+					<div id="mathbook" class="productslide">
 						<div class="row">
 							<div class="col-5">
 								<div class="image"><img src="images/Blue-Book-3.png" alt="Blue book"></div>
@@ -363,6 +363,36 @@
 		$('.requestaquote').click(function () {
 			$('html, body').animate({
 				scrollTop: $('#demorequestsec').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.sciencebook').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#sciencebook').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.englishbook').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#englishbook').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.mathbook').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#mathbook').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.curiouslearnsec').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#curiouslearnsec').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.demorequestsec').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#demorequestsec').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.faq').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#faqsection').offset().top
 			}, 500); // 500ms for smooth scroll
 		});
 	});
