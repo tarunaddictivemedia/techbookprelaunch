@@ -485,6 +485,7 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     background: rgb(222, 223, 224);
     background: linear-gradient(187deg, rgba(222, 223, 224, 1) 0%, rgba(255, 255, 255, 1) 100%);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for sticky header */
+    padding: 0.8rem 0;
 }
 .siteheader.sticky .menu{
     background: transparent !important;
