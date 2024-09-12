@@ -252,7 +252,8 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 .bookpage{position: relative;}
 .threetechbook ul li .techbook {cursor: pointer;}
 .productsection {
-    height: 100vh;padding-top: 10rem;
+    /* height: 100vh; */
+    padding-top: 2rem;    padding-bottom: 5rem;
 }
 .productsection .container, .curiouslearnsec .container, .demorequestsec .container {
     height: 100%;
@@ -271,8 +272,14 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     height: 6rem;
     margin-top: 3rem;
 }
-.curiouslearnsec, .demorequestsec {
+.curiouslearnsec {
     height: 100vh;
+}
+.demorequestsec, .faqsection {
+    padding: 8rem 0;
+}
+.demorequestsec .container {
+    width: 90%;
 }
 .curiouslearnsec .row, .demorequestsec .row{
     align-items: center;
@@ -286,6 +293,35 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     font-weight: 400;
     color: #404040;
 }
+.faqsection .row {
+    justify-content: center;
+}
+.faqsection h2 {
+    font-size: 3.5rem;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #404040;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.faqsection .accordion h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #080808;
+    padding: 1rem 0;
+    border-bottom: 1px solid #cccccc;
+}
+.details {
+    display: none;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+.faqsection .accordion h4 span {
+    float: right;
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin-top: -0.5rem;
+}
 .curiouslearnsec a.btn {
     font-size: 1.4rem;
     margin: 0 auto;
@@ -295,12 +331,17 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 .formdata {
     height: auto;
     background: #fff;
-    width: 44rem;
+    /* width: 44rem; */
     padding: 3rem 4.75rem;
     border-radius: 2rem;
     box-shadow: 0px 0px 20px rgb(0 0 0 / 17%);
 }
-
+.productslide {
+    padding-top: 5rem;
+}
+.productslide.columnreverse {
+    padding-left: 5rem;
+}
 .formdata .input {margin-bottom: 0.8rem;}
 
 .formdata .input input, .formdata .input select {
@@ -390,6 +431,77 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 .slideinnr {
     position: relative;
 }
+.formdata h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+}
+.input.checkprivacy {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 1rem;
+}
+.input.checkprivacy input#privacy {
+    height: 30px;
+    width: 20px;
+    margin-right: 10px;
+}
+.formdata label {
+    text-align: left;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.formdata label span span.hs-form-required {}
+
+.formdata 
+ label.hs-error-msg.hs-main-font-element {
+    color: red;
+}
+
+.formdata label.hs-form-booleancheckbox-display {
+    display: flex;
+}
+
+.formdata label.hs-form-booleancheckbox-display input {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+}
+
+.formdata .hs-richtext.hs-main-font-element {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+.siteheader.sticky {
+    position: fixed; /* Make it fixed */
+    top: 0; /* Stick to the top */
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background: rgb(222, 223, 224);
+    background: linear-gradient(187deg, rgba(222, 223, 224, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for sticky header */
+}
+.siteheader.sticky .menu{
+    background: transparent !important;
+}
+.formdata .hs_submit.hs-submit input {
+    text-transform: uppercase;
+    background-image: linear-gradient(to bottom, #703d95 , #37378f);
+    font-size: 1.15rem;
+    padding: 1.2rem 3rem;
+    margin-top: 1rem;
+    border-radius: 40px;
+    font-weight: 600;
+    color: #fff;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
 /* Responsive Css */
 
 @media(max-width: 2560px) {
@@ -474,6 +586,9 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
         display: block !important;
         float: right;
     }
+    .siteheader.sticky .menu {
+        background: #e9eaea !important;
+    }
     .menu {
         display: none;
     }
@@ -494,6 +609,9 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
         font-size: 20px;
         margin-bottom: 13px;
         display: block;
+    }
+    .demorequestsec .col-5, .faqsection  .col-6 {
+        width: 100%;
     }
 }
 @media(max-width: 767px) {
