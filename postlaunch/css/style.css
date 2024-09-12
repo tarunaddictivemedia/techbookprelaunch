@@ -471,7 +471,40 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     height: 30px;
     margin-right: 1rem;
 }
+ul.submenu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 230px;
+    padding: 0px !important;
+    display: none !important;
+    background: #fff;
+    padding: 20px 20px 0 !important;
+}
 
+header.siteheader .menu ul li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+ul.submenu li {
+    width: 100%;
+    margin-bottom: 15px !important;
+}
+
+ul.submenu li a img {
+    width: 100px;
+}
+
+header.siteheader .menu ul.submenu li a {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(117,62,150,1);
+}
+
+header.siteheader .menu ul li:hover ul.submenu {
+    display: block !important;
+}
 .formdata .hs-richtext.hs-main-font-element {
     text-align: left;
     margin-bottom: 1.5rem;
