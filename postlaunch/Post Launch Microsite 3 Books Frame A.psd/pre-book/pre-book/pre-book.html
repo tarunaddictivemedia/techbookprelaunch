@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techbook Pre-Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Embark on Your Pre-Booking Adventure</h1>
+        <p>Secure Your Spot Now!</p>
+        <button id="preBookBtn">Pre-Book Now</button>
+
+        <div id="preBookPage" class="hidden">
+            <p>Do you have the exclusive invite code?</p>
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+
+            <div id="enterCodeSection" class="hidden">
+                <input type="text" id="inviteCode" placeholder="Enter your invite code">
+                <button id="validateCodeBtn">Submit</button>
+                <p id="codeMessage"></p>
+            </div>
+
+            <div id="requestFormSection" class="hidden">
+                <p>Please fill out the request form. Our team will validate your details.</p>
+                <button id="submitRequestBtn">Submit Request</button>
+            </div>
+
+            <div id="paymentSection" class="hidden">
+                <p>Fill out other details and proceed to payment.</p>
+                <button id="payBtn">Pay INR 10,000</button>
+            </div>
+
+            <p id="waitlistMessage" class="hidden">You have been waitlisted. We will contact you soon!</p>
+            <p id="invalidCodeMessage" class="hidden">Invalid code. Please try again.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
