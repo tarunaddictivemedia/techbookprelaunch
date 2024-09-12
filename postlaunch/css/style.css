@@ -57,6 +57,9 @@ ul  {
 .col-2 {
     width: 20%;box-sizing: border-box;
 }
+.col-35 {
+    width: 35%;box-sizing: border-box;
+}
 .col-6 {
     width: 60%;box-sizing: border-box;
 }
@@ -536,8 +539,97 @@ header.siteheader .menu ul li:hover ul.submenu {
     height: auto;
     cursor: pointer;
 }
-/* Responsive Css */
+.sitefooter {
+    padding: 3.5rem 0 2rem;
+}
+.sitefooter .row > .col-3 {
+    width: calc(100% / 4);
+}
+.sitefooter .container, .containBox {
+    max-width: 90rem;margin: 0 auto !important;
+}
+.copyright p {
+    text-align: center;
+}
+.sitefooter h6 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #000;
+}
 
+.sitefooter ul li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+.sitefooter ul li span {
+    display: block;
+}
+.sitefooter ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.copyright {
+    border-top: 1px solid #1f295c;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+/* Responsive Css */
+.bookFeature h6 {
+    font-size: 2.375rem;
+    color: #411e78;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.bookFeature ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.bookFeature ul li {
+    display: flex;
+    align-items: center;
+    width: calc(100% / 2 - 20px );
+    font-size: 1.25rem;
+    margin-bottom: 1.8rem;
+}
+
+.bookFeature ul li img {
+    margin-right: 1rem;
+}
+
+.bookFeature p span {
+    padding: 0 1rem;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.bookFeature a.btn.formtarget.requestaquote {
+    color: #000;
+    max-width: 15rem;
+    height: 5rem;
+}
+
+.productslide .image a {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.productslide .image {
+    text-align: center;
+}
+
+.bookFeature {
+    padding-left: 4rem;
+}
 @media(max-width: 2560px) {
     .threetechbook ul li img {
         height: 40rem;
@@ -647,8 +739,48 @@ header.siteheader .menu ul li:hover ul.submenu {
     .demorequestsec .col-5, .faqsection  .col-6 {
         width: 100%;
     }
+    .sitefooter .row > .col-3 {
+        width: calc(100% / 2);
+        margin-bottom: 2rem;
+    }
+    .productslide .col-6, .productslide .col-35 {
+        width: 100%;
+    }
+    
+    .productslide .image {
+        margin-bottom: 40px;
+    }
+    
+    .bookFeature .buttonBox .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @media(max-width: 767px) {
+    .copyright {
+        padding: 2rem 1rem;
+    }
+    .bookFeature ul li {
+        width: 100% !important;
+        text-align: left;
+    }
+    .faqsection .accordion h4 {
+        font-size: 10px;
+    }
+    .faqsection .accordion h4 span {
+        margin-top: -3px;
+        font-size: 19px;
+    }
+    .bookFeature {
+        padding: 0 15px;
+    }
+    .details {
+        font-size: 10px;
+    }
+    .sitefooter .row > .col-3 {
+        width: calc(100% / 1);
+        margin-bottom: 2rem;
+    }
     .mainbanner .col-3, .mainbanner .col-65 {
         width: 100%;
         text-align: center;
@@ -751,5 +883,31 @@ header.siteheader .menu ul li:hover ul.submenu {
         height: 20rem;
         margin: 0 auto;
         object-fit: contain;
+    }
+    .demorequestsec, .faqsection {
+        padding: 60px 0;
+    }
+    .productslide .image img {
+        height: 25rem;
+        margin: 0 auto;
+    }
+    .bookFeature h6 {
+        font-size: 24px;
+    }
+    
+    .bookFeature ul li img {
+        width: 42px;
+    }
+    .curiouslearnsec a.btn {
+        max-width: unset;
+        width: 200px;
+        height: 80px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .bookFeature ul li {
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 }
