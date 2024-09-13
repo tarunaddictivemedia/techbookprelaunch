@@ -254,7 +254,7 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 } */
 .middlebook li:nth-child(2) {
     width: 50%;
-    margin: 0 -15rem 0 -12rem;
+    margin: 0 -14rem 0 -12rem;
     z-index: 1;
     position: relative;
 }
