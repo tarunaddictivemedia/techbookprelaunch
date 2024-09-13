@@ -116,7 +116,7 @@
 									<div class="slideinnr">
 										<img src="images/Open-Red-Book.png" alt="">
 										<div class="btnbox">
-											<a href="javascript:;" class="posurl irabookvideo">												
+											<a href="javascript:void(0)" onclick="showPopup()" class="posurl irabookvideo">												
 											</a>
 										</div>
 									</div>
@@ -140,7 +140,7 @@
 								<div class="slideinnr">
 									<img src="images/Open-Blue-Book.png" alt="">
 									<div class="btnbox">
-										<a href="" class="posurl">
+										<a href="javascript:;" onclick="showpiePopup()" class="posurl">
 										</a>
 									</div>
 								</div>
@@ -149,7 +149,7 @@
 								<div class="slideinnr">
 									<img src="images/Open-Green-Book.png" alt="">
 									<div class="btnbox">
-										<a href="" class="posurl">
+										<a href="javascript:;" onclick="showairPopup()" class="posurl">
 										</a>
 									</div>
 								</div>
@@ -434,6 +434,22 @@
 			</video>
 		</div>
 	</div>
+	<div class="popupsec pieredbook" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<video id="video" width="100%" height="100%" controls="" preload="auto">
+				<source src="images/pievideo.mp4" />
+			</video>
+		</div>
+	</div>
+	<div class="popupsec ariredbook" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<video id="video" width="100%" height="100%" controls="" preload="auto">
+				<source src="images/airvideo.mp4" />
+			</video>
+		</div>
+	</div>
 
 	<div class="popupsec" id="sciencebookpdf" style="display: none;">
 		<div class="popupinnr">
@@ -528,6 +544,24 @@
 				pauseOnHover: false,
 			});
 		});
+		function showPopup() {
+			$('.iraredbook').show();
+		}
+		function showpiePopup() {
+			$('.pieredbook').show();
+		}
+		function showairPopup() {
+			$('.ariredbook').show();
+		}
+		$('.pieredbook .close').click(function() {
+			$('.pieredbook').hide();
+		});
+		$('.ariredbook .close').click(function() {
+			$('.ariredbook').hide();
+		});
+		$('.iraredbook .close').click(function() {
+			$('.iraredbook').hide();
+		});
 		$(document).ready(function() {
 			// Handle click event on .techbook elements
 			$('.blueactive').click(function() {
@@ -560,12 +594,6 @@
 			});
 			$('#mathbookpdf .close').click(function() {
 				$('#mathbookpdf').hide();
-			});
-			$('.irabookvideo').click(function() {
-				$('.iraredbook').show();
-			});
-			$('#irabookvideo .close').click(function() {
-				$('#irabookvideo').hide();
 			});
 			$('.humburgur').click(function() {
 				$('.menu').slideToggle();
