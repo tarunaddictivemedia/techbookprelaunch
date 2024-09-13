@@ -64,14 +64,22 @@
 								</div>
 							</div>
 							<div class="col-7">	
-								<!-- <div id="slider" class="slider">
+								<div id="slider" class="slider">
 									<div class="slider__inner">
-									  <img src="images/Blue-Book-1.png" alt="Blue-Book-1" data-index="1" class="slider__image image--1">
-									  <img src="images/Red-Book-1.png" alt="Red-Book-1" data-index="2" class="slider__image image--2">
-									  <img src="images/Green-Book-1.png" alt="Green-Book-1" data-index="3" class="slider__image image--3">
+									  <img  data-book="bluebook" src="https://techbookprelaunch.netlify.app/postlaunch/images/sciencemiddle-active-Book.png" alt="Sunflowers" data-index="1" class="slider__image techbook image--1">
+									  <img data-book="redbook" src="https://techbookprelaunch.netlify.app/postlaunch/images/middle-active-Book.png" alt="Waterfall" data-index="2" class="slider__image techbook image--2">
+									  <img data-book="greenbook" src="https://techbookprelaunch.netlify.app/postlaunch/images/mathmiddle-active-Book.png" alt="River" data-index="3" class="slider__image techbook image--3">
 									</div>
-								  </div> -->
-								<div class="threetechbook">
+									<div class="slider__action" style="display: none;">
+									  <div id="prev" class="slider__button slider__button--prev">
+										<i class="fas fa-angle-left"></i>
+									  </div>
+									  <div id="next" class="slider__button slider__button--next">
+										<i class="fas fa-angle-right"></i>
+									  </div>
+									</div>
+								  </div>
+								<!-- <div class="threetechbook">
 									<ul>
 										<li>
 											<div class="techbook" data-book="bluebook"><img src="images/Blue-Book-1.png" alt="Blue-Book-1"></div>
@@ -83,7 +91,7 @@
 											<div class="techbook" data-book="greenbook"><img src="images/Green-Book-1.png" alt="Green-Book-1"></div>
 										</li>
 									</ul>
-								</div>	
+								</div>	 -->
 							</div>
 						</div>	
 					</div>
@@ -723,6 +731,146 @@
 		});
 	});
 
+	</script>
+
+	<script>
+		"use strict";
+
+// forEach FIX for IE 
+(function () {
+  if ( typeof NodeList.prototype.forEach === "function" ) return false;
+  NodeList.prototype.forEach = Array.prototype.forEach;
+})();
+
+//document.documentElement.setAttribute("data-agent", navigator.userAgent);
+
+// Slider prototype object
+function Slider(element, imageSelector) {
+  //Image selector class or default
+  this.imageClass = imageSelector || '.slider__image';
+
+  //Array with images in slider
+  this.images = element.querySelectorAll(this.imageClass);
+
+  //Previous image
+  this.previous = function() {
+    this.images.forEach( function img(elem,index) {
+      let Index = parseInt(elem.getAttribute('data-index')), IN, addClass;
+      if (Index < 5){ IN = Index + 1; } 
+      else { IN = 1; }
+      addClass = 'image--'+IN;
+      elem.className = elem.className.replace(/image--[0-9]/,'');
+      elem.setAttribute('data-index', IN);
+      elem.classList.add(addClass);
+
+      if (addClass == 'image--1') { elem.classList.add('active'); } 
+      else { elem.classList.remove('active'); }
+    });
+  };
+
+  //Next image
+  this.next = function() {
+    this.images.forEach(function (elem, index) {
+      let Index = parseInt(elem.getAttribute('data-index')), IN, addClass;
+      if(Index > 1){ IN = Index - 1; } 
+      else { IN = 5; }
+      addClass = 'image--'+IN;
+      elem.className = elem.className.replace(/image--[0-9]/,'');
+      elem.setAttribute('data-index', IN);
+      elem.classList.add(addClass);
+
+      if(addClass=='image--1'){ elem.classList.add('active'); } 
+      else { elem.classList.remove('active'); }
+    });
+  };
+};
+
+const d = document,
+      slider = d.getElementById('slider'),    //Slider container
+      next = d.getElementById('next'),        //Next slide button 
+      prev = d.getElementById('prev');        //Previous slide button
+let isWheel;                                  //Global var for setTimeout
+
+//Creating carousel
+let carousel = new Slider(slider);
+
+//Button 
+next.addEventListener('click', function(e) { carousel.next(); }, true);
+prev.addEventListener('click', function(e) { carousel.previous(); }, true);
+
+//Adding sliding when scroll
+slider.addEventListener('wheel', function(e){
+  e.preventDefault;
+
+  if (e.deltaY > 0){ carousel.next(); } 
+  else { carousel.previous(); }
+
+  //Getting alt text (name) from .active slide
+  let active = this.getElementsByClassName('active'),
+      name = active[0].getAttribute('alt');
+
+  //Stoping latest timeout
+  window.clearTimeout(isWheel);
+
+  //creating new timeout for current active slide
+  // isWheel = window.setTimeout(function(e) { alert(name); }, 1500);
+});
+
+//Adding swipe events to inner slider container
+let sliderInner = slider.querySelector('.slider__inner');
+swipedetect(sliderInner, function (swipedir) {
+  if (swipedir == 'left') { carousel.previous(); }
+  if (swipedir == 'right') { carousel.next(); }
+});
+
+// Library for swipe detect
+// credit: http://www.javascriptkit.com/javatutors/touchevents2.shtml
+function swipedetect(el, callback) {
+  let touchsurface = el,
+      swipedir,
+      startX,
+      startY,
+      distX,
+      distY,
+      dist,
+      threshold = 150, //required min distance traveled to be considered swipe
+      restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+      allowedTime = 300, // maximum time allowed to travel that distance
+      elapsedTime,
+      startTime,
+      handleswipe = callback || function (swipedir) { }
+
+  touchsurface.addEventListener('touchstart', function(e) {
+    let touchobj = e.changedTouches[0]
+    swipedir = 'none'
+    dist = 0
+    startX = touchobj.pageX
+    startY = touchobj.pageY
+    startTime = new Date().getTime() // record time when finger first makes contact with surface
+    e.preventDefault()
+  }, false)
+
+  touchsurface.addEventListener('touchmove', function (e) {
+    e.preventDefault() // prevent scrolling when inside DIV
+  }, false)
+
+  touchsurface.addEventListener('touchend', function (e) {
+    let touchobj = e.changedTouches[0]
+    distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
+    distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
+    elapsedTime = new Date().getTime() - startTime // get time elapsed
+    if (elapsedTime <= allowedTime) { // first condition for awipe met
+      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) { // 2nd condition for horizontal swipe met
+        swipedir = (distX < 0) ? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
+      }
+      else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) { // 2nd condition for vertical swipe met
+        swipedir = (distY < 0) ? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
+      }
+    }
+    handleswipe(swipedir)
+    e.preventDefault()
+  }, false)
+}
 	</script>
 	
 </body>
