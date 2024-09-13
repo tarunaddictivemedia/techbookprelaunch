@@ -64,6 +64,13 @@
 								</div>
 							</div>
 							<div class="col-7">	
+								<!-- <div id="slider" class="slider">
+									<div class="slider__inner">
+									  <img src="images/Blue-Book-1.png" alt="Blue-Book-1" data-index="1" class="slider__image image--1">
+									  <img src="images/Red-Book-1.png" alt="Red-Book-1" data-index="2" class="slider__image image--2">
+									  <img src="images/Green-Book-1.png" alt="Green-Book-1" data-index="3" class="slider__image image--3">
+									</div>
+								  </div> -->
 								<div class="threetechbook">
 									<ul>
 										<li>
@@ -73,7 +80,7 @@
 											<div class="techbook" data-book="redbook"><img src="images/Red-Book-1.png" alt="Red-Book-1"></div>
 										</li>
 										<li>
-											<div class="techbooks"><img src="images/Green-Book-1.png" alt="Green-Book-1"></div>
+											<div class="techbook" data-book="greenbook"><img src="images/Green-Book-1.png" alt="Green-Book-1"></div>
 										</li>
 									</ul>
 								</div>	
@@ -107,6 +114,19 @@
 						</li>
 					</ul>
 				</div>
+				<div id="greenbook" class="middlebook greenbookactive" style="display: none;">
+					<ul>
+						<li>
+							<div class="bookpage"><img src="images/blurblue.png" alt="Tech Book"><a href="javascript:;" class="posurl"></a></div>
+						</li>
+						<li>
+							<div class="bookpage greenactive"><img src="images/greenactive.png" alt="Tech Book"><a href="javascript:;" class="posurl"></a></div>
+						</li>
+						<li>
+							<div class="bookpage"><img src="images/blurred-right.png" alt="Tech Book"><a href="javascript:;" class="posurl"></a></div>
+						</li>
+					</ul>
+				</div>
 				<div class="bookpdf" id="redbookpdf" style="display: none;">
 					<div class="bookpdfinnr">
 						<div class="bookpdfrow">
@@ -131,7 +151,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bookpdf" id="bluebookpdf" style="display: none;">
+			<div class="bookpdf bluebookpdf" id="bluebookpdf" style="display: none;">
 				<div class="bookpdfinnr">
 					<div class="bookpdfrow">
 						<div class="close"><img src="images/cross.png" alt="cross"></div>
@@ -150,6 +170,38 @@
 									<img src="images/Open-Green-Book.png" alt="">
 									<div class="btnbox">
 										<a href="javascript:;" onclick="showairPopup()" class="posurl">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>							
+						<div class="buttonBox">
+							<a href="javascript:;" class="btn formtarget requestaquote" style="background-image: url(images/buttonbg.png);">Request a 
+								Demo
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bookpdf greenbookpdf" id="bluebookpdf" style="display: none;">
+				<div class="bookpdfinnr">
+					<div class="bookpdfrow">
+						<div class="close"><img src="images/cross.png" alt="cross"></div>
+						<div class="bookslider">
+							<div class="slide">
+								<div class="slideinnr">
+									<img src="images/Open-Green-Book.png" alt="">
+									<div class="btnbox">
+										<a href="javascript:;" onclick="showairPopup()" class="posurl">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideinnr">
+									<img src="images/Open-Blue-Book.png" alt="">
+									<div class="btnbox">
+										<a href="javascript:;" onclick="showpiePopup()" class="posurl">
 										</a>
 									</div>
 								</div>
@@ -213,9 +265,9 @@
 								<div class="bookFeature">
 									<h6>THE INTELLIGENT SCIENCE BOOK</h6>
 									<ul>
-										<li><img src="images/pie.png" alt="Pie">Concepts come alive with ARI</li>
-										<li><img src="images/ari.png" alt="ari">Personalised practice beyond the book with PIE</li>
-										<li><img src="images/cpa.png" alt="cpa">Learn Science by Doing</li>
+										<li><img src="images/ari.png" alt="Pie">Concepts come alive with ARI</li>
+										<li><img src="images/pie.png" alt="ari">Personalised practice beyond the book with PIE</li>
+										<li><img src="images/lbd.png" alt="cpa">Learn Science by Doing</li>
 										<li><img src="images/skill.png" alt="skill">Build essential skills</li>
 									</ul>					
 									<p><span>NCF-aligned features</span> | <span>Comprehensive teacher resources on the Active Teach App</span> | <span>Rich student resources on the Pinnacle Student App</span></p>
@@ -235,10 +287,10 @@
 								<div class="bookFeature">
 									<h6>THE INTELLIGENT ENGLISH BOOK</h6>
 									<ul>
-										<li><img src="images/pie.png" alt="Pie">Build reading fluency for every child with IRA</li>
-										<li><img src="images/ari.png" alt="ari">Personalised practice beyond the book with PIE</li>
-										<li><img src="images/cpa.png" alt="cpa">Advance Language Skills in your students</li>
-										<li><img src="images/skill.png" alt="skill">⁠Lexile-based reading levels</li>
+										<li><img src="images/ira.png" alt="Pie">Build reading fluency for every child with IRA</li>
+										<li><img src="images/pie.png" alt="ari">Personalised practice beyond the book with PIE</li>
+										<li><img src="images/adls.png" alt="cpa">Advance Language Skills in your students</li>
+										<li><img src="images/lexile.png" alt="skill">⁠Lexile-based reading levels</li>
 									</ul>					
 									<p><span>NCF-aligned features</span> | <span>Comprehensive teacher resources on the Active Teach App</span> | <span>Rich student resources on the Pinnacle Student App</span></p>
 									<div class="buttonBox">
@@ -290,7 +342,7 @@
 						<!-- <h2>Interested in bringing this to your schools?</h2>				 -->
 						 <h2>Curious to learn more?</h2>
 						<div class="buttonBox">
-							<a href="javascript:;" class="btn" style="background-image: url(images/buttonbg.png);">Join the Waitlist</a>
+							<a href="javascript:;" class="btn" style="background-image: url(images/buttonbg.png);">Request a demo</a>
 						</div>
 					</div>
 				</div>
@@ -386,7 +438,7 @@
 				<div class="col-3">
 					<h6>Quick Links</h6>
 					<ul>
-						<li><a href="">LEAD Group</a></li>
+						<li><a href="www.pinnacle.co.in">Pinnacle</a></li><li><a href="https://www.leadgroup.co.in/">LEAD Group</a></li>
 					</ul>
 				</div>
 				<div class="col-3">
@@ -430,7 +482,7 @@
 		<div class="popupinnr">
 			<div class="close"><img src="images/cross.png" alt="cross"></div>
 			<video id="video" width="100%" height="100%" controls="" preload="auto">
-				<source src="images/iravideo.mp4" />
+				<source src="images/iranew.mp4" />
 			</video>
 		</div>
 	</div>
@@ -565,7 +617,7 @@
 		$(document).ready(function() {
 			// Handle click event on .techbook elements
 			$('.blueactive').click(function() {
-				$('#bluebookpdf').show();
+				$('.bluebookpdf').show();
 				$(".bluebookactive").hide();
 				$('.bookslider').slick('refresh');
 				$('.blockbookjourney').hide(); 
@@ -575,6 +627,13 @@
 				$('#redbookpdf').show();
 				$(".redbookactive").hide();
 				$('.bookslider').slick('refresh');
+
+			});
+			$('.greenactive').click(function() {
+				$('.greenbookpdf').show();
+				$(".greenbookactive").hide();
+				$('.bookslider').slick('refresh');
+				$('.blockbookjourney').hide(); 
 
 			});
 			$('.scienceclickexplore').click(function() {
