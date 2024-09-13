@@ -169,7 +169,7 @@
 								<div class="slideinnr">
 									<img src="images/Open-Green-Book-1-new.png" alt="">
 									<div class="btnbox">
-										<a href="javascript:;" onclick="showairPopup()" class="posurl">
+										<a href="javascript:;" onclick="showmathariPopup()" class="posurl">
 										</a>
 									</div>
 								</div>
@@ -201,7 +201,7 @@
 								<div class="slideinnr">
 									<img src="images/Open-green-Book--1new.png" alt="">
 									<div class="btnbox">
-										<a href="javascript:;" onclick="showpiePopup()" class="posurl">
+										<a href="javascript:;" onclick="scipiePopup()" class="posurl">
 										</a>
 									</div>
 								</div>
@@ -502,6 +502,22 @@
 			</video>
 		</div>
 	</div>
+	<div class="popupsec scipiedbook" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<video id="video" width="100%" height="100%" controls="" preload="auto">
+				<source src="images/scipie.mp4" />
+			</video>
+		</div>
+	</div>
+	<div class="popupsec matharibook" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<video id="video" width="100%" height="100%" controls="" preload="auto">
+				<source src="images/mathari.mp4" />
+			</video>
+		</div>
+	</div>
 
 	<div class="popupsec" id="sciencebookpdf" style="display: none;">
 		<div class="popupinnr">
@@ -599,11 +615,17 @@
 		function showPopup() {
 			$('.iraredbook').show();
 		}
+		function scipiePopup() {
+			$('.scipiedbook').show();
+		}
 		function showpiePopup() {
 			$('.pieredbook').show();
 		}
 		function showairPopup() {
 			$('.ariredbook').show();
+		}
+		function showmathariPopup() {
+			$('.matharibook').show();
 		}
 		$('.pieredbook .close').click(function() {
 			$('.pieredbook').hide();
@@ -613,6 +635,12 @@
 		});
 		$('.iraredbook .close').click(function() {
 			$('.iraredbook').hide();
+		});
+		$('.scipiedbook .close').click(function() {
+			$('.scipiedbook').hide();
+		});
+		$('.matharibook .close').click(function() {
+			$('.matharibook').hide();
 		});
 		$(document).ready(function() {
 			// Handle click event on .techbook elements

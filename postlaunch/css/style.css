@@ -405,11 +405,17 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 .bookpdfinnr .close {
     position: absolute;
     top: 45px;
-    right: 0rem;
+    right: 8rem;
     cursor: pointer;
     z-index: 2;
 }
+.bookslider .slick-prev {
+    left: 6rem;
+}
 
+.bookslider .slick-next {
+    right: 6rem;
+}
 .bookpdfrow {
     position: relative;
     /* max-width: 80rem; */
