@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Techbook Prelaunch: home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="siteheader">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-3">
+					<div class="logo"><a href="/"><img src="images/logo.png" alt="logo"></a></div>
+				</div>
+				<div class="col-7">
+					<div class="humburgur" style="display: none;">
+						<svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" fill="#000000"/>
+						</svg>
+					</div>
+					<div class="menu">
+						<ul>
+							<li class="dropdown">
+								<a href="javascript:;">Product</a>
+								<ul class="submenu">
+									<li class="sciencebook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> Science</a></li>
+									<li class="englishbook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> English</a></li>
+									<li class="mathbook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> Math</a></li>
+								</ul>
+							</li>
+							<li class="curiouslearn"><a href="javascript:;">Pre-book</a></li>
+							<li class="demorequest"><a href="javascript:;">Demo Request</a></li>
+							<li class="faq"><a href="javascript:;">FAQs</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+ 
+
+
+	<!-- Curious to learn more? Start -->
+	 <section class="curiouslearnsec bgstyle" id="curiouslearnsec" style="background-image: url(images/background.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-5">
+					<div class="image">
+						<img src="images/techBooksgoup.png" alt="Books">
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="content">
+
+ 
+
+                        <div class="curiouscontainer" id="curiouscontainer2">
+                            <h2 class="left">Pre-book now to secure<br />Techbook for your school.</h2>
+                            <div class="curiousform" id="screen_curiousform" style="display:block;">
+                                <p>Please share your details to complete the pre-booking process</p>
+                                <form id="contact-form" name="contact-form">
+                                <input class="curiousFormInput" type="text" name="name" id="name" placeholder="Name" />
+                                <span class="curiousFormError" id="error_name" style="display:none;"></span>
+                                <input class="curiousFormInput" name="phonenumber" type="text" id="phonenumber" placeholder="Phone Number" />
+                                <span class="curiousFormError" id="error_phonenumber" style="display:none;"></span>
+                                <input class="curiousFormInput" name="emailid" type="text" id="emailid" placeholder="Email ID*" />
+                                <span class="curiousFormError" id="error_emailid" style="display:none;"></span>
+                                <input class="curiousFormInput" name="schoolname" type="text" id="schoolname" placeholder="School Name" />
+                                <span class="curiousFormError" id="error_schoolname" style="display:none;"></span>
+                                <input class="curiousFormInput" name="schoolpincode" type="text" id="schoolpincode" placeholder="School Pincode" />
+                                <span class="curiousFormError" id="error_schoolpincode" style="display:none;"></span>
+                                <select name="roleinschool" id="roleinschool" required="" class="curiousFormInput">
+                                    <option disabled value="">Role at School *</option>
+                                    <option value="Director">Director</option>
+                                    <option value="Principal">Principal</option>
+                                    <option value="School Owner">School Owner</option>
+                                    <option value="Trustee">Trustee</option>
+                                    <option value="Vice Principal">Vice Principal</option>
+                                    <option value="Teacher">Teacher</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="curiousFormError" id="error_roleinschool" style="display:none;"></span>
+                                <input type="hidden" name="datetime" id="datetime" />
+                                <input type="hidden" name="status" id="status" value="Open" />
+                                <aside>
+                                    <button  class="curiousFormSubmit" type="submit">Submit</button>
+                                </aside>
+                                </form>
+                            </div>
+                            <div class="curiousform" id="screen_thankyou" style="display:none;">
+                                <h4>
+                                    <span>Thank you</span>
+                                    for submitting your details!<br><br>
+                                    We've added you to our waitlist. <br>
+                                    Keep an eye on your inbox or WhatsApp for updates!
+                                </h5>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Curious to learn more? End -->
+
+
+
+ 
+
+
+     
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+        var currentdate = new Date(); 
+        var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+        $("#datetime").val(datetime);
+
+
+        $('#contact-form').on('submit', function(e) {
+            e.preventDefault();
+            $(".curiousFormError").hide().html('');
+            const regexMobile = /^[6789][0-9]{9}$/i;
+            const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i
+            const regexZip = /^[0-9]{6}$/i;
+            if($("#name").val() == '')
+            {
+                $("#error_name").show().html('Please enter your Name');
+                return false;
+            }
+            else if($("#phonenumber").val() == '')
+            {
+                $("#error_phonenumber").show().html('Please enter your Phone number');
+                return false;
+            }
+            else if($("#phonenumber").val().length != 10)
+            {
+                $("#error_phonenumber").show().html('Phone Number must have at least 10 Digit');
+                return false;
+            }
+            else if(!regexMobile.test($("#phonenumber").val()))
+            {
+                $("#error_phonenumber").show().html("Invalid mobile number!");
+                return false;
+            }
+            else if($("#emailid").val() == '')
+            {
+                $("#error_emailid").show().html('Please enter your Email id');
+                return false;
+            }
+            else if(!regexEmail.test($("#emailid").val()))
+            {
+                $("#error_emailid").show().html('Please enter valid Email id');
+                return false;
+            }
+            else if($("#schoolname").val() == '')
+            {
+                $("#error_schoolname").show().html('Please enter your School name');
+                return false;
+            }
+            else if($("#schoolpincode").val() == '')
+            {
+                $("#error_schoolpincode").show().html('Please enter your Pincode');
+                return false;
+            }
+            else if($("#schoolpincode").val().length != 6)
+            {
+                $("#error_schoolpincode").show().html('Pincode must have at least 6 Digit');
+                return false;
+            }
+            else if(!regexZip.test($("#schoolpincode").val()))
+            {
+                $("#error_schoolpincode").show().html("Invalid Pincode!");
+                return false;
+            }
+            else if($("#roleinschool").val() == '')
+            {
+                $("#error_roleinschool").show().html('Please enter your Roll in School');
+                return false;
+            }
+            else 
+            {
+                $(".curiousFormError").hide().html('');
+                console.log($(this).serialize())
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://script.google.com/macros/s/AKfycbymiULfWWJgNqiKnKsHyqjA_cQmKezMizw4pMy8fELIUAbdz_16Q74Sfb8nmm2CvfqElg/exec',
+                    data:  $(this).serialize(),
+                    success: function(response) 
+                    {
+                        $("#screen_curiousform").slideUp(300);
+                        $("#screen_thankyou").slideDown(300);
+                        setTimeout(function(){ location.href="https://pages.razorpay.com/techbook" }, 2000);
+                    },
+                    error: function(err) 
+                    {
+                        alert('Error submitting form');
+                    }
+                });
+                return true;
+            }
+        });
+
+ 
+
+	</script>
+
+
+</body>
+</html>

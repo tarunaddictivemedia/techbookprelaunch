@@ -856,6 +856,25 @@ header.siteheader .menu ul li ul li {
     height: 100%;
     width: 100%;
   }
+  
+.curiouscontainer { width: 100%; }
+.curiouscontainer h2 { text-align: center; }
+.curiouscontainer h2.left { text-align: left; line-height: 1.2; }
+.curiouscontainer aside { margin-top: 0.7rem; }
+.curiousform { padding: 1.5rem; box-sizing: border-box; border-radius: 10px; background-color: #ffff; margin-top:1.5rem; box-shadow:0 0 20px 0px rgba(0,0,0,0.6)}
+.curiousform p {  font-size: 1.3rem;  }
+.curiousform h4 { text-align: left; font-size: 1.2rem; color: #000000; }
+.curiousform h4 span { display: block; color: #411e78; font-size: 1.8rem;  }
+.curiousFormError { width: 100%; color: red;  font-size:0.9rem;  }
+.curiousFormInput { width: 100%; margin-top: 1rem; font-size: 1rem;    height: 3rem;    width: 100%;    background: #f1f1f1;    padding:0.7rem 1rem; }
+.curiousFormSubmit { display: inline-block; text-transform: uppercase;    background-image: linear-gradient(to bottom, #703d95, #37378f);
+font-size: 1rem;    padding: 1rem 3rem;    margin-top: 1rem;    border-radius: 40px;    font-weight: 600;    color: #fff;
+width: auto;    height: auto;    cursor: pointer;}
+.curiousFormSubmit:hover { background-image: linear-gradient(to bottom, #37378f, #703d95); }
+section#curiouslearnsec {
+    height: auto;
+    padding: 12rem 0px 6rem;
+}
 @media(max-width: 2560px) {
     .threetechbook ul li img {
         height: 40rem;
@@ -926,7 +945,7 @@ header.siteheader .menu ul li ul li {
         padding: 5rem 0;
     }
     .curiouslearnsec {
-        height: 500px;
+        height: auto; padding: 4rem 0;
     }
     .demorequestsec {
         height: auto;
@@ -1067,9 +1086,9 @@ header.siteheader .menu ul li ul li {
     .curiouslearnsec h2 {
         font-size: 30px;
     }
-    .curiouslearnsec {
+    /* .curiouslearnsec {
         height: 300px;
-    }
+    } */
     .curiouslearnsec a.btn {
         max-width: unset;
         width: 252px;
@@ -1178,4 +1197,62 @@ header.siteheader .menu ul li ul li {
       .image--5 {
         margin-right: -130px;
       }
+      .curiouslearnsec .col-5, .curiouslearnsec .col-4 {
+            width: 100%;
+        }
+        
+        .curiouslearnsec .content h2 {
+            text-align: center;
+        }
+        
+        .curiouslearnsec .content .buttonBox .btn {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .formdata {
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .demorequestsec .container {
+            width: 100%;
+        }
+        
+        .poweredsec .row .poweredtt {
+            margin-bottom: 1rem;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .poweredsec .poweredbyitems ul li .linnr p {
+            font-size: 15px;
+        }
+        
+        .poweredsec .poweredbyitems ul li .linnr img {
+            width: 50px;
+        }
+        .bookthreeblockinnr .col-7 {
+            width: 100%;
+        }
+        .bookslider .slick-prev {
+            left: 1rem;
+            margin-top: -20px;
+        }
+        .bookslider .slick-next {
+            right: 1rem;
+        }
+        .poweredsec .poweredbyitems ul li {margin-bottom: 12px;}
+        
+        .poweredsec {
+            padding: 3rem 0;
+        }
+        .threetechbook ul li img {height: auto;}
+        .mainbanner .buttonBox {
+            margin-top: 60px;
+        }
+        .bookpdfinnr .close {
+            position: absolute;
+            top: 5px;
+            right: 0;
+        }
 }
