@@ -17,7 +17,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-3">
-					<div class="logo"><a href=""><img src="images/logo.png" alt="logo"></a></div>
+					<div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
 				</div>
 				<div class="col-7">
 					<div class="humburgur" style="display: none;">
@@ -27,7 +27,6 @@
 					</div>
 					<div class="menu">
 						<ul>
-							<!-- <li class="active" data-id="mainbanner"><a href="">Home</a></li> -->
 							<li class="dropdown">
 								<a href="javascript:;">Product</a>
 								<ul class="submenu">
@@ -36,9 +35,8 @@
 									<li class="mathbook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> Math</a></li>
 								</ul>
 							</li>
-							<li class="curiouslearn"><a href="javascript:;">Pre-book</a></li>
+							<li><a href="prebook.html">Pre-book</a></li>
 							<li class="demorequest"><a href="javascript:;">Demo Request</a></li>
-							<!-- <li><a href="javascript:;">Contact Us</a></li> -->
 							<li class="faq"><a href="javascript:;">FAQs</a></li>
 						</ul>
 					</div>
@@ -58,8 +56,8 @@
 						<div class="row">
 							<div class="col-3">																
 								<div class="buttonBox">
-									<a href="javascript:;" class="btn formtarget requestaquote" style="background-image: url(images/buttonbg.png);">Request a 
-										Demo
+									<a href="prebook.html" class="btn formtarget" style="background-image: url(images/buttonbg.png);">Pre-book Now
+
 									</a>
 								</div>
 							</div>
@@ -79,19 +77,6 @@
 									  </div>
 									</div>
 								  </div>
-								<!-- <div class="threetechbook">
-									<ul>
-										<li>
-											<div class="techbook" data-book="bluebook"><img src="images/Blue-Book-1.png" alt="Blue-Book-1"></div>
-										</li>
-										<li>
-											<div class="techbook" data-book="redbook"><img src="images/Red-Book-1.png" alt="Red-Book-1"></div>
-										</li>
-										<li>
-											<div class="techbook" data-book="greenbook"><img src="images/Green-Book-1.png" alt="Green-Book-1"></div>
-										</li>
-									</ul>
-								</div>	 -->
 							</div>
 						</div>	
 					</div>
@@ -280,7 +265,7 @@
 									</ul>					
 									<p><span>NCF-aligned features</span> | <span>Comprehensive teacher resources on the Active Teach App</span> | <span>Rich student resources on the Pinnacle Student App</span></p>
 									<div class="buttonBox">
-										<a href="javascript:;" class="btn formtarget requestaquote" style="background-image: url(images/buttonbg.png);">PRE-BOOK NOW</a>
+										<a href="prebook.html" class="btn formtarget" style="background-image: url(images/buttonbg.png);">PRE-BOOK NOW</a>
 									</div>
 								</div>
 							</div>
@@ -302,7 +287,7 @@
 									</ul>					
 									<p><span>NCF-aligned features</span> | <span>Comprehensive teacher resources on the Active Teach App</span> | <span>Rich student resources on the Pinnacle Student App</span></p>
 									<div class="buttonBox">
-										<a href="javascript:;" class="btn formtarget requestaquote" style="background-image: url(images/buttonbg.png);">PRE-BOOK NOW</a>
+										<a href="prebook.html" class="btn formtarget" style="background-image: url(images/buttonbg.png);">PRE-BOOK NOW</a>
 									</div>
 								</div>
 							</div>
@@ -324,7 +309,7 @@
 									</ul>					
 									<p><span>NCF-aligned features</span> | <span>Comprehensive teacher resources on the Active Teach App</span> | <span>Rich student resources on the Pinnacle Student App</span></p>
 									<div class="buttonBox">
-										<a href="javascript:;" class="btn formtarget requestaquote" style="background-image: url(images/buttonbg.png);">PRE-BOOK NOW</a>
+										<a href="prebook.html" class="btn formtarget" style="background-image: url(images/buttonbg.png);">PRE-BOOK NOW</a>
 									</div>
 								</div>
 							</div>
@@ -350,7 +335,7 @@
 						<!-- <h2>Interested in bringing this to your schools?</h2>				 -->
 						 <h2>Curious to learn more?</h2>
 						<div class="buttonBox">
-							<a href="javascript:;" class="btn" style="background-image: url(images/buttonbg.png);">Request a demo</a>
+							<a href="javascript:;" class="btn requestaquote" style="background-image: url(images/buttonbg.png);">Request a demo</a>
 						</div>
 					</div>
 				</div>
@@ -446,7 +431,7 @@
 				<div class="col-3">
 					<h6>Quick Links</h6>
 					<ul>
-						<li><a href="https://pinnaclelearning.co.in/">Pinnacle</a></li><li><a href="https://www.leadgroup.co.in/">LEAD Group</a></li>
+						<li><a href="https://www.pinnaclelearning.in/">Pinnacle</a></li><li><a href="https://www.leadgroup.co.in/">LEAD Group</a></li>
 					</ul>
 				</div>
 				<div class="col-3">
@@ -549,6 +534,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="script.js"></script>
 	<script>
 		$(document).ready(function() {
 			// Handle click event on .techbook elements
@@ -637,18 +623,33 @@
 		}
 		$('.pieredbook .close').click(function() {
 			$('.pieredbook').hide();
+			$(".pieredbook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
 		});
 		$('.ariredbook .close').click(function() {
 			$('.ariredbook').hide();
+			$(".ariredbook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
 		});
 		$('.iraredbook .close').click(function() {
 			$('.iraredbook').hide();
+			$(".iraredbook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
 		});
 		$('.scipiedbook .close').click(function() {
 			$('.scipiedbook').hide();
+			$(".scipiedbook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
 		});
 		$('.matharibook .close').click(function() {
 			$('.matharibook').hide();
+			$(".matharibook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
 		});
 		$(document).ready(function() {
 			// Handle click event on .techbook elements
@@ -731,146 +732,6 @@
 		});
 	});
 
-	</script>
-
-	<script>
-		"use strict";
-
-// forEach FIX for IE 
-(function () {
-  if ( typeof NodeList.prototype.forEach === "function" ) return false;
-  NodeList.prototype.forEach = Array.prototype.forEach;
-})();
-
-//document.documentElement.setAttribute("data-agent", navigator.userAgent);
-
-// Slider prototype object
-function Slider(element, imageSelector) {
-  //Image selector class or default
-  this.imageClass = imageSelector || '.slider__image';
-
-  //Array with images in slider
-  this.images = element.querySelectorAll(this.imageClass);
-
-  //Previous image
-  this.previous = function() {
-    this.images.forEach( function img(elem,index) {
-      let Index = parseInt(elem.getAttribute('data-index')), IN, addClass;
-      if (Index < 5){ IN = Index + 1; } 
-      else { IN = 1; }
-      addClass = 'image--'+IN;
-      elem.className = elem.className.replace(/image--[0-9]/,'');
-      elem.setAttribute('data-index', IN);
-      elem.classList.add(addClass);
-
-      if (addClass == 'image--1') { elem.classList.add('active'); } 
-      else { elem.classList.remove('active'); }
-    });
-  };
-
-  //Next image
-  this.next = function() {
-    this.images.forEach(function (elem, index) {
-      let Index = parseInt(elem.getAttribute('data-index')), IN, addClass;
-      if(Index > 1){ IN = Index - 1; } 
-      else { IN = 5; }
-      addClass = 'image--'+IN;
-      elem.className = elem.className.replace(/image--[0-9]/,'');
-      elem.setAttribute('data-index', IN);
-      elem.classList.add(addClass);
-
-      if(addClass=='image--1'){ elem.classList.add('active'); } 
-      else { elem.classList.remove('active'); }
-    });
-  };
-};
-
-const d = document,
-      slider = d.getElementById('slider'),    //Slider container
-      next = d.getElementById('next'),        //Next slide button 
-      prev = d.getElementById('prev');        //Previous slide button
-let isWheel;                                  //Global var for setTimeout
-
-//Creating carousel
-let carousel = new Slider(slider);
-
-//Button 
-next.addEventListener('click', function(e) { carousel.next(); }, true);
-prev.addEventListener('click', function(e) { carousel.previous(); }, true);
-
-//Adding sliding when scroll
-slider.addEventListener('wheel', function(e){
-  e.preventDefault;
-
-  if (e.deltaY > 0){ carousel.next(); } 
-  else { carousel.previous(); }
-
-  //Getting alt text (name) from .active slide
-  let active = this.getElementsByClassName('active'),
-      name = active[0].getAttribute('alt');
-
-  //Stoping latest timeout
-  window.clearTimeout(isWheel);
-
-  //creating new timeout for current active slide
-  // isWheel = window.setTimeout(function(e) { alert(name); }, 1500);
-});
-
-//Adding swipe events to inner slider container
-let sliderInner = slider.querySelector('.slider__inner');
-swipedetect(sliderInner, function (swipedir) {
-  if (swipedir == 'left') { carousel.previous(); }
-  if (swipedir == 'right') { carousel.next(); }
-});
-
-// Library for swipe detect
-// credit: http://www.javascriptkit.com/javatutors/touchevents2.shtml
-function swipedetect(el, callback) {
-  let touchsurface = el,
-      swipedir,
-      startX,
-      startY,
-      distX,
-      distY,
-      dist,
-      threshold = 150, //required min distance traveled to be considered swipe
-      restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-      allowedTime = 300, // maximum time allowed to travel that distance
-      elapsedTime,
-      startTime,
-      handleswipe = callback || function (swipedir) { }
-
-  touchsurface.addEventListener('touchstart', function(e) {
-    let touchobj = e.changedTouches[0]
-    swipedir = 'none'
-    dist = 0
-    startX = touchobj.pageX
-    startY = touchobj.pageY
-    startTime = new Date().getTime() // record time when finger first makes contact with surface
-    e.preventDefault()
-  }, false)
-
-  touchsurface.addEventListener('touchmove', function (e) {
-    e.preventDefault() // prevent scrolling when inside DIV
-  }, false)
-
-  touchsurface.addEventListener('touchend', function (e) {
-    let touchobj = e.changedTouches[0]
-    distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
-    distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
-    elapsedTime = new Date().getTime() - startTime // get time elapsed
-    if (elapsedTime <= allowedTime) { // first condition for awipe met
-      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) { // 2nd condition for horizontal swipe met
-        swipedir = (distX < 0) ? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
-      }
-      else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) { // 2nd condition for vertical swipe met
-        swipedir = (distY < 0) ? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
-      }
-    }
-    handleswipe(swipedir)
-    e.preventDefault()
-  }, false)
-}
 	</script>
 	
 </body>
