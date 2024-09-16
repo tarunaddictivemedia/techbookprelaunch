@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Techbook Prelaunch: home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://mitsubishielectric.in/assets_gws_template_responsive/css/jquery.flipster.min.css">
+</head>
+<body>
+	<header class="siteheader">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-3">
+					<div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+				</div>
+				<div class="col-7">
+					<div class="humburgur" style="display: none;">
+						<svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" fill="#000000"/>
+						</svg>
+					</div>
+					<div class="menu">
+						<ul>
+							<li class="dropdown">
+								<a href="javascript:;">Product</a>
+								<ul class="submenu">
+									<li class="sciencebook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> Science</a></li>
+									<li class="englishbook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> English</a></li>
+									<li class="mathbook"><a href="javascript:;"><img src="images/logo.png" alt="logo"> Math</a></li>
+								</ul>
+							</li>
+							<li><a href="prebook.html">Pre-book</a></li>
+							<li class="demorequest"><a href="javascript:;">Demo Request</a></li>
+							<li class="faq"><a href="javascript:;">FAQs</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Main Banner Start -->
+	 <section class="mainbanner bgstyle" id="mainbanner" style="background-image: url(images/background.png);">
+		<div class="container">
+			<div class="blockbookjourney">
+				<div class="bookthreeblock">
+					<div class="bookthreeblockinnr">
+						<div class="headingBox">
+							<h1>The INTELLIGENT BOOK FOR <br>NEW-AGE SCHOOLS</h1>
+						</div>	
+						<div class="row">
+							<div class="col-3">																
+								<div class="buttonBox">
+									<a href="prebook.html" class="btn formtarget" style="background-image: url(images/buttonbg.png);">Pre-book Now
+
+									</a>
+								</div>
+							</div>
+							<div class="col-7">	
+								<div id="carousel">
+									<ul class="flip-items">
+										<li class="yt-item--post" data-modal-id="modal--1">
+											<img data-book="bluebook" src="https://techbookprelaunch.netlify.app/postlaunch/images/sciencemiddle-active-Book.png" alt="Sunflowers" class="techbook">
+										</li>
+										<li class="yt-item--post" data-modal-id="modal--1">
+											<img data-book="redbook" src="https://techbookprelaunch.netlify.app/postlaunch/images/middle-active-Book.png" alt="Waterfall" class="techbook">
+										</li>
+										<li class="yt-item--post" data-modal-id="modal--1">
+											<img data-book="greenbook" src="https://techbookprelaunch.netlify.app/postlaunch/images/mathmiddle-active-Book.png" alt="River" class="techbook">
+										</li>
+									</ul>
+								</div>								
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div id="bluebook" class="middlebook bluebookactive" style="display: none;">
+					<ul>
+						<li>
+							<div class="bookpage"><img src="images/blurred.png" alt="Tech Book"></div>
+						</li>
+						<li>
+							<div class="bookpage blueactive"><img src="images/Blueactive.png" alt="Tech Book"></div>
+						</li>
+						<li>
+							<div class="bookpage"><img src="images/blurgreen.png" alt="Tech Book"></div>
+						</li>
+					</ul>
+				</div>
+				<div id="redbook" class="middlebook redbookactive" style="display: none;">
+					<ul>
+						<li>
+							<div class="bookpage"><img src="images/blurblue.png" alt="Tech Book"><a href="javascript:;" class="posurl"></a></div>
+						</li>
+						<li>
+							<div class="bookpage redactive"><img src="images/redactive.png" alt="Tech Book"><a href="javascript:;" class="posurl"></a></div>
+						</li>
+						<li>
+							<div class="bookpage"><img src="images/blurgreen.png" alt="Tech Book"><a href="javascript:;" class="posurl"></a></div>
+						</li>
+					</ul>
+				</div>
+				<div id="greenbook" class="middlebook greenbookactive" style="display: none;">
+					<ul>
+						<li>
+							<div class="bookpage"><img src="images/blurblue.png" alt="Tech Book"><a href="javascript:;" class="posurl"></a></div>
+						</li>
+						<li>
+							<div class="bookpage greenactive"><img src="images/greenactive.png" alt="Tech Book"><a href="javascript:;" class="posurl"></a></div>
+						</li>
+						<li>
+							<div class="bookpage"><img src="images/blurred-right.png" alt="Tech Book"><a href="javascript:;" class="posurl"></a></div>
+						</li>
+					</ul>
+				</div>
+				<div class="bookpdf" id="redbookpdf" style="display: none;">
+					<div class="bookpdfinnr">
+						<div class="bookpdfrow">
+							<div class="close"><img src="images/cross.png" alt="cross"></div>
+							<div class="bookslider">
+								<div class="slide">
+									<div class="slideinnr">
+										<img src="images/Open-Red-Book-new.png" alt="">
+										<div class="btnbox">
+											<a href="javascript:void(0)" onclick="showPopup()" class="posurl irabookvideo">												
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>							
+							<div class="buttonBox">
+								<a href="javascript:;" class="btn formtarget requestaquote" style="background-image: url(images/buttonbg.png);">Request a 
+									Demo
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bookpdf bluebookpdf" id="bluebookpdf" style="display: none;">
+				<div class="bookpdfinnr">
+					<div class="bookpdfrow">
+						<div class="close"><img src="images/cross.png" alt="cross"></div>
+						<div class="bookslider">
+							<div class="slide">
+								<div class="slideinnr">
+									<img src="images/Open-Blue-Book-new.png" alt="">
+									<div class="btnbox">
+										<a href="javascript:;" onclick="showpiePopup()" class="posurl">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideinnr">
+									<img src="images/Open-Green-Book-1-new.png" alt="">
+									<div class="btnbox">
+										<a href="javascript:;" onclick="showmathariPopup()" class="posurl">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>							
+						<div class="buttonBox">
+							<a href="javascript:;" class="btn formtarget requestaquote" style="background-image: url(images/buttonbg.png);">Request a 
+								Demo
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bookpdf greenbookpdf" id="bluebookpdf" style="display: none;">
+				<div class="bookpdfinnr">
+					<div class="bookpdfrow">
+						<div class="close"><img src="images/cross.png" alt="cross"></div>
+						<div class="bookslider">
+							<div class="slide">
+								<div class="slideinnr">
+									<img src="images/Open-Green-Book-new.png" alt="">
+									<div class="btnbox">
+										<a href="javascript:;" onclick="showairPopup()" class="posurl">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideinnr">
+									<img src="images/Open-green-Book--1new.png" alt="">
+									<div class="btnbox">
+										<a href="javascript:;" onclick="scipiePopup()" class="posurl">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>							
+						<div class="buttonBox">
+							<a href="javascript:;" class="btn formtarget requestaquote" style="background-image: url(images/buttonbg.png);">Request a 
+								Demo
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Main Banner End -->
+	
+	<!-- Powered by Start -->
+	 	<div class="poweredsec">
+			<div class="container">
+				<div class="row">
+					<div class="poweredtt">Powered By</div>
+					<div class="poweredbyitems">
+						<ul>
+							<li>
+								<div class="linnr">
+									<div class="icon"><img src="images/iraicon.png" alt="IRA"></div>
+									<p>Personalised Reading Fluency</p>
+								</div>
+							</li>
+							<li>
+								<div class="linnr">
+									<div class="icon"><img src="images/pie.png" alt="PIE"></div>
+									<p>Personalised Practice</p>
+								</div>
+							</li>
+							<li>
+								<div class="linnr">
+									<div class="icon"><img src="images/ari.png" alt="ARI"></div>
+									<p>Augmented Reality</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- Powered by End -->
+
+	<!-- Product Section Start -->
+	 <section class="productsection bgstyle" id="productsection" style="background-image: url(images/background.png);">
+		<div class="containBox">
+			<div class="productblock">
+				<div class="productslider">
+					<div id="sciencebook" class="productslide">
+						<div class="row">
+							<div class="col-35">
+								<div class="image"><img src="images/sciencemiddle-active-Book.png" alt="Red book"><a href="javascript:;" class="scienceclickexplore">CLICK TO EXPLORE</a></div>
+							</div>
+							<div class="col-6">
+								<div class="bookFeature">
+									<h6>THE INTELLIGENT SCIENCE BOOK</h6>
+									<ul>
+										<li><img src="images/ari.png" alt="Pie">Concepts come alive <br>with ARI</li>
+										<li><img src="images/pie.png" alt="ari">Personalised practice <br>beyond the book with PIE</li>
+										<li><img src="images/lbd.png" alt="cpa">Learn Science <br>by Doing</li>
+										<li><img src="images/skill.png" alt="skill">Build <br>essential skills</li>
+									</ul>					
+									<p><span>NCF-aligned features</span> | <span>Comprehensive teacher resources on the Active Teach App</span> | <span>Rich student resources on the Pinnacle Student App</span></p>
+									<div class="buttonBox">
+										<a href="prebook.html" class="btn formtarget" style="background-image: url(images/buttonbg.png);">PRE-BOOK NOW</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="englishbook" class="productslide">
+						<div class="row">
+							<div class="col-35">
+								<div class="image"><img src="images/middle-active-Book.png" alt="Red book"><a href="javascript:;" class="englishclickexplore">CLICK TO EXPLORE</a></div>
+							</div>
+							<div class="col-6">
+								<div class="bookFeature">
+									<h6>THE INTELLIGENT ENGLISH BOOK</h6>
+									<ul>
+										<li><img src="images/ira.png" alt="Pie">Build reading fluency <br>for every child with IRA</li>
+										<li><img src="images/pie.png" alt="ari">Personalised practice <br>beyond the book with PIE</li>
+										<li><img src="images/adls.png" alt="cpa">Advance Language Skills <br>in your students</li>
+										<li><img src="images/lexile.png" alt="skill">⁠Lexile-based <br>reading levels</li>
+									</ul>					
+									<p><span>NCF-aligned features</span> | <span>Comprehensive teacher resources on the Active Teach App</span> | <span>Rich student resources on the Pinnacle Student App</span></p>
+									<div class="buttonBox">
+										<a href="prebook.html" class="btn formtarget" style="background-image: url(images/buttonbg.png);">PRE-BOOK NOW</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="mathbook" class="productslide">
+						<div class="row">
+							<div class="col-35">
+								<div class="image"><img src="images/mathmiddle-active-Book.png" alt="Red book"><a href="javascript:;" class="mathclickexplore">CLICK TO EXPLORE</a></div>
+							</div>
+							<div class="col-6">
+								<div class="bookFeature">
+									<h6>THE INTELLIGENT MATH BOOK</h6>
+									<ul>
+										<li><img src="images/pie.png" alt="Pie">Personalised practice <br>beyond the book with PIE</li>
+										<li><img src="images/ari.png" alt="ari">Concepts come alive <br>with ARI</li>
+										<li><img src="images/cpa.png" alt="cpa">Learn Math via <br>Concrete-Pictorial-Abstract Method</li>
+										<li><img src="images/skill.png" alt="skill">Build <br>essential skills</li>
+									</ul>					
+									<p><span>NCF-aligned features</span> | <span>Comprehensive teacher resources on the Active Teach App</span> | <span>Rich student resources on the Pinnacle Student App</span></p>
+									<div class="buttonBox">
+										<a href="prebook.html" class="btn formtarget" style="background-image: url(images/buttonbg.png);">PRE-BOOK NOW</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Product Section End -->
+
+	<!-- Curious to learn more? Start -->
+	 <section class="curiouslearnsec bgstyle" id="curiouslearnsec" style="background-image: url(images/background.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-5">
+					<div class="image">
+						<img src="images/techBooksgoup.png" alt="Books">
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="content">
+						<!-- <h2>Interested in bringing this to your schools?</h2>				 -->
+						 <h2>Curious to learn more?</h2>
+						<div class="buttonBox">
+							<a href="javascript:;" class="btn requestaquote" style="background-image: url(images/buttonbg.png);">Request a demo</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Curious to learn more? End -->
+
+	<!-- Demo Request Form Start -->
+	 <section class="demorequestsec bgstyle" id="demorequestsec" style="background-image: url(images/demorequestbg.jpg);">
+		<div class="container">
+			<div class="row">
+				<div class="col-5"></div>
+				<div class="col-5">					
+					<div class="formdata">	
+						<h2>Give Your School The Lead Advantage</h2>				
+						<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+						<script>
+						hbspt.forms.create({
+							region: "na1",
+							portalId: "8143162",
+							formId: "34584e0f-beb2-41e5-8f2a-33c0f93ca1e2"
+						});
+						</script>
+
+						<div class="sucessmsg" style="display: none;">
+							<p style="text-align: center;color: green;font-weight: 500;font-size: 1.9rem;">Thanks for your Techbook demo request! We'll contact you soon to schedule.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Demo Request Form End -->
+	 
+	<!-- Faq Section Start -->
+	<section class="faqsection bgstyle" id="faqsection" style="background-image: url(images/background.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">	
+					<h2>FAQs </h2>	
+					<div class="accordion">
+						<h4>What is a Techbook?<span class="icon">+</span></h4>
+						<div class="details">
+							Techbook is an intelligent book designed to transform traditional textbook-driven learning.  The TECHBOOK brings three cutting-edge technologies and NCF aligned curriculum to address key learning challenges among school students today.
+						</div>
+						<h4>For which grades is The Techbook available?<span class="icon">+</span></h4>
+						<div class="details">The Techbook is currently available for Grades 1 -8.</div>
+						<h4>For which subjects is The Techbook available?<span class="icon">+</span></h4>
+						<div class="details">The Techbook is currently available for Math, Science & English.</div>
+						<h4>How can I get TECHBOOK for my school?<span class="icon">+</span></h4>
+						<div class="details">Techbook is currently available by Invitation Only. To get your exclusive invite code, either get in touch with your Pinnacle Representative OR fill out your details here -<4AM to put><></div>
+						<h4>Can parents purchase a Techbook directly for their child?<span class="icon">+</span></h4>
+						<div class="details">
+							No. Techbook is available only for students in select new-age schools that pre-book. Check with your school to apply for Techbook.
+						</div>
+						<h4>How is TECHBOOK different from traditional textbooks?<span class="icon">+</span></h4>
+						<div class="details">
+							The TECHBOOK addresses the limitations of traditional textbooks by introducing a personalized and interactive learning experience. In classrooms with varying learning levels, the TECHBOOK enables personalised instruction for each student.
+						</div>
+						<h4>What is ARI? How does it improve the learning of students?<span class="icon">+</span></h4>
+						<div class="details">
+							Traditional 2D textbooks limit students' ability to grasp complex concepts that are inherently 3D in nature. The TECHBOOK brings subjects such as Science and Mathematics to life with ARI enabling students to interact with topics in 3D using any device like mobile phone/tablet. The teachers can also use this augmented reality technology in their classrooms by casting on their existing hardware.
+						</div>
+						<h4>What is IRA? How does it improve reading fluency of students?<span class="icon">+</span></h4>
+						<div class="details">
+							For language learning, TECHBOOK’s IRA acts as a personal tutor, reading books aloud to students, while also listening to a student’s reading and providing real-time feedback on their reading fluency and pronunciation. 
+						</div>
+						<h4>What is PIE? How does it help in improving subject mastery?<span class="icon">+</span></h4>
+						<div class="details">
+							With PIE (Personalized Interactive Exercises), students get limitless exercises that are adaptive in nature. So students can master subjects at their own pace using any device like a mobile phone/tablet, making learning fun and continuous.
+						</div>
+						<h4>Which technologies are available in which subjects? <span class="icon">+</span></h4>
+						<div class="details">
+							TECHBOOK English is powered by IRA & PIE. TECHBOOK Science has ARI & PIE. TECHBOOK Math has ARI & PIE. 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Faq Section End -->
+
+	<!-- Footer Start -->
+	 <footer class="sitefooter">
+		<div class="container">
+			<div class="row">
+				<div class="col-3">
+					<div class="footerlogo">
+						<img src="images/pinnacle.png" alt="logo" width="150px">
+					</div>
+				</div>
+				<div class="col-3">
+					<h6>Quick Links</h6>
+					<ul>
+						<li><a href="https://www.pinnaclelearning.in/">Pinnacle</a></li><li><a href="https://www.leadgroup.co.in/">LEAD Group</a></li>
+					</ul>
+				</div>
+				<div class="col-3">
+					<h6>Contact</h6>
+					<ul>
+						<li>
+							<div class="linnr">
+								<p><span>Email:</span>help@leadgroup.co.in</p>
+							</div>
+						</li>
+						<li>
+							<div class="linnr">
+								<p><span>Call/Whatsapp:</span>+9186828 33333</p>
+							</div>
+						</li>
+						<li>
+							<div class="linnr">
+								<p><span>Timings:</span>8:00 AM to 6:00 PM</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-3">
+					<h6>Follow us</h6>
+					<ul>
+						<li><a href="https://www.facebook.com/leadschoolindia" target="_blank">Facebook</a></li>
+						<li><a href="https://www.instagram.com/leadschoolindia?igsh=b2htdWJ4eTQ4bjl3" target="_blank">Instagram</a></li>
+						<li><a href="https://www.linkedin.com/school/leadgroupindia/" target="_blank">Linkedin</a></li>
+						<li><a href="https://x.com/leadgroupindia?t=2F-AJYxA7W80hRzh6WOuOA&s=09" target="_blank">Twitter</a></li>
+						<li><a href="https://youtube.com/@leadgroupindia?si=yt1iQdtqeEDcFu2h" target="_blank">Youtube</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>© Copyright Leadership Boulevard Private Limited 2024. All rights reserved.</p>
+		</div>
+	 </footer>
+	<!-- Footer End -->
+	<div class="popupsec iraredbook" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<video id="video" width="100%" height="100%" controls="" preload="auto">
+				<source src="images/iranew.mp4" />
+			</video>
+		</div>
+	</div>
+	<div class="popupsec pieredbook" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<video id="video" width="100%" height="100%" controls="" preload="auto">
+				<source src="images/pievideo.mp4" />
+			</video>
+		</div>
+	</div>
+	<div class="popupsec ariredbook" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<video id="video" width="100%" height="100%" controls="" preload="auto">
+				<source src="images/airvideo.mp4" />
+			</video>
+		</div>
+	</div>
+	<div class="popupsec scipiedbook" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<video id="video" width="100%" height="100%" controls="" preload="auto">
+				<source src="images/scipie.mp4" />
+			</video>
+		</div>
+	</div>
+	<div class="popupsec matharibook" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<video id="video" width="100%" height="100%" controls="" preload="auto">
+				<source src="images/mathari.mp4" />
+			</video>
+		</div>
+	</div>
+
+	<div class="popupsec" id="sciencebookpdf" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<div style="position:relative;padding-top:max(46%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/mnvuh/hjud/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
+		</div>
+	</div>
+	<div class="popupsec" id="englishbookpdf" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<div style="position:relative;padding-top:max(46%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/mnvuh/lqkl/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
+		</div>
+	</div>
+	<div class="popupsec" id="mathbookpdf" style="display: none;">
+		<div class="popupinnr">
+			<div class="close"><img src="images/cross.png" alt="cross"></div>
+			<div style="position:relative;padding-top:max(46%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/mnvuh/ptwh/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
+		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://mitsubishielectric.in/assets_gws_template_responsive/js/jquery.flipster.min.js"></script>
+	<script>
+		var carousel = $("#carousel");
+		if (carousel) {
+			carousel.flipster({
+				style: 'carousel',
+				spacing: -0.25,
+				nav: false,
+				buttons: true,
+				start: 'center',
+				loop: true,
+				touch: true,
+			});
+		}
+	</script>
+	<style>.yt-item--post {
+		width: 300px;
+	}</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Handle click event on .techbook elements
+			$('.techbook').click(function() {
+				// Get the value of the data-book attribute of the clicked element
+				var bookType = $(this).attr('data-book');
+				
+				// Hide all middlebook divs
+				$('.middlebook').hide();
+				$('.bookthreeblock').hide();
+				
+				// Show the matching div based on the data-book attribute
+				$('#' + bookType).show();
+			});
+		});
+		// Attach click event listener to all li elements within .menu
+		$('.requestaquote').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#demorequestsec').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.sciencebook').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#sciencebook').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.englishbook').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#englishbook').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.mathbook').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#mathbook').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.curiouslearn').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#curiouslearnsec').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.demorequest').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#demorequestsec').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+		$('.faq').click(function () {
+			$('html, body').animate({
+				scrollTop: $('#faqsection').offset().top
+			}, 500); // 500ms for smooth scroll
+		});
+
+		$(document).ready(function () {
+			// $(".productslider").slick({
+			// 	slidesToShow: 1,
+			// 	slidesToScroll: 1,
+			// 	autoplay: true,
+			// 	autoplaySpeed: 5000,
+			// 	arrows: false,
+			// 	dots: false,
+			// 	pauseOnHover: false,
+			// });
+			$(".bookslider").slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: false,
+				arrows: true,
+				dots: false,
+				pauseOnHover: false,
+			});
+		});
+		function showPopup() {
+			$('.iraredbook').show();
+		}
+		function scipiePopup() {
+			$('.scipiedbook').show();
+		}
+		function showpiePopup() {
+			$('.pieredbook').show();
+		}
+		function showairPopup() {
+			$('.ariredbook').show();
+		}
+		function showmathariPopup() {
+			$('.matharibook').show();
+		}
+		$('.pieredbook .close').click(function() {
+			$('.pieredbook').hide();
+			$(".pieredbook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
+		});
+		$('.ariredbook .close').click(function() {
+			$('.ariredbook').hide();
+			$(".ariredbook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
+		});
+		$('.iraredbook .close').click(function() {
+			$('.iraredbook').hide();
+			$(".iraredbook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
+		});
+		$('.scipiedbook .close').click(function() {
+			$('.scipiedbook').hide();
+			$(".scipiedbook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
+		});
+		$('.matharibook .close').click(function() {
+			$('.matharibook').hide();
+			$(".matharibook video").each(function() {
+				this.pause(); // Use 'this' to reference the actual DOM video element
+			});
+		});
+		$(document).ready(function() {
+			// Handle click event on .techbook elements
+			$('.blueactive').click(function() {
+				$('.bluebookpdf').show();
+				$(".bluebookactive").hide();
+				$('.bookslider').slick('refresh');
+				$('.blockbookjourney').hide(); 
+				
+			});
+			$('.redactive').click(function() {
+				$('#redbookpdf').show();
+				$(".redbookactive").hide();
+				$('.bookslider').slick('refresh');
+
+			});
+			$('.greenactive').click(function() {
+				$('.greenbookpdf').show();
+				$(".greenbookactive").hide();
+				$('.bookslider').slick('refresh');
+				$('.blockbookjourney').hide(); 
+
+			});
+			$('.scienceclickexplore').click(function() {
+				$('#sciencebookpdf').show();
+			});
+			$('#sciencebookpdf .close').click(function() {
+				$('#sciencebookpdf').hide();
+			});
+			$('.englishclickexplore').click(function() {
+				$('#englishbookpdf').show();
+			});
+			$('#englishbookpdf .close').click(function() {
+				$('#englishbookpdf').hide();
+			});
+			$('.mathclickexplore').click(function() {
+				$('#mathbookpdf').show();
+			});
+			$('#mathbookpdf .close').click(function() {
+				$('#mathbookpdf').hide();
+			});
+			$('.humburgur').click(function() {
+				$('.menu').slideToggle();
+				$(this).toggleClass('active');
+
+			});
+			$('.bookpdfrow .close').click(function() {
+				$('.bookpdf').hide();
+				$('.bookthreeblock').show();
+				$('.blockbookjourney').css('display', 'flex');
+			});
+			
+
+		});
+		$(document).ready(function(){
+	    $('.accordion h4').click(function(){
+	        // Close other open panels
+	        $('.details').slideUp();
+	        $('.accordion h4 .icon').text('+');
+	        
+	        // Toggle the clicked panel
+	        if($(this).next('.details').is(':visible')) {
+	            $(this).next('.details').slideUp();
+	            $(this).find('.icon').text('+');
+	        } else {
+	            $(this).next('.details').slideDown();
+	            $(this).find('.icon').text('-');
+	        }
+	    });
+	});
+	// jQuery for sticky header on scroll
+	jQuery(document).ready(function($) {
+		$(window).on('scroll', function() {
+			var scroll = $(window).scrollTop();
+			if (scroll > 100) { // Adjust the value as needed
+				$('.siteheader').addClass('sticky');
+			} else {
+				$('.siteheader').removeClass('sticky');
+			}
+		});
+	});
+
+	</script>
+	
+</body>
+</html>
