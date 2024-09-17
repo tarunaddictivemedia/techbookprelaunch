@@ -602,6 +602,25 @@
 .flipster--infinite-carousel .flipster__item--current .flipster__item__content {
   transform: translateX(0) rotateY(0deg) scale(1);
 }
+@media(max-width: 800px) {
+	.flipster {
+		display: block;
+		overflow-x: visible;
+		overflow-y: visible;
+		position: relative;
+		transform: scale(0.8);
+	}
+
+}
+@media(max-width: 500px) {
+	.flipster {
+		margin-top: -110px;
+		transform: scale(0.54);
+	}
+	.mainbanner .headingBox {
+        padding-top: 16rem;
+    }
+}
 </style>
 	<script src="slider.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
