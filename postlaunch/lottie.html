@@ -26,6 +26,7 @@ body {
 </head>
 <body>
     <div id="lottie" width="200"></div>
+    <div id="icon1" width="200"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
@@ -40,7 +41,15 @@ body {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'images/book.json' // Update this path
+        path: 'images/bookopen.json' // Update this path
+    });
+
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('icon1'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/bookselect.json' // Update this path
     });
 
        
