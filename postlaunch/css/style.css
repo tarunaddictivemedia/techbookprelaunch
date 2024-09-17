@@ -860,9 +860,10 @@ header.siteheader .menu ul li ul li {
 .curiouscontainer { width: 100%; }
 .curiouscontainer h2 { text-align: center; }
 .curiouscontainer h2.left { text-align: left; line-height: 1.2; }
-.curiouscontainer aside { margin-top: 0.7rem; }
-.curiousform { padding: 1.5rem; box-sizing: border-box; border-radius: 10px; background-color: #ffff; margin-top:1.5rem; box-shadow:0 0 20px 0px rgba(0,0,0,0.6)}
+.curiouscontainer aside { margin-top: 0.7rem; text-align: left;}
+.curiousform {box-sizing: border-box; border-radius: 10px; background-color: #ffff; margin-top:1.5rem; box-shadow:0 0 20px 0px rgba(0,0,0,0.6)}
 .curiousform p {  font-size: 1.3rem;  }
+.tabinr { padding: 1.5rem; }
 .curiousform h4 { text-align: left; font-size: 1.2rem; color: #000000; }
 .curiousform h4 span { display: block; color: #411e78; font-size: 1.8rem;  }
 .curiousFormError { width: 100%; color: red;  font-size:0.9rem;  }
@@ -874,6 +875,66 @@ width: auto;    height: auto;    cursor: pointer;}
 section#curiouslearnsec {
     height: auto;
     padding: 12rem 0px 6rem;
+}
+.curiousform .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.curiousform .tabs .items {
+    width: 50%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.curiousform .tabs .items.active {
+    background: #eeefef;
+    font-weight: 900;
+    color: #411e78;
+}
+
+.curiousform {
+    overflow: hidden;
+}
+.tabinr p strong {
+    display: block;
+    font-size: 20px;
+    color: #411e78;
+    font-weight: 500;
+}
+
+#invite .tabinr p {
+    font-size: 20px;
+    text-align: left;
+}
+form#contact-form {
+    margin-bottom: 20px;
+}
+
+#need p {
+    text-align: left;
+}
+#invite .tabinr .btn {
+    max-width: 11rem;
+    background-image: linear-gradient(to bottom, #703d95, #37378f) !important;
+    border-radius: 50px;
+    color: #fff;
+    height: 3.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#invite .tabinr .button {
+    text-align: left;
+    margin-top: 2rem;
 }
 @media(max-width: 2560px) {
     .threetechbook ul li img {

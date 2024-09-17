@@ -53,7 +53,7 @@
 			<div class="row">
 				<div class="col-5">
 					<div class="image">
-						<img src="images/techBooksgoup.png" alt="Books">
+						<img src="images/techBooksgroup.png" alt="Books">
 					</div>
 				</div>
 				<div class="col-4">
@@ -64,35 +64,59 @@
                         <div class="curiouscontainer" id="curiouscontainer2">
                             <h2 class="left">Pre-book now to secure<br />Techbook for your school.</h2>
                             <div class="curiousform" id="screen_curiousform" style="display:block;">
-                                <p>Please share your details to complete the pre-booking process</p>
-                                <form id="contact-form" name="contact-form">
-                                <input class="curiousFormInput" type="text" name="name" id="name" placeholder="Name" />
-                                <span class="curiousFormError" id="error_name" style="display:none;"></span>
-                                <input class="curiousFormInput" name="phonenumber" type="text" id="phonenumber" placeholder="Phone Number" />
-                                <span class="curiousFormError" id="error_phonenumber" style="display:none;"></span>
-                                <input class="curiousFormInput" name="emailid" type="text" id="emailid" placeholder="Email ID*" />
-                                <span class="curiousFormError" id="error_emailid" style="display:none;"></span>
-                                <input class="curiousFormInput" name="schoolname" type="text" id="schoolname" placeholder="School Name" />
-                                <span class="curiousFormError" id="error_schoolname" style="display:none;"></span>
-                                <input class="curiousFormInput" name="schoolpincode" type="text" id="schoolpincode" placeholder="School Pincode" />
-                                <span class="curiousFormError" id="error_schoolpincode" style="display:none;"></span>
-                                <select name="roleinschool" id="roleinschool" required="" class="curiousFormInput">
-                                    <option disabled value="">Role at School *</option>
-                                    <option value="Director">Director</option>
-                                    <option value="Principal">Principal</option>
-                                    <option value="School Owner">School Owner</option>
-                                    <option value="Trustee">Trustee</option>
-                                    <option value="Vice Principal">Vice Principal</option>
-                                    <option value="Teacher">Teacher</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                                <span class="curiousFormError" id="error_roleinschool" style="display:none;"></span>
-                                <input type="hidden" name="datetime" id="datetime" />
-                                <input type="hidden" name="status" id="status" value="Open" />
-                                <aside>
-                                    <button  class="curiousFormSubmit" type="submit">Submit</button>
-                                </aside>
-                                </form>
+                                <div class="tabs">
+                                    <div class="items active" data-code="invite">
+                                        <p>I have an Invite Code</p>
+                                    </div>
+                                    <div class="items" data-code="need">
+                                        <p>I need an Invite Code</p>
+                                    </div>
+                                </div>
+                                <div class="tabcontent" id="invite">
+                                    <div class="tabinr">
+                                       <p><strong>Congratulations!</strong>     
+                                        Your Invite Code is successfully validated.</p>
+                                        <div class="button">
+                                            <a href="" class="btn">
+                                                Pay Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabcontent" id="need" style="display: none;">
+                                    <div class="tabinr">
+                                        <p>Please share your details to complete the pre-booking process</p>
+                                        <form id="contact-form" name="contact-form">
+                                        <input class="curiousFormInput" type="text" name="name" id="name" placeholder="Name" />
+                                        <span class="curiousFormError" id="error_name" style="display:none;"></span>
+                                        <input class="curiousFormInput" name="phonenumber" type="text" id="phonenumber" placeholder="Phone Number" />
+                                        <span class="curiousFormError" id="error_phonenumber" style="display:none;"></span>
+                                        <input class="curiousFormInput" name="emailid" type="text" id="emailid" placeholder="Email ID*" />
+                                        <span class="curiousFormError" id="error_emailid" style="display:none;"></span>
+                                        <input class="curiousFormInput" name="schoolname" type="text" id="schoolname" placeholder="School Name" />
+                                        <span class="curiousFormError" id="error_schoolname" style="display:none;"></span>
+                                        <input class="curiousFormInput" name="schoolpincode" type="text" id="schoolpincode" placeholder="School Pincode" />
+                                        <span class="curiousFormError" id="error_schoolpincode" style="display:none;"></span>
+                                        <select name="roleinschool" id="roleinschool" required="" class="curiousFormInput">
+                                            <option disabled value="">Role at School *</option>
+                                            <option value="Director">Director</option>
+                                            <option value="Principal">Principal</option>
+                                            <option value="School Owner">School Owner</option>
+                                            <option value="Trustee">Trustee</option>
+                                            <option value="Vice Principal">Vice Principal</option>
+                                            <option value="Teacher">Teacher</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <span class="curiousFormError" id="error_roleinschool" style="display:none;"></span>
+                                        <input type="hidden" name="datetime" id="datetime" />
+                                        <input type="hidden" name="status" id="status" value="Open" />
+                                        <aside>
+                                            <button  class="curiousFormSubmit" type="submit">Request Callback</button>
+                                        </aside>
+                                        </form>
+                                        <p>You can also <a href="">Call Us</a> for the same.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="curiousform" id="screen_thankyou" style="display:none;">
                                 <h4>
@@ -117,6 +141,23 @@
 
      
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        
+		$(document).ready(function() {
+			// Handle click event on .techbook elements
+			$('.tabs .items').click(function() {
+				// Get the value of the data-book attribute of the clicked element
+				var bookType = $(this).attr('data-code');
+				
+                $('.tabcontent').hide();
+                $('.tabs .items').removeClass('active');
+				
+				// Show the matching div based on the data-book attribute
+				$('#' + bookType).show();
+                $(this).addClass('active');
+			});
+		});
+    </script>
 	<script>
         var currentdate = new Date(); 
         var datetime = currentdate.getDate() + "/"
