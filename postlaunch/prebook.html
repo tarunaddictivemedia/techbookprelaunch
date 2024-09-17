@@ -59,46 +59,66 @@
 				<div class="col-4">
 					<div class="content">
 
- 
+                        <div class="curiouscontainer" id="curiouscontainer1" style="display: none;">
+                            <h2>Curious to learn more?</h2>
+                            <aside>
+                                <span onclick="requestDemo();" class="curiousFormSubmit">Request a demo</span>
+                            </aside>
+                        </div>
 
-                        <div class="curiouscontainer" id="curiouscontainer2">
+                        <div class="curiouscontainer" id="curiouscontainer2" style="display: block;">
                             <h2 class="left">Pre-book now to secure<br />Techbook for your school.</h2>
-                            <div class="curiousform" id="screen_curiousform" style="display:block;">
-                                <div class="tabs">
-                                    <div class="items active" data-code="invite">
-                                        <p>I have an Invite Code</p>
-                                    </div>
-                                    <div class="items" data-code="need">
-                                        <p>I need an Invite Code</p>
-                                    </div>
+                            <div class="curiousholder">
+                                <dl id="invitecodeholder">
+                                    <dt id="have_InviteCode" class="active" onclick="setInviteCode('have');">I have an Invite Code</dt>
+                                    <dt id="need_InviteCode" onclick="setInviteCode('need');">I need an Invite Code</dt>
+                                </dl>
+                                <article id="curious_congratulations" style="display: none;">
+                                    <p>
+                                        <span>Congratulations!</span>
+                                        <b>Your Invite Code is successfully validated.</b>
+                                    </p>
+                                    <aside>
+                                        <span class="curiousFormSubmit" onclick="window.open('https://pages.razorpay.com/techbook','_self');">Pay Now</span>
+                                    </aside>
+                                </article>
+                                <article id="curious_oops" style="display: none;">
+                                    <p>
+                                        <span>Oops!</span>
+                                        <b id="curious_msg">The entered Invite Code is invalid.</b> 
+                                    </p>
+                                    <aside>
+                                        <span class="curiousFormSubmit" onclick="setInviteCode('have');">Try Again</span>
+                                    </aside>
+                                </article> 
+                                
+                                
+                                <div class="curiousinfo" id="screen_curioushaveandneed" style="display:block;">
+                                    <h6>Enter your exclusive Invite Code</h6>
+                                    <input class="curiousFormInput cfi2" type="text" name="checkinvitecode" id="checkinvitecode" maxlength="9" />
+                                    <span class="curiousFormError cfe2" id="error_checkinvitecode" style="display:none;"></span>
+                                    <aside>
+                                        <span class="curiousFormSubmit cfs2" onclick="invitecodeHandler();">Validate Invite Code</span>
+                                    </aside>
                                 </div>
-                                <div class="tabcontent" id="invite">
-                                    <div class="tabinr">
-                                       <p><strong>Congratulations!</strong>     
-                                        Your Invite Code is successfully validated.</p>
-                                        <div class="button">
-                                            <a href="" class="btn">
-                                                Pay Now
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tabcontent" id="need" style="display: none;">
-                                    <div class="tabinr">
-                                        <p>Please share your details to complete the pre-booking process</p>
-                                        <form id="contact-form" name="contact-form">
+                                
+
+                                 <!-- form  start -->
+                                <div class="curiousinfo" id="screen_curiousform" style="display:none;">
+                                    <p>Please share your details to complete the pre-booking process</p>
+                                    <form id="contact-form" name="contact-form">
                                         <input class="curiousFormInput" type="text" name="name" id="name" placeholder="Name" />
                                         <span class="curiousFormError" id="error_name" style="display:none;"></span>
-                                        <input class="curiousFormInput" name="phonenumber" type="text" id="phonenumber" placeholder="Phone Number" />
+                                        <input class="curiousFormInput" name="phonenumber" type="text" id="phonenumber" placeholder="Phone Number" maxlength="10" />
                                         <span class="curiousFormError" id="error_phonenumber" style="display:none;"></span>
                                         <input class="curiousFormInput" name="emailid" type="text" id="emailid" placeholder="Email ID*" />
                                         <span class="curiousFormError" id="error_emailid" style="display:none;"></span>
                                         <input class="curiousFormInput" name="schoolname" type="text" id="schoolname" placeholder="School Name" />
                                         <span class="curiousFormError" id="error_schoolname" style="display:none;"></span>
-                                        <input class="curiousFormInput" name="schoolpincode" type="text" id="schoolpincode" placeholder="School Pincode" />
+                                        <input class="curiousFormInput" name="schoolpincode" type="text" id="schoolpincode" placeholder="School Pincode" maxlength="6" />
                                         <span class="curiousFormError" id="error_schoolpincode" style="display:none;"></span>
-                                        <select name="roleinschool" id="roleinschool" required="" class="curiousFormInput">
-                                            <option disabled value="">Role at School *</option>
+                                        <select name="roleinschool" id="roleinschool" class="curiousFormInput">
+                                            <option value="select">Role at School *</option>
                                             <option value="Director">Director</option>
                                             <option value="Principal">Principal</option>
                                             <option value="School Owner">School Owner</option>
@@ -113,19 +133,24 @@
                                         <aside>
                                             <button  class="curiousFormSubmit" type="submit">Request Callback</button>
                                         </aside>
-                                        </form>
-                                        <p>You can also <a href="">Call Us</a> for the same.</p>
-                                    </div>
+                                    </form>
+                                    <p>You can also <a href="#">Call Us</a> for the same.</p>
                                 </div>
+                                 <!-- form start -->
+
+                                <!-- thank start -->
+                                <div class="curiousinfo" id="screen_thankyou" style="display:none;">
+                                    <h4>
+                                        <span>Thank you</span>
+                                        for submitting your details!<br><br>
+                                        We've added you to our waitlist. <br>
+                                        Keep an eye on your inbox or WhatsApp for updates!
+                                    </h4>
+                                </div>
+                                 <!-- thank end -->
+
                             </div>
-                            <div class="curiousform" id="screen_thankyou" style="display:none;">
-                                <h4>
-                                    <span>Thank you</span>
-                                    for submitting your details!<br><br>
-                                    We've added you to our waitlist. <br>
-                                    Keep an eye on your inbox or WhatsApp for updates!
-                                </h5>
-                            </div>
+                            
                         </div>
 					</div>
 				</div>
@@ -133,6 +158,14 @@
 		</div>
 	 </section>
 	<!-- Curious to learn more? End -->
+    <!-- pageloader start -->
+    <div class="pageloader" id="pageloader">
+        <div>
+          <aside></aside>
+          <h2>Loading...</h2>
+        </div>
+    </div>
+    <!-- pageloader End -->
 
 
 
@@ -141,23 +174,6 @@
 
      
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        
-		$(document).ready(function() {
-			// Handle click event on .techbook elements
-			$('.tabs .items').click(function() {
-				// Get the value of the data-book attribute of the clicked element
-				var bookType = $(this).attr('data-code');
-				
-                $('.tabcontent').hide();
-                $('.tabs .items').removeClass('active');
-				
-				// Show the matching div based on the data-book attribute
-				$('#' + bookType).show();
-                $(this).addClass('active');
-			});
-		});
-    </script>
 	<script>
         var currentdate = new Date(); 
         var datetime = currentdate.getDate() + "/"
@@ -167,7 +183,101 @@
                 + currentdate.getMinutes() + ":" 
                 + currentdate.getSeconds();
         $("#datetime").val(datetime);
+ 
+        function requestDemo()
+        {
+            $("#curiouscontainer1").slideUp(300);
+            $("#curiouscontainer2").slideDown(300);
+        }
+        function setInviteCode(value)
+        {
+            $("#curious_congratulations, #curious_oops, #screen_thankyou").hide();
+            $("#checkinvitecode").val('');
+            $("#error_checkinvitecode, .curiousFormError").hide().html('');
+            $("#contact-form").find('input').val('');
+            $("#contact-form").find('select').val('select');
 
+            $("#invitecodeholder dt").removeClass('active');
+            $("#"+value+"_InviteCode").addClass('active');
+            if(value == 'have')
+            {
+                $("#screen_curioushaveandneed").slideDown(300);
+                $("#screen_curiousform").slideUp(300);
+            }
+            else if(value == 'need')
+            {
+                $("#screen_curioushaveandneed").slideUp(300);
+                $("#screen_curiousform").slideDown(300);
+            }
+            else 
+            {
+                // nothing
+            }
+        }
+
+        $('#checkinvitecode').keyup(function() {
+            $(this).val($(this).val().toUpperCase());
+        });
+
+        function invitecodeHandler()
+        {
+          //  const regexCode = /^[T][B][-][0-9]{6}$/i;
+            $("#error_checkinvitecode").hide().html('');
+            let inputvaluecode = $("#checkinvitecode").val().trim();
+            if(inputvaluecode == '')
+            {
+                $("#error_checkinvitecode").show().html('Please enter invite code');
+                return false;
+            }
+            else 
+            {    
+                $("#pageloader").fadeIn(300);
+                const url = 'https://ada.leadschool.in/api/techbook/validate-coupon';
+                let fetchData = {
+                    method: 'POST',
+                    body: JSON.stringify({ "coupon_code": inputvaluecode}),
+                    headers: new Headers({ 'Content-Type': 'application/json; charset=UTF-8'})
+                }
+                fetch(url, fetchData)
+                .then(response => {
+                    $("#pageloader").fadeOut(300); 
+                    if (!response.ok) { 
+                        alert('Network response was not ok'); 
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    if (data.success) 
+                    {
+                        $("#curious_congratulations").show();
+                        $("#curious_oops").hide();
+                        sessionStorage.setItem('invitecode', inputvaluecode)
+                    } 
+                    else 
+                    {
+                        $("#curious_congratulations").hide();
+                        $("#curious_oops").show();
+                        $("#curious_msg").text(data.message);
+                        $("#checkinvitecode").val('');
+                    }
+                    $("#error_checkinvitecode").hide().html('');
+                    // $("#invitecodeholder").addClass('disabled');
+                    // $("#screen_curiousform").slideDown(300);
+                    $("#screen_curioushaveandneed").slideUp(300);
+                    $("#pageloader").fadeOut(300);
+                })
+                .catch(error => {
+                    alert('fetch Failed : ', error);
+                    $("#pageloader").fadeOut(300);
+                });
+                return true;
+            }
+        }
+          
+        
+        
+        
 
         $('#contact-form').on('submit', function(e) {
             e.preventDefault();
@@ -225,15 +335,17 @@
                 $("#error_schoolpincode").show().html("Invalid Pincode!");
                 return false;
             }
-            else if($("#roleinschool").val() == '')
+            else if($("#roleinschool").val() == '' || $("#roleinschool").val() == 'select')
             {
-                $("#error_roleinschool").show().html('Please enter your Roll in School');
+                $("#error_roleinschool").show().html('Please select Roll in School');
                 return false;
             }
             else 
             {
+                $("#pageloader").fadeIn(300);
+                $("#curious_congratulations, #curious_oops").hide();
                 $(".curiousFormError").hide().html('');
-                console.log($(this).serialize())
+                 console.log($(this).serialize());
                 $.ajax({
                     type: 'POST',
                     url: 'https://script.google.com/macros/s/AKfycbymiULfWWJgNqiKnKsHyqjA_cQmKezMizw4pMy8fELIUAbdz_16Q74Sfb8nmm2CvfqElg/exec',
@@ -242,19 +354,21 @@
                     {
                         $("#screen_curiousform").slideUp(300);
                         $("#screen_thankyou").slideDown(300);
-                        setTimeout(function(){ location.href="https://pages.razorpay.com/techbook" }, 2000);
+                        $("#pageloader").fadeOut(300);
+                        // setTimeout(function(){ 
+                        //     location.href="https://pages.razorpay.com/techbook" 
+                        // }, 2000);
                     },
                     error: function(err) 
                     {
+                        $("#pageloader").fadeOut(300);
                         alert('Error submitting form');
                     }
                 });
                 return true;
+                
             }
         });
-
- 
-
 	</script>
 
 

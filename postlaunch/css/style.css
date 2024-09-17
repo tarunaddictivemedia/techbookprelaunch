@@ -936,6 +936,46 @@ form#contact-form {
     text-align: left;
     margin-top: 2rem;
 }
+
+/* ################### pageloader ################### */
+.pageloader {display: none;position: fixed;left: 0;top: 0;z-index: 9;width: 100%;height: 100%;margin: 0;padding: 0;background: #000000; background: rgba(0, 0, 0, 0.8);text-align: center;}
+.pageloader div { position: absolute; left: 50%;top: 50%; transform: translate(-50%, -50%); width: 260px; height: auto; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+.pageloader div aside { border:7px solid #fff; border-radius: 50%; border-top:7px solid #703d95;width:60px;height:60px;-webkit-animation: spin 2s linear infinite; animation: spin 2s linear infinite; }
+.pageloader div h2 {  width: 100%; float: left; margin: 2rem 0 0 0; padding: 0; text-align: center; color:#fff; line-height: 1; font-size:18px; font-weight:normal;  text-transform: none; } 
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); }  100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* ################### sectionload ################### */
+.sectionload {display: block; width: 100%; height: auto;  min-height:270px;  float: left; margin: 0;padding: 0;background: transparent;  display: flex; justify-content: center; align-items: center;  }
+.sectionload div { float: none; margin: 1rem auto; width: 260px; height: auto; display: flex; justify-content: center; align-items: center; flex-direction: column;  }
+.sectionload div aside { border:5px solid #fff; border-radius: 50%; border-top:5px solid #afcdaf;width:50px;height:50px;-webkit-animation: spin 2s linear infinite; animation: spin 2s linear infinite; }
+.sectionload div h2 {  width: 100%; float: left; margin: 1rem 0 0 0; padding: 0; text-align: center; color:#fff; line-height: 1; font-size:18px; font-weight:normal;  text-transform: none; } 
+.curiouscontainer { width: 100%; }
+.curiouscontainer h2 { text-align: center; }
+.curiouscontainer h2.left { text-align: left; line-height: 1.2; }
+.curiouscontainer aside { margin-top: 0.7rem; }
+.curiousholder { padding:0 0 1.5rem 0;  box-sizing: border-box; border-radius: 10px; background-color: #ffff; margin-top:1.5rem; box-shadow:0 0 20px 0px rgba(0,0,0,0.6) }
+.curiousholder dl { width: 100%; overflow: hidden; border-radius: 10px 10px 0 0; display: flex; justify-content: center; align-items: center; }
+.curiousholder dl.disabled { user-select: none; pointer-events: none; }
+.curiousholder dl dt { padding: 0.8rem; box-sizing: border-box; width: 50%; color: #c1c1c1; text-align: center; font-size: 1.2rem; cursor: pointer; }
+.curiousholder dl dt.active { background-color: #eeefef; color: #411e78; font-weight: bold; user-select: none; pointer-events: none; }
+.curiousholder article { width: 100%; padding:1rem 1.5rem; text-align: left; font-size: 1.2rem; font-weight: 600; color: #000000; }
+.curiousholder article p { width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; color: #000000; }
+.curiousholder article p span { display: block; color: #411e78; font-size: 1.8rem; font-weight: bold;  }
+
+.curiousinfo { padding:1.5rem 1.5rem 0 1.5rem; text-align: left;  }
+.curiousinfo p {  font-size: 1.3rem;  }
+.curiousinfo h4 { text-align: left; font-size: 1.2rem; color: #000000; }
+.curiousinfo h4 span { display: block; color: #411e78; font-size: 1.8rem;  }
+.curiousinfo h6 { text-align: left; font-size: 1.2rem; color: #411e78; }
+.curiousFormError { width: 100%; color: red;  font-size:0.9rem;  }
+.curiousFormError.cfe2 {  width: 100%;  float: left; text-align: left;}
+.curiousFormInput { width: 100%; margin-top: 1rem; font-size: 1rem; height: 3rem; width: 100%; background: #f1f1f1; padding:0.7rem 1rem; }
+.curiousFormInput.cfi2 { width: 70%; border-radius: 10px; }
+.curiousFormSubmit { display: inline-block; text-transform: uppercase; background-image: linear-gradient(to bottom, #703d95, #37378f); font-size: 1rem; padding: 1rem 3rem; margin-top: 1rem; border-radius: 40px; font-weight: 600; color: #fff;
+width: auto; height: auto; cursor: pointer;}
+.curiousFormSubmit.cfs2 { padding: 0.6rem 1rem; }
+.curiousFormSubmit:hover { background-image: linear-gradient(to bottom, #37378f, #703d95); }
 @media(max-width: 2560px) {
     .threetechbook ul li img {
         height: 40rem;
