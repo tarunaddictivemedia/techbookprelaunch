@@ -1355,4 +1355,7 @@ width: auto; height: auto; cursor: pointer;}
             top: 5px;
             right: 0;
         }
+        .bookslider {
+            max-width: 34rem;
+        }
 }
