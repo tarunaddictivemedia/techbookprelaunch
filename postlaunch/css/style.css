@@ -39,6 +39,15 @@ abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite
     background: 0 0;
     font-family: 'Jost', sans-serif;
 }
+#bluebookpdf {
+    display: flex;align-items: center;height: 100%;
+}
+.bookpdfinnr {
+    display: block;
+}
+.bookslider {
+    max-width: 100rem;
+}
 ul  {
     list-style: none;
     padding-left: 0
@@ -397,9 +406,6 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
 .bookslider {
     width: 100%; /* Ensure slider takes full width */
 }
-#bluebookpdf {
-    padding-top: 40rem;
-}
 .slick-slide {
     display: block; /* Override default display style */
     overflow: hidden; /* Prevent overflow issues */
@@ -602,7 +608,9 @@ header.siteheader .menu ul li:hover ul.submenu {
     right: 20px;
     z-index: 10;
     width: 29px;
+    cursor: pointer;
 }
+.bookFeature ul li img {cursor: pointer;}
 .sitefooter ul li {
     margin-bottom: 16px;
     font-size: 16px;
@@ -980,9 +988,6 @@ width: auto; height: auto; cursor: pointer;}
     .threetechbook ul li img {
         height: 40rem;
     }
-    #bluebookpdf {
-        padding-top: 24rem;
-    }
     .mainbanner {
         height: 120vh;
     }
@@ -1001,12 +1006,9 @@ width: auto; height: auto; cursor: pointer;}
     .middlebook {
         margin-top: -10rem;
     }
-    #bluebookpdf .slideinnr img {
+    /* #bluebookpdf .slideinnr img {
         height: 32rem;
-    }
-    #bluebookpdf {
-        padding-top: 20rem;
-    }
+    } */
     #bluebookpdf .bookpdfrow {
         width: 60%;
         margin: 0 auto;
@@ -1221,12 +1223,9 @@ width: auto; height: auto; cursor: pointer;}
         width: 90%;
         margin: 0 auto;
     }
-    #bluebookpdf .slideinnr img {
+    /* #bluebookpdf .slideinnr img {
         height: 20rem;
-    }
-    #bluebookpdf {
-        padding-top: 16rem;
-    }
+    } */
     #bluebookpdf .close {
         right: -10px;
         top: 22px;
