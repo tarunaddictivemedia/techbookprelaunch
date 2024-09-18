@@ -1358,4 +1358,18 @@ width: auto; height: auto; cursor: pointer;}
         .bookslider {
             max-width: 34rem;
         }
+        .curiouscontainer h2.left {
+            margin-bottom: 3rem;
+        }
+        .curiouslearnsec .image img {
+            max-width: 120%;
+            object-fit: fill;
+            object-position: left;
+            height: auto;
+            margin-left: -30px;
+        }
+        section#curiouslearnsec {
+            height: auto;
+            padding: 6rem 0px 6rem;
+        } 
 }
