@@ -641,7 +641,7 @@ header.siteheader .menu ul li:hover ul.submenu {
     line-height: 1.4;
 }
 /* Responsive Css */
-.bookFeature h6 {
+.bookFeature h2 {
     font-size: 2.375rem;
     color: #411e78;
     font-weight: 500;
@@ -1253,7 +1253,7 @@ width: auto; height: auto; cursor: pointer;}
         height: 25rem;
         margin: 0 auto;
     }
-    .bookFeature h6 {
+    .bookFeature h2 {
         font-size: 24px;
     }
     
