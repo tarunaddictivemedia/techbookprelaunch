@@ -67,88 +67,92 @@
                         </div>
 
                         <div class="curiouscontainer" id="curiouscontainer2" style="display: block;">
-                            <h2 class="left">Pre-book now to secure<br />Techbook for your school.</h2>
-                            <div class="curiousholder">
-                                <dl id="invitecodeholder">
-                                    <dt id="have_InviteCode" class="active" onclick="setInviteCode('have');">I have an Invite Code</dt>
-                                    <dt id="need_InviteCode" onclick="setInviteCode('need');">I need an Invite Code</dt>
-                                </dl>
-                                <article id="curious_congratulations" style="display: none;">
-                                    <p>
-                                        <span>Congratulations!</span>
-                                        <b>Your Invite Code is successfully validated.</b>
-                                    </p>
-                                    <aside>
-                                        <span class="curiousFormSubmit" onclick="window.open('https://pages.razorpay.com/techbook','_self');">Pay Now</span>
-                                    </aside>
-                                </article>
-                                <article id="curious_oops" style="display: none;">
-                                    <p>
-                                        <span>Oops!</span>
-                                        <b id="curious_msg">The entered Invite Code is invalid.</b> 
-                                    </p>
-                                    <aside>
-                                        <span class="curiousFormSubmit" onclick="setInviteCode('have');">Try Again</span>
-                                    </aside>
-                                </article> 
-                                
-                                
-                                <div class="curiousinfo" id="screen_curioushaveandneed" style="display:block;">
-                                    <h6>Enter your exclusive Invite Code</h6>
-                                    <input class="curiousFormInput cfi2" type="text" name="checkinvitecode" id="checkinvitecode" maxlength="9" />
-                                    <span class="curiousFormError cfe2" id="error_checkinvitecode" style="display:none;"></span>
-                                    <aside>
-                                        <span class="curiousFormSubmit cfs2" onclick="invitecodeHandler();">Validate Invite Code</span>
-                                    </aside>
-                                </div>
-                                
+                            <div class="curiouscontainerbox">
+                                <div class="curiouscontainerinnr">  
+                                    <h2 class="left">Pre-book now to secure<br />Techbook for your school.</h2>
+                                    <div class="curiousholder">
+                                        <dl id="invitecodeholder">
+                                            <dt id="have_InviteCode" class="active" onclick="setInviteCode('have');">I have an Invite Code</dt>
+                                            <dt id="need_InviteCode" onclick="setInviteCode('need');">I need an Invite Code</dt>
+                                        </dl>
+                                        <article id="curious_congratulations" style="display: none;">
+                                            <p>
+                                                <span>Congratulations!</span>
+                                                <b>Your Invite Code is successfully validated.</b>
+                                            </p>
+                                            <aside>
+                                                <span class="curiousFormSubmit" onclick="window.open('https://pages.razorpay.com/techbook','_self');">Pay Now</span>
+                                            </aside>
+                                        </article>
+                                        <article id="curious_oops" style="display: none;">
+                                            <p>
+                                                <span>Oops!</span>
+                                                <b id="curious_msg">The entered Invite Code is invalid.</b> 
+                                            </p>
+                                            <aside>
+                                                <span class="curiousFormSubmit" onclick="setInviteCode('have');">Try Again</span>
+                                            </aside>
+                                        </article> 
+                                        
+                                        
+                                        <div class="curiousinfo" id="screen_curioushaveandneed" style="display:block;">
+                                            <h6>Enter your exclusive Invite Code</h6>
+                                            <input class="curiousFormInput cfi2" type="text" name="checkinvitecode" id="checkinvitecode" maxlength="9" />
+                                            <span class="curiousFormError cfe2" id="error_checkinvitecode" style="display:none;"></span>
+                                            <aside>
+                                                <span class="curiousFormSubmit cfs2" onclick="invitecodeHandler();">Validate Invite Code</span>
+                                            </aside>
+                                        </div>
+                                        
 
-                                 <!-- form  start -->
-                                <div class="curiousinfo" id="screen_curiousform" style="display:none;">
-                                    <p>Please share your details to complete the pre-booking process</p>
-                                    <form id="contact-form" name="contact-form">
-                                        <input class="curiousFormInput" type="text" name="name" id="name" placeholder="Name" />
-                                        <span class="curiousFormError" id="error_name" style="display:none;"></span>
-                                        <input class="curiousFormInput" name="phonenumber" type="text" id="phonenumber" placeholder="Phone Number" maxlength="10" />
-                                        <span class="curiousFormError" id="error_phonenumber" style="display:none;"></span>
-                                        <input class="curiousFormInput" name="emailid" type="text" id="emailid" placeholder="Email ID*" />
-                                        <span class="curiousFormError" id="error_emailid" style="display:none;"></span>
-                                        <input class="curiousFormInput" name="schoolname" type="text" id="schoolname" placeholder="School Name" />
-                                        <span class="curiousFormError" id="error_schoolname" style="display:none;"></span>
-                                        <input class="curiousFormInput" name="schoolpincode" type="text" id="schoolpincode" placeholder="School Pincode" maxlength="6" />
-                                        <span class="curiousFormError" id="error_schoolpincode" style="display:none;"></span>
-                                        <select name="roleinschool" id="roleinschool" class="curiousFormInput">
-                                            <option value="select">Role at School *</option>
-                                            <option value="Director">Director</option>
-                                            <option value="Principal">Principal</option>
-                                            <option value="School Owner">School Owner</option>
-                                            <option value="Trustee">Trustee</option>
-                                            <option value="Vice Principal">Vice Principal</option>
-                                            <option value="Teacher">Teacher</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                        <span class="curiousFormError" id="error_roleinschool" style="display:none;"></span>
-                                        <input type="hidden" name="datetime" id="datetime" />
-                                        <input type="hidden" name="status" id="status" value="Open" />
-                                        <aside>
-                                            <button  class="curiousFormSubmit" type="submit">Request Callback</button>
-                                        </aside>
-                                    </form>
-                                    <p>You can also <a href="#">Call Us</a> for the same.</p>
-                                </div>
-                                 <!-- form start -->
+                                        <!-- form  start -->
+                                        <div class="curiousinfo" id="screen_curiousform" style="display:none;">
+                                            <p>Please share your details to complete the pre-booking process</p>
+                                            <form id="contact-form" name="contact-form">
+                                                <input class="curiousFormInput" type="text" name="name" id="name" placeholder="Name" />
+                                                <span class="curiousFormError" id="error_name" style="display:none;"></span>
+                                                <input class="curiousFormInput" name="phonenumber" type="text" id="phonenumber" placeholder="Phone Number" maxlength="10" />
+                                                <span class="curiousFormError" id="error_phonenumber" style="display:none;"></span>
+                                                <input class="curiousFormInput" name="emailid" type="text" id="emailid" placeholder="Email ID*" />
+                                                <span class="curiousFormError" id="error_emailid" style="display:none;"></span>
+                                                <input class="curiousFormInput" name="schoolname" type="text" id="schoolname" placeholder="School Name" />
+                                                <span class="curiousFormError" id="error_schoolname" style="display:none;"></span>
+                                                <input class="curiousFormInput" name="schoolpincode" type="text" id="schoolpincode" placeholder="School Pincode" maxlength="6" />
+                                                <span class="curiousFormError" id="error_schoolpincode" style="display:none;"></span>
+                                                <select name="roleinschool" id="roleinschool" class="curiousFormInput">
+                                                    <option value="select">Role at School *</option>
+                                                    <option value="Director">Director</option>
+                                                    <option value="Principal">Principal</option>
+                                                    <option value="School Owner">School Owner</option>
+                                                    <option value="Trustee">Trustee</option>
+                                                    <option value="Vice Principal">Vice Principal</option>
+                                                    <option value="Teacher">Teacher</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <span class="curiousFormError" id="error_roleinschool" style="display:none;"></span>
+                                                <input type="hidden" name="datetime" id="datetime" />
+                                                <input type="hidden" name="status" id="status" value="Open" />
+                                                <aside>
+                                                    <button  class="curiousFormSubmit" type="submit">Request Callback</button>
+                                                </aside>
+                                            </form>
+                                            <p>You can also <a href="#">Call Us</a> for the same.</p>
+                                        </div>
+                                        <!-- form start -->
 
-                                <!-- thank start -->
-                                <div class="curiousinfo" id="screen_thankyou" style="display:none;">
-                                    <h4>
-                                        <span>Thank you</span>
-                                        for submitting your details!<br><br>
-                                        We've added you to our waitlist. <br>
-                                        Keep an eye on your inbox or WhatsApp for updates!
-                                    </h4>
-                                </div>
-                                 <!-- thank end -->
+                                        <!-- thank start -->
+                                        <div class="curiousinfo" id="screen_thankyou" style="display:none;">
+                                            <h4>
+                                                <span>Thank you</span>
+                                                for submitting your details!<br><br>
+                                                We've added you to our waitlist. <br>
+                                                Keep an eye on your inbox or WhatsApp for updates!
+                                            </h4>
+                                        </div>
+                                        <!-- thank end -->
 
+                                    </div>
+                                </div>
                             </div>
                             
                         </div>

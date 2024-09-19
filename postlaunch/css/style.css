@@ -984,6 +984,12 @@ form#contact-form {
 width: auto; height: auto; cursor: pointer;}
 .curiousFormSubmit.cfs2 { padding: 0.6rem 1rem; }
 .curiousFormSubmit:hover { background-image: linear-gradient(to bottom, #37378f, #703d95); }
+.curiouscontainerbox {
+    height: 560px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
 @media(max-width: 2560px) {
     .threetechbook ul li img {
         height: 40rem;
@@ -1372,4 +1378,7 @@ width: auto; height: auto; cursor: pointer;}
             height: auto;
             padding: 6rem 0px 6rem;
         } 
+        .curiouscontainerbox {
+            height: auto;
+        }
 }
