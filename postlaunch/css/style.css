@@ -987,7 +987,7 @@ width: auto; height: auto; cursor: pointer;}
 .curiouscontainerbox {
     height: 560px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     padding-bottom: 30px;
 }
