@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
 	<title>Techbook: PREBOOK</title>
+	<link rel="icon" href="images/logo.ico" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +88,7 @@
                                         <article id="curious_oops" style="display: none;">
                                             <p>
                                                 <span>Oops!</span>
-                                                <b id="curious_msg">The entered Invite Code is invalid.</b> 
+                                                <b id="curious_msg">The invite code you entered is invalid.</b> 
                                             </p>
                                             <aside>
                                                 <span class="curiousFormSubmit" onclick="setInviteCode('have');">Try Again</span>
@@ -136,7 +137,7 @@
                                                     <button  class="curiousFormSubmit" type="submit">Request Callback</button>
                                                 </aside>
                                             </form>
-                                            <p>You can also call us at <a href="tel:+918884522552">+91-88845 22552</a> for the same.</p>
+                                            <p>You can also call us at <a href="tel:9355994229">Call Us</a> for the same.</p>
                                         </div>
                                         <!-- form start -->
 
@@ -193,8 +194,7 @@
             $("#curiouscontainer1").slideUp(300);
             $("#curiouscontainer2").slideDown(300);
         }
-        function setInviteCode(value)
-        {
+        function setInviteCode(value) {
             $("#curious_congratulations, #curious_oops, #screen_thankyou").hide();
             $("#checkinvitecode").val('');
             $("#error_checkinvitecode, .curiousFormError").hide().html('');
@@ -202,22 +202,31 @@
             $("#contact-form").find('select').val('select');
 
             $("#invitecodeholder dt").removeClass('active');
-            $("#"+value+"_InviteCode").addClass('active');
-            if(value == 'have')
-            {
+            $("#" + value + "_InviteCode").addClass('active');
+            
+            if (value == 'have') {
                 $("#screen_curioushaveandneed").slideDown(300);
                 $("#screen_curiousform").slideUp(300);
-            }
-            else if(value == 'need')
-            {
+            } else if (value == 'need') {
                 $("#screen_curioushaveandneed").slideUp(300);
                 $("#screen_curiousform").slideDown(300);
-            }
-            else 
-            {
+            } else {
                 // nothing
             }
         }
+
+        // Function to check the URL and set the invite code accordingly
+        $(document).ready(function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('needinvitecode')) {
+                
+                $("#screen_curiousform").slideDown(300);
+                setInviteCode('need'); 
+                $("#screen_curioushaveandneed").slideUp(300);
+                $("#" + value + "_InviteCode").addClass('active');
+            }
+        });
+
 
         $('#checkinvitecode').keyup(function() {
             $(this).val($(this).val().toUpperCase());

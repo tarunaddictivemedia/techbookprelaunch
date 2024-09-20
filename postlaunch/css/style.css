@@ -991,6 +991,9 @@ width: auto; height: auto; cursor: pointer;}
     flex-wrap: wrap;
     padding-bottom: 30px;
 }
+.formdata input, .formdata select, .curiousinfo input, .curiousinfo select, .curiousinfo button {
+    font-family: 'Jost';
+}
 @media(max-width: 2560px) {
     .threetechbook ul li img {
         height: 40rem;

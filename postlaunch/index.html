@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/logo.ico" type="image/x-icon">
 	<title>Techbook: The Intelligent Book for New-Age Schools</title>
 	<meta name="description" content="Upgrade your school with Techbook—digital textbooks featuring AR, personalized learning, and interactive exercises for Math, Science, and English. Pre-book for your school today!">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -12,6 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://mitsubishielectric.in/assets_gws_template_responsive/css/jquery.flipster.min.css">
 </head>
 <body>
 	<header class="siteheader">
@@ -63,16 +65,16 @@
 								</div>
 							</div>
 							<div class="col-7">	
-								<div class="threetechbook">
-									<ul>
-										<li>
-											<div class="techbook" data-book="bluebook"><img src="images/Blue-Book-1.png" alt="Blue-Book-1"></div>
+								<div class="flipster">
+									<ul class="flip-items">
+										<li class="yt-item--post techbook" id="1">
+											<img src="https://techbookprelaunch.netlify.app/postlaunch/images/sciencemiddle-active-Book.png" onclick="bluebooktechbook()">
 										</li>
-										<li>
-											<div class="techbook" data-book="redbook"><img src="images/Red-Book-1.png" alt="Red-Book-1"></div>
-										</li>
-										<li>
-											<div class="techbook" data-book="greenbook"><img src="images/Green-Book-1.png" alt="Green-Book-1"></div>
+										<li class="yt-item--post techbook" id="2">
+											<img src="https://techbookprelaunch.netlify.app/postlaunch/images/middle-active-Book.png" onclick="REDbooktechbook()">
+										 </li>
+										<li class="yt-item--post techbook" id="3">
+											<img src="https://techbookprelaunch.netlify.app/postlaunch/images/mathmiddle-active-Book.png" onclick="greenbooktechbook()">
 										</li>
 									</ul>
 								</div>	
@@ -350,7 +352,7 @@
 				<div class="col-5"></div>
 				<div class="col-5">					
 					<div class="formdata">	
-						<h2>Give Your School The Lead Advantage</h2>				
+						<h2>Bring Tomorrow’s Learning Today To Your School!</h2>				
 						<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
 						<script>
 						hbspt.forms.create({
@@ -386,7 +388,7 @@
 						<h4>For which subjects is The Techbook available?<span class="icon">+</span></h4>
 						<div class="details">The Techbook is currently available for Math, Science & English.</div>
 						<h4>How can I get TECHBOOK for my school?<span class="icon">+</span></h4>
-						<div class="details">Techbook is currently available by Invitation Only. To get your exclusive invite code, either get in touch with your Pinnacle Representative OR fill out your details here -<4AM to put><></div>
+						<div class="details">Techbook is currently available by Invitation Only. To get your exclusive invite code, either get in touch with your Pinnacle Representative OR fill out your <a href="/prebook.html?needinvitecode">details here</a> -<4AM to put><></div>
 						<h4>Can parents purchase a Techbook directly for their child?<span class="icon">+</span></h4>
 						<div class="details">
 							No. Techbook is available only for students in select new-age schools that pre-book. Check with your school to apply for Techbook.
@@ -532,22 +534,114 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://mitsubishielectric.in/assets_gws_template_responsive/js/jquery.flipster.min.js"></script>
+	<style>
+	.yt-item--post {
+		width: 300px;
+	}
+	.flipster--loop {
+	/*  .flipster__item--past { transform: translateX(-100%); }
+	.flipster__item--future { transform: translateX(100%); }*/
+	}
+	.flipster--loop .flipster__item {
+	position: absolute;
+	}
+	.flipster--loop .flipster__item--past-2 {
+	transform: translateX(-100%);
+	}
+	.flipster--loop .flipster__item--future-2 {
+	transform: translateX(100%);
+	}
+	.flipster--loop .flipster__item--past-1 {
+	transform: translateX(-50%);
+	}
+	.flipster--loop .flipster__item--future-1 {
+	transform: translateX(50%);
+	}
+	.flipster--infinite-carousel .flipster__container,
+	.flipster--infinite-carousel .flipster__item {
+	transition: all 350ms ease-in-out;
+	transition-timing-function: cubic-bezier(0.56, 0.12, 0.12, 0.98);
+	}
+	.flipster--infinite-carousel .flipster__item__content {
+	transition: inherit;
+	}
+	.flipster--infinite-carousel .flipster__item {
+	position: absolute;
+	opacity: 0;
+	perspective: 800px;
+	}
+	.flipster--infinite-carousel .flipster__item--past-2,
+	.flipster--infinite-carousel .flipster__item--future-2 {
+	opacity: 0.6;
+	transition-delay: 90ms;
+	}
+	.flipster--infinite-carousel .flipster__item--past-1,
+	.flipster--infinite-carousel .flipster__item--future-1 {
+	opacity: 0.8;
+	transition-delay: 60ms;
+	}
+	.flipster--infinite-carousel .flipster__item--current {
+	opacity: 1;
+	transition-delay: 0;
+	}
+	.flipster--infinite-carousel .flipster__item--past .flipster__item__content,
+	.flipster--infinite-carousel .flipster__item--future .flipster__item__content {
+	transform: scale(0.4);
+	}
+	.flipster--infinite-carousel .flipster__item--past-2 .flipster__item__content {
+	transform: translateX(-75%) rotateY(45deg) scale(0.6);
+	}
+	.flipster--infinite-carousel .flipster__item--future-2 .flipster__item__content {
+	transform: translateX(75%) rotateY(-45deg) scale(0.6);
+	}
+	.flipster--infinite-carousel .flipster__item--past-1 .flipster__item__content {
+	transform: translateX(-50%) rotateY(45deg) scale(0.8);
+	}
+	.flipster--infinite-carousel .flipster__item--future-1 .flipster__item__content {
+	transform: translateX(50%) rotateY(-45deg) scale(0.8);
+	}
+	.flipster--infinite-carousel .flipster__item--current .flipster__item__content {
+	transform: translateX(0) rotateY(0deg) scale(1);
+	}
+	@media(max-width: 800px) {
+		.flipster {
+			display: block;
+			overflow-x: visible;
+			overflow-y: visible;
+			position: relative;
+			transform: scale(0.8);
+		}
+
+	}
+	@media(max-width: 500px) {
+		.flipster {
+			margin-top: -110px;
+			transform: scale(0.54);
+		}
+		.mainbanner .headingBox {
+			padding-top: 16rem;
+		}
+	}
+	</style>
+	<script src="slider.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script>
-		$(document).ready(function() {
-			// Handle click event on .techbook elements
-			$('.techbook').click(function() {
-				// Get the value of the data-book attribute of the clicked element
-				var bookType = $(this).attr('data-book');
-				
-				// Hide all middlebook divs
-				$('.middlebook').hide();
-				$('.bookthreeblock').hide();
-				
+		function bluebooktechbook() {
+				$('.bookthreeblock').hide();				
 				// Show the matching div based on the data-book attribute
-				$('#' + bookType).show();
-			});
-		});
+				$('#bluebook').show();
+		}
+		function REDbooktechbook() {
+				$('.bookthreeblock').hide();				
+				// Show the matching div based on the data-book attribute
+				$('#redbook').show();
+		}
+		function greenbooktechbook() {
+				$('.bookthreeblock').hide();				
+				// Show the matching div based on the data-book attribute
+				$('#greenbook').show();
+		}
 		// Attach click event listener to all li elements within .menu
 		$('.requestaquote').click(function () {
 			$('html, body').animate({
