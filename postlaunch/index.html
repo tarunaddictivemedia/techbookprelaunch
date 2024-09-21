@@ -618,10 +618,14 @@
 	@media(max-width: 500px) {
 		.flipster {
 			margin-top: -110px;
-			transform: scale(0.54);
+			transform: scale(0.5);
 		}
 		.mainbanner .headingBox {
 			padding-top: 16rem;
+		}
+		.flipster ~ p {
+			position: relative;
+			top: -100px;
 		}
 	}
 	</style>
@@ -631,17 +635,20 @@
 		function bluebooktechbook() {
 				$('.bookthreeblock').hide();				
 				// Show the matching div based on the data-book attribute
-				$('#bluebook').show();
+				$('#bluebookpdf').show();
+				$('.bookslider').slick('refresh');
 		}
 		function REDbooktechbook() {
 				$('.bookthreeblock').hide();				
 				// Show the matching div based on the data-book attribute
-				$('#redbook').show();
+				$('#redbookpdf').show();
+				$('.bookslider').slick('refresh');
 		}
 		function greenbooktechbook() {
 				$('.bookthreeblock').hide();				
 				// Show the matching div based on the data-book attribute
-				$('#greenbook').show();
+				$('.greenbookpdf').show();
+				$('.bookslider').slick('refresh');
 		}
 		// Attach click event listener to all li elements within .menu
 		$('.requestaquote').click(function () {
