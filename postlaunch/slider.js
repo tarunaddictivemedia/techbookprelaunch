@@ -78,7 +78,7 @@
           // Loop around when the start or end is reached
           // If number, this is the number of items that will be shown when the beginning or end is reached
 
-          autoplay: 1000,
+          autoplay: 2000,
           // [false|milliseconds]
           // If a positive number, Flipster will automatically advance to next item after that number of milliseconds
 
