@@ -273,6 +273,9 @@
                         $("#curious_oops").show();
                         $("#curious_msg").text(data.message);
                         $("#checkinvitecode").val('');
+                        setTimeout(function() {
+                            setInviteCode('need');
+                        }, 2000); // 2000 milliseconds = 2 seconds
                     }
                     $("#error_checkinvitecode").hide().html('');
                     // $("#invitecodeholder").addClass('disabled');
