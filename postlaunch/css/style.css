@@ -1018,7 +1018,7 @@ span.tbfront input#checkinvitecode {
     padding-left: 25px;
 }
 #screen_curiousform input, #screen_curiousform select {
-    padding: 4px;
+    padding: 6px 4px;
     border: 1px solid #ddd;
     width: 100%;
     margin-bottom: 11px;
@@ -1040,6 +1040,13 @@ label.hs-error-msg.hs-main-font-element {
     border-radius: 20px;
     color: #fff;
     padding: 0.5rem 2rem;
+}
+#screen_curiousform input#i_agree_to_receive_communications_by_whatsapp-d6f73584-ff71-4699-a3c1-72ac86117862 {
+    width: auto;
+    padding: 0;
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
 }
 @media(max-width: 2560px) {
     .threetechbook ul li img {

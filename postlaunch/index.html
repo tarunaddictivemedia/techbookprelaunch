@@ -152,7 +152,8 @@
 							<div class="bookslider">
 								<div class="slide">
 									<div class="slideinnr">
-										<img src="images/Open-Green-Book-1-new.png" alt="">
+										<!-- <img src="images/Open-Green-Book-1-new.png" alt=""> -->
+										<div id="bluebook1"></div>
 										<div class="btnbox">
 											<a href="javascript:;" onclick="showmathariPopup()" class="posurl">
 											</a>
@@ -161,6 +162,7 @@
 								</div>
 								<div class="slide">
 									<div class="slideinnr">
+										<div id="bluebook2"></div>
 										<img src="images/Open-Blue-Book-new.png" alt="">
 										<div class="btnbox">
 											<a href="javascript:;" onclick="showpiePopup()" class="posurl">
@@ -535,6 +537,30 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script>
+        var animation = lottie.loadAnimation({
+        container: document.getElementById('bluebook1'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/BLUE_Book_Open_ARI.json' // Update this path
+    });
+
+    var animations = lottie.loadAnimation({
+        container: document.getElementById('bluebook2'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/BLUE_Book_Fold 2_PIE.json' // Update this path
+    });
+
+    animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+
+
+       
+
+    </script>
 	<script src="https://mitsubishielectric.in/assets_gws_template_responsive/js/jquery.flipster.min.js"></script>
 	<style>
 	.yt-item--post {
