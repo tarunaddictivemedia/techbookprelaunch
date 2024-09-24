@@ -291,6 +291,14 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     margin-bottom: 1rem;
     font-weight: 500;
 }
+.bookFeature ul li:nth-child(1) img, .bookFeature ul li:nth-child(2) img {
+    transition: 0.3s all ease-in-out;
+    position: relative;
+    top: 0;
+}
+.bookFeature ul li:nth-child(1) img:hover, .bookFeature ul li:nth-child(2) img:hover {
+    top: -5px;
+}
 .productslide .buttonBox .btn {
     font-size: 1.4rem;
     max-width: 18rem;
@@ -993,6 +1001,45 @@ width: auto; height: auto; cursor: pointer;}
 }
 .formdata input, .formdata select, .curiousinfo input, .curiousinfo select, .curiousinfo button {
     font-family: 'Jost';
+}
+.productslide .image img {
+    cursor: pointer;
+}
+span.tbfront {
+    position: relative;
+}
+span.tbfront:before {
+    content: "TB-";
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+span.tbfront input#checkinvitecode {
+    padding-left: 25px;
+}
+#screen_curiousform input, #screen_curiousform select {
+    padding: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 11px;
+}
+#screen_curiousform p {
+    margin-bottom: 10px;
+}
+label.hs-error-msg.hs-main-font-element {
+    color: red;
+    margin-bottom: 2px;
+    display: block;
+}
+#screen_curiousform input#i_agree_to_receive_communications_by_whatsapp-34584e0f-beb2-41e5-8f2a-33c0f93ca1e2 {
+    width: auto;
+}
+#screen_curiousform  input.hs-button.primary.large {
+    background-image: linear-gradient(to bottom, #37378f, #703d95);
+    width: auto;
+    border-radius: 20px;
+    color: #fff;
+    padding: 0.5rem 2rem;
 }
 @media(max-width: 2560px) {
     .threetechbook ul li img {

@@ -91,14 +91,15 @@
                                                 <b id="curious_msg">The invite code you entered is invalid.</b> 
                                             </p>
                                             <aside>
-                                                <span class="curiousFormSubmit" onclick="setInviteCode('have');">Try Again</span>
+                                                <span class="curiousFormSubmit" onclick="setInviteCode('have');" style="margin-right: 10px;">Try Again</span>
+                                                <span class="curiousFormSubmit" onclick="setInviteCode('need');">Request An Invite Code</span>
                                             </aside>
                                         </article> 
                                         
                                         
                                         <div class="curiousinfo" id="screen_curioushaveandneed" style="display:block;">
                                             <h6>Enter your exclusive Invite Code</h6>
-                                            <input class="curiousFormInput cfi2" type="text" name="checkinvitecode" id="checkinvitecode" maxlength="9" />
+                                            <span class="tbfront"><input class="curiousFormInput cfi2" type="text" name="checkinvitecode" id="checkinvitecode" maxlength="9"/></span>
                                             <span class="curiousFormError cfe2" id="error_checkinvitecode" style="display:none;"></span>
                                             <aside>
                                                 <span class="curiousFormSubmit cfs2" onclick="invitecodeHandler();">Validate Invite Code</span>
@@ -109,34 +110,14 @@
                                         <!-- form  start -->
                                         <div class="curiousinfo" id="screen_curiousform" style="display:none;">
                                             <p>Please share your details to complete the pre-booking process</p>
-                                            <form id="contact-form" name="contact-form">
-                                                <input class="curiousFormInput" type="text" name="name" id="name" placeholder="Name" />
-                                                <span class="curiousFormError" id="error_name" style="display:none;"></span>
-                                                <input class="curiousFormInput" name="phonenumber" type="text" id="phonenumber" placeholder="Phone Number" maxlength="10" />
-                                                <span class="curiousFormError" id="error_phonenumber" style="display:none;"></span>
-                                                <input class="curiousFormInput" name="emailid" type="text" id="emailid" placeholder="Email ID*" />
-                                                <span class="curiousFormError" id="error_emailid" style="display:none;"></span>
-                                                <input class="curiousFormInput" name="schoolname" type="text" id="schoolname" placeholder="School Name" />
-                                                <span class="curiousFormError" id="error_schoolname" style="display:none;"></span>
-                                                <input class="curiousFormInput" name="schoolpincode" type="text" id="schoolpincode" placeholder="School Pincode" maxlength="6" />
-                                                <span class="curiousFormError" id="error_schoolpincode" style="display:none;"></span>
-                                                <select name="roleinschool" id="roleinschool" class="curiousFormInput">
-                                                    <option value="select">Role at School *</option>
-                                                    <option value="Director">Director</option>
-                                                    <option value="Principal">Principal</option>
-                                                    <option value="School Owner">School Owner</option>
-                                                    <option value="Trustee">Trustee</option>
-                                                    <option value="Vice Principal">Vice Principal</option>
-                                                    <option value="Teacher">Teacher</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <span class="curiousFormError" id="error_roleinschool" style="display:none;"></span>
-                                                <input type="hidden" name="datetime" id="datetime" />
-                                                <input type="hidden" name="status" id="status" value="Open" />
-                                                <aside>
-                                                    <button  class="curiousFormSubmit" type="submit">Request Callback</button>
-                                                </aside>
-                                            </form>
+                                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                                            <script>
+                                            hbspt.forms.create({
+                                                region: "na1",
+                                                portalId: "8143162",
+                                                formId: "d6f73584-ff71-4699-a3c1-72ac86117862"
+                                              });
+                                            </script>
                                             <p>You can also <a href="tel:9355994229">Call Us</a> for the same.</p>
                                         </div>
                                         <!-- form start -->
@@ -265,7 +246,10 @@
                     {
                         $("#curious_congratulations").show();
                         $("#curious_oops").hide();
-                        sessionStorage.setItem('invitecode', inputvaluecode)
+                        sessionStorage.setItem('invitecode', inputvaluecode);
+                        setTimeout(function() {
+                            window.location.href = 'https://pages.razorpay.com/techbook';
+                        }, 1000);// 2000 milliseconds = 2 seconds
                     } 
                     else 
                     {
@@ -275,7 +259,7 @@
                         $("#checkinvitecode").val('');
                         setTimeout(function() {
                             setInviteCode('need');
-                        }, 2000); // 2000 milliseconds = 2 seconds
+                        }, 4000); // 2000 milliseconds = 2 seconds
                     }
                     $("#error_checkinvitecode").hide().html('');
                     // $("#invitecodeholder").addClass('disabled');
@@ -295,96 +279,8 @@
         
         
 
-        $('#contact-form').on('submit', function(e) {
-            e.preventDefault();
-            $(".curiousFormError").hide().html('');
-            const regexMobile = /^[6789][0-9]{9}$/i;
-            const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i
-            const regexZip = /^[0-9]{6}$/i;
-            if($("#name").val() == '')
-            {
-                $("#error_name").show().html('Please enter your Name');
-                return false;
-            }
-            else if($("#phonenumber").val() == '')
-            {
-                $("#error_phonenumber").show().html('Please enter your Phone number');
-                return false;
-            }
-            else if($("#phonenumber").val().length != 10)
-            {
-                $("#error_phonenumber").show().html('Phone Number must have at least 10 Digit');
-                return false;
-            }
-            else if(!regexMobile.test($("#phonenumber").val()))
-            {
-                $("#error_phonenumber").show().html("Invalid mobile number!");
-                return false;
-            }
-            else if($("#emailid").val() == '')
-            {
-                $("#error_emailid").show().html('Please enter your Email id');
-                return false;
-            }
-            else if(!regexEmail.test($("#emailid").val()))
-            {
-                $("#error_emailid").show().html('Please enter valid Email id');
-                return false;
-            }
-            else if($("#schoolname").val() == '')
-            {
-                $("#error_schoolname").show().html('Please enter your School name');
-                return false;
-            }
-            else if($("#schoolpincode").val() == '')
-            {
-                $("#error_schoolpincode").show().html('Please enter your Pincode');
-                return false;
-            }
-            else if($("#schoolpincode").val().length != 6)
-            {
-                $("#error_schoolpincode").show().html('Pincode must have at least 6 Digit');
-                return false;
-            }
-            else if(!regexZip.test($("#schoolpincode").val()))
-            {
-                $("#error_schoolpincode").show().html("Invalid Pincode!");
-                return false;
-            }
-            else if($("#roleinschool").val() == '' || $("#roleinschool").val() == 'select')
-            {
-                $("#error_roleinschool").show().html('Please select Roll in School');
-                return false;
-            }
-            else 
-            {
-                $("#pageloader").fadeIn(300);
-                $("#curious_congratulations, #curious_oops").hide();
-                $(".curiousFormError").hide().html('');
-                 console.log($(this).serialize());
-                $.ajax({
-                    type: 'POST',
-                    url: 'https://script.google.com/macros/s/AKfycbymiULfWWJgNqiKnKsHyqjA_cQmKezMizw4pMy8fELIUAbdz_16Q74Sfb8nmm2CvfqElg/exec',
-                    data:  $(this).serialize(),
-                    success: function(response) 
-                    {
-                        $("#screen_curiousform").slideUp(300);
-                        $("#screen_thankyou").slideDown(300);
-                        $("#pageloader").fadeOut(300);
-                        // setTimeout(function(){ 
-                        //     location.href="https://pages.razorpay.com/techbook" 
-                        // }, 2000);
-                    },
-                    error: function(err) 
-                    {
-                        $("#pageloader").fadeOut(300);
-                        alert('Error submitting form');
-                    }
-                });
-                return true;
-                
-            }
-        });
+        
+
 	</script>
 
 
