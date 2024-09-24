@@ -44,13 +44,16 @@ body {
         path: 'images/BLUE_Book_Open_ARI.json' // Update this path
     });
 
-    var animation = lottie.loadAnimation({
+    var animations = lottie.loadAnimation({
         container: document.getElementById('icon1'),
         renderer: 'svg',
         loop: true,
         autoplay: true,
         path: 'images/BLUE_Book_Fold 2_PIE.json' // Update this path
     });
+
+    animations.setSpeed(2); // Set to 0.5 for half speed, adjust as needed
+
 
        
 
