@@ -1004,7 +1004,7 @@ width: auto; height: auto; cursor: pointer;}
 .curiousFormSubmit.cfs2 { padding: 0.6rem 1rem; }
 .curiousFormSubmit:hover { background-image: linear-gradient(to bottom, #37378f, #703d95); }
 .curiouscontainerbox {
-    height: 40rem;
+    height: 50rem;
     display: flex;
     /* align-items: center; */
     flex-wrap: wrap;
