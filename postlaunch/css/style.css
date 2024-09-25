@@ -618,7 +618,8 @@ header.siteheader .menu ul li:hover ul.submenu {
     width: 29px;
     cursor: pointer;
 }
-.bookFeature ul li img {cursor: pointer;}
+.bookFeature ul li:nth-child(1) img,
+.bookFeature ul li:nth-child(2) img {cursor: pointer;}
 .sitefooter ul li {
     margin-bottom: 16px;
     font-size: 16px;
