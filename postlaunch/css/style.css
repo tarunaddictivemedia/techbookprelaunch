@@ -295,7 +295,7 @@ div#redbook1 {
     text-align: center;
 }
 div#redbook1 svg {
-    width: 60rem !important;!i;!;
+    width: 60rem !important;
 }
 .bookFeature ul li:nth-child(1) img, .bookFeature ul li:nth-child(2) img {
     transition: 0.3s all ease-in-out;
