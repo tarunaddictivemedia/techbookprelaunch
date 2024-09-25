@@ -129,7 +129,8 @@
 							<div class="bookslider">
 								<div class="slide">
 									<div class="slideinnr">
-										<img src="images/Open-Red-Book-new.png" alt="">
+										<!-- <img src="images/Open-Red-Book-new.png" alt=""> -->
+										<div id="redbook1"></div>
 										<div class="btnbox">
 											<a href="javascript:void(0)" onclick="showPopup()" class="posurl irabookvideo">												
 											</a>
@@ -186,7 +187,8 @@
 							<div class="bookslider">
 								<div class="slide">
 									<div class="slideinnr">
-										<img src="images/Open-Green-Book-new.png" alt="">
+										<!-- <img src="images/Open-Green-Book-new.png" alt=""> -->
+										<div id="greenbook1"></div>
 										<div class="btnbox">
 											<a href="javascript:;" onclick="showairPopup()" class="posurl">
 											</a>
@@ -195,7 +197,8 @@
 								</div>
 								<div class="slide">
 									<div class="slideinnr">
-										<img src="images/Open-green-Book--1new.png" alt="">
+										<!-- <img src="images/Open-green-Book--1new.png" alt=""> -->
+										<div id="greenbook2"></div>
 										<div class="btnbox">
 											<a href="javascript:;" onclick="scipiePopup()" class="posurl">
 											</a>
@@ -555,7 +558,34 @@
         path: 'images/BLUE_Book_Fold 2_PIE.json' // Update this path
     });
 
+animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+
     animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+	var animationss = lottie.loadAnimation({
+        container: document.getElementById('redbook1'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/redbook1.json' // Update this path
+    });
+
+    animationss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+        var animation = lottie.loadAnimation({
+        container: document.getElementById('greenbook1'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: 'images/greenbook1.json' // Update this path
+    });
+	var animationsss = lottie.loadAnimation({
+        container: document.getElementById('greenbook2'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/greenbook2.json' // Update this path
+    });
+
+    animationsss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
 
 
        
