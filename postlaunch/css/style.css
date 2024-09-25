@@ -291,6 +291,12 @@ header.siteheader .menu ul li.active a, header.siteheader .menu ul li a:hover {
     margin-bottom: 1rem;
     font-weight: 500;
 }
+div#redbook1 {
+    text-align: center;
+}
+div#redbook1 svg {
+    width: 60rem !important;!i;!;
+}
 .bookFeature ul li:nth-child(1) img, .bookFeature ul li:nth-child(2) img {
     transition: 0.3s all ease-in-out;
     position: relative;
