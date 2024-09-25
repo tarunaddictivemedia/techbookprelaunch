@@ -1096,6 +1096,9 @@ label.hs-error-msg.hs-main-font-element {
     html {
         font-size: 70%;
     }
+    span.tbfront input#checkinvitecode {
+        padding-left: 25px;
+    }
 }
 @media(max-width: 1440px ) {
     html {
