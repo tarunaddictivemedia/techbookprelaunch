@@ -13,7 +13,58 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://mitsubishielectric.in/assets_gws_template_responsive/css/jquery.flipster.min.css">
+	<link rel="stylesheet" href="https://mitsubishielectric.in/assets_gws_template_responsive/css/jquery.flipster.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script>
+        var animation = lottie.loadAnimation({
+        container: document.getElementById('bluebook1'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: 'images/BLUE_Book_Open_ARI_min.json' // Update this path
+    });
+
+    var animations = lottie.loadAnimation({
+        container: document.getElementById('bluebook2'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/BLUE_Book_Fold_02_PIE_min.json' // Update this path
+    });
+
+animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+
+    animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+	var animationss = lottie.loadAnimation({
+        container: document.getElementById('redbook1'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/RED_Book_Open_min.json' // Update this path
+    });
+
+    animationss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+        var animation = lottie.loadAnimation({
+        container: document.getElementById('greenbook1'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: 'images/GREEN_Book_Open_ARI_min.json' // Update this path
+    });
+	var animationsss = lottie.loadAnimation({
+        container: document.getElementById('greenbook2'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/GREEN_Book_Fold02_PIE_min.json' // Update this path
+    });
+
+    animationsss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+
+
+       
+
+    </script>
 </head>
 <body>
 	<header class="siteheader">
@@ -539,58 +590,7 @@
 	</div>
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
-    <script>
-        var animation = lottie.loadAnimation({
-        container: document.getElementById('bluebook1'),
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: 'images/BLUE_Book_Open_ARI_min.json' // Update this path
-    });
-
-    var animations = lottie.loadAnimation({
-        container: document.getElementById('bluebook2'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'images/BLUE_Book_Fold_02_PIE_min.json' // Update this path
-    });
-
-animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
-
-    animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
-	var animationss = lottie.loadAnimation({
-        container: document.getElementById('redbook1'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'images/RED_Book_Open_min.json' // Update this path
-    });
-
-    animationss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
-        var animation = lottie.loadAnimation({
-        container: document.getElementById('greenbook1'),
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: 'images/GREEN_Book_Open_ARI_min.json' // Update this path
-    });
-	var animationsss = lottie.loadAnimation({
-        container: document.getElementById('greenbook2'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'images/GREEN_Book_Fold02_PIE_min.json' // Update this path
-    });
-
-    animationsss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
-
-
-       
-
-    </script>
+	
 	<script src="https://mitsubishielectric.in/assets_gws_template_responsive/js/jquery.flipster.min.js"></script>
 	<style>
 	.yt-item--post {
