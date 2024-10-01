@@ -130,7 +130,6 @@
 								<div class="slide">
 									<div class="slideinnr">
 										<!-- <img src="images/Open-Red-Book-new.png" alt=""> -->
-										 <div class="loader"><p><img src="images/loader.gif" alt="loader">Loading...</p></div>
 										<div id="redbook1"></div>
 										<div class="btnbox">
 											<a href="javascript:void(0)" onclick="showPopup()" class="posurl irabookvideo">												
@@ -154,7 +153,6 @@
 							<div class="bookslider">
 								<div class="slide">
 									<div class="slideinnr">
-										<div class="loader"><p><img src="images/loader.gif" alt="loader">Loading...</p></div>
 										<!-- <img src="images/Open-Green-Book-1-new.png" alt=""> -->
 										<div id="bluebook1"></div>
 										<div class="btnbox">
@@ -165,7 +163,6 @@
 								</div>
 								<div class="slide">
 									<div class="slideinnr">
-										<div class="loader"><p><img src="images/loader.gif" alt="loader">Loading...</p></div>
 										<div id="bluebook2"></div>
 										<!-- <img src="images/Open-Blue-Book-new.png" alt=""> -->
 										<div class="btnbox">
@@ -190,7 +187,6 @@
 							<div class="bookslider">
 								<div class="slide">
 									<div class="slideinnr">
-										<div class="loader"><p><img src="images/loader.gif" alt="loader">Loading...</p></div>
 										<!-- <img src="images/Open-Green-Book-new.png" alt=""> -->
 										<div id="greenbook1"></div>
 										<div class="btnbox">
@@ -201,7 +197,6 @@
 								</div>
 								<div class="slide">
 									<div class="slideinnr">
-										<div class="loader"><p><img src="images/loader.gif" alt="loader">Loading...</p></div>
 										<!-- <img src="images/Open-green-Book--1new.png" alt=""> -->
 										<div id="greenbook2"></div>
 										<div class="btnbox">
@@ -767,10 +762,6 @@ animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
 				dots: false,
 				pauseOnHover: false,
 			});
-			
-			setTimeout(function() {
-                $('.loader').hide();
-			}, 10000);// 2000 milliseconds = 2 seconds
 		});
 		function showPopup() {
 			$('.iraredbook').show();

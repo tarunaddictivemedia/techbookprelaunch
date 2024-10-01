@@ -1059,26 +1059,6 @@ label.hs-error-msg.hs-main-font-element {
     position: relative;
     top: 2px;
 }
-.loader {
-    width: 21rem;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    min-height: 30rem;
-    z-index: 1;
-    position: relative;
-}
-.loader img {
-    margin-right: 1rem;
-    width: 2rem;
-    height: 2rem;
-}
-.loader p {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    width: 100%;
-}
 @media(max-width: 2560px) {
     .threetechbook ul li img {
         height: 40rem;
