@@ -542,7 +542,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <script>
-        var animation = lottie.loadAnimation({
+	window.onload = function() {
+    var animation = lottie.loadAnimation({
         container: document.getElementById('bluebook1'),
         renderer: 'svg',
         loop: false,
@@ -586,7 +587,7 @@ animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
     });
 
     animationsss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
-
+	}
 
        
 
