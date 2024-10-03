@@ -179,6 +179,7 @@ img {
 }
 .mainbanner .buttonBox .btn {
     max-width: 20rem;
+    width: 20rem;
     background-image: linear-gradient(to bottom, #703d95, #37378f) !important;
     border-radius: 50px;
     color: #fff;
