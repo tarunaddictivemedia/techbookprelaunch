@@ -296,7 +296,7 @@ div#redbook1 {
     text-align: center;
 }
 div#redbook1 {
-    width: 60rem !important;
+    max-width: 60rem !important;
 }
 div#redbook1 svg {
     width: 100%;
