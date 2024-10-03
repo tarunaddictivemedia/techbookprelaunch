@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://mitsubishielectric.in/assets_gws_template_responsive/css/jquery.flipster.min.css">
+	<link rel="preload" href="images/RED_Book_Open_min.json" as="fetch" crossorigin="anonymous">
+
 </head>
 <body>
 	<header class="siteheader">
@@ -561,16 +563,7 @@
 
 animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
 
-    animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
-	var animationss = lottie.loadAnimation({
-        container: document.getElementById('redbook1'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'images/redbook1.lottie' // Update this path
-    });
-
-    animationss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+	
         var animation = lottie.loadAnimation({
         container: document.getElementById('greenbook1'),
         renderer: 'svg',
@@ -590,6 +583,25 @@ animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
 	}
 
        
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				lottie.loadAnimation({
+					container: document.getElementById('redbook1'),
+					renderer: 'svg',
+					loop: true,
+					autoplay: true,
+					path: 'images/RED_Book_Open_min.json'
+				}).addEventListener('data_ready', function() {
+					animationss.setSpeed(0.5);
+				});
+				observer.unobserve(entry.target); // Stop observing after loading
+			}
+		});
+	});
+
+	observer.observe(document.getElementById('redbook1'));
+
 
     </script>
 	<script src="https://mitsubishielectric.in/assets_gws_template_responsive/js/jquery.flipster.min.js"></script>
