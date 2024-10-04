@@ -565,11 +565,14 @@
 
 	// Play the animation when the corresponding slide comes into view
 	$('.bookslider').on('afterChange', function(event, slick, currentSlide) {
-		// Check if the current slide is the one with bluebook2
+		// Get the current slide
 		var $currentSlide = $(slick.$slides[currentSlide]);
-		
-		if ($currentSlide.find('#bluebook2').length) {
-			// Reset and play the animation
+
+		// Check if the current slide contains the element with ID 'bluebook2'
+		var $bluebook2 = $currentSlide.find('#bluebook2');
+
+		// If the bluebook2 div is found, play the animation
+		if ($bluebook2.length) {
 			animation.goToAndPlay(0, true);
 		}
 	});
