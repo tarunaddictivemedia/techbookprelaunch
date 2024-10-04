@@ -561,17 +561,16 @@
 
 animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Play the animation when the element is visible
-            animation.goToAndPlay(0, true);
-        }
-    });
-}, { threshold: 0.5 }); // Trigger when 50% of the element is visible
-
-// Observe the bluebook2 container
-observer.observe(document.getElementById('bluebook2'));
+// Play the animation when the corresponding slide comes into view
+$('.bookslider').on('afterChange', function(event, slick, currentSlide) {
+    // Check if the current slide is the one with bluebook2
+    var $currentSlide = $(slick.$slides[currentSlide]);
+    
+    if ($currentSlide.find('#bluebook2').length) {
+        // Reset and play the animation
+        animation.goToAndPlay(0, true);
+    }
+});
 
 	var animationss = lottie.loadAnimation({
         container: document.getElementById('redbook1'),
