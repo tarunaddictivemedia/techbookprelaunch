@@ -542,74 +542,82 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <script>
-	window.onload = function() {
-    var animation = lottie.loadAnimation({
-        container: document.getElementById('bluebook1'),
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: 'images/BLUE_Book_Open_ARI_min.json' // Update this path
-    });
 
-	// Load the Lottie animation for bluebook2
-	// Initialize the Lottie animation for bluebook2
-	$(document).ready(function() {
-		// Initialize the Lottie animation for bluebook2
-		var animation = lottie.loadAnimation({
-			container: document.getElementById('bluebook2'),
-			renderer: 'svg',
-			loop: false,
-			autoplay: false, // Set autoplay to false to control manually
-			path: 'images/BLUE_Book_Fold_02_PIE_min.json'
+		$(document).ready(function() {
+			// Initialize the Lottie animations for each book
+			var bluebook1Animation = lottie.loadAnimation({
+				container: document.getElementById('bluebook1'),
+				renderer: 'svg',
+				loop: false,
+				autoplay: true,
+				path: 'images/BLUE_Book_Open_ARI_min.json'
+			});
+
+			var bluebook2Animation = lottie.loadAnimation({
+				container: document.getElementById('bluebook2'),
+				renderer: 'svg',
+				loop: false,
+				autoplay: false,
+				path: 'images/BLUE_Book_Fold_02_PIE_min.json'
+			});
+			bluebook2Animation.setSpeed(0.5);
+
+			var redbook1Animation = lottie.loadAnimation({
+				container: document.getElementById('redbook1'),
+				renderer: 'svg',
+				loop: false,
+				autoplay: false,
+				path: 'images/RED_Book_Open_min.json'
+			});
+			redbook1Animation.setSpeed(0.5);
+
+			var greenbook1Animation = lottie.loadAnimation({
+				container: document.getElementById('greenbook1'),
+				renderer: 'svg',
+				loop: false,
+				autoplay: true,
+				path: 'images/GREEN_Book_Open_ARI_min.json'
+			});
+
+			var greenbook2Animation = lottie.loadAnimation({
+				container: document.getElementById('greenbook2'),
+				renderer: 'svg',
+				loop: false,
+				autoplay: false,
+				path: 'images/GREEN_Book_Fold02_PIE_min.json'
+			});
+			greenbook2Animation.setSpeed(0.5);
+
+			// Slick slider afterChange event
+			$('.bookslider').on('afterChange', function(event, slick, currentSlide) {
+				// Get the current slide element
+				var $currentSlide = $(slick.$slides[currentSlide]);
+
+				// Check if the current slide contains specific book containers and reset/replay the respective animation
+				if ($currentSlide.find('#bluebook1').length) {
+					bluebook1Animation.goToAndStop(0, true); // Reset to frame 0
+					bluebook1Animation.play(); // Play the animation
+				}
+				if ($currentSlide.find('#bluebook2').length) {
+					bluebook2Animation.goToAndStop(0, true); // Reset to frame 0
+					bluebook2Animation.play(); // Play the animation
+				}
+				if ($currentSlide.find('#redbook1').length) {
+					redbook1Animation.goToAndStop(0, true); // Reset to frame 0
+					redbook1Animation.play(); // Play the animation
+				}
+				if ($currentSlide.find('#greenbook1').length) {
+					greenbook1Animation.goToAndStop(0, true); // Reset to frame 0
+					greenbook1Animation.play(); // Play the animation
+				}
+				if ($currentSlide.find('#greenbook2').length) {
+					greenbook2Animation.goToAndStop(0, true); // Reset to frame 0
+					greenbook2Animation.play(); // Play the animation
+				}
+			});
 		});
 
-		// Set animation speed
-		animation.setSpeed(0.5);
 
-		// Slick slider afterChange event
-		$('.bookslider').on('afterChange', function(event, slick, currentSlide) {
-			// Get the current slide element
-			var $currentSlide = $(slick.$slides[currentSlide]);
-
-			// Check if the current slide contains the bluebook2 animation container
-			var $bluebook2 = $currentSlide.find('#bluebook2');
-
-			if ($bluebook2.length) {
-				// Reset and replay the animation from the start
-				animation.goToAndStop(0, true); // Reset to frame 0
-				animation.play(); // Play the animation
-			}
-		});
-	});
-
-
-
-	var animationss = lottie.loadAnimation({
-        container: document.getElementById('redbook1'),
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: 'images/RED_Book_Open_min.json' // Update this path
-    });
-
-    animationss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
-        var animation = lottie.loadAnimation({
-        container: document.getElementById('greenbook1'),
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: 'images/GREEN_Book_Open_ARI_min.json' // Update this path
-    });
-	var animationsss = lottie.loadAnimation({
-        container: document.getElementById('greenbook2'),
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: 'images/GREEN_Book_Fold02_PIE_min.json' // Update this path
-    });
-
-    animationsss.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
-	}
 
        
 
