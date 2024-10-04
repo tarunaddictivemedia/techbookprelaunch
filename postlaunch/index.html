@@ -552,30 +552,38 @@
     });
 
 	// Load the Lottie animation for bluebook2
-	var animation = lottie.loadAnimation({
-		container: document.getElementById('bluebook2'),
-		renderer: 'svg',
-		loop: false,
-		autoplay: false, // Set autoplay to false to control manually
-		path: 'images/BLUE_Book_Fold_02_PIE_min.json'
-	});
+	// Function to initialize Lottie animation for the current slide
+	function initLottieAnimation() {
+		// Load the Lottie animation for bluebook2
+		return lottie.loadAnimation({
+			container: document.getElementById('bluebook2'),
+			renderer: 'svg',
+			loop: false,
+			autoplay: false, // Control autoplay manually
+			path: 'images/BLUE_Book_Fold_02_PIE_min.json'
+		});
+	}
 
-	// Set animation speed
+	// Set initial speed for animation
+	var animation = initLottieAnimation();
 	animation.setSpeed(0.5);
 
-	// Play the animation when the corresponding slide comes into view
+	// Listen to the afterChange event of Slick slider
 	$('.bookslider').on('afterChange', function(event, slick, currentSlide) {
-		// Get the current slide
+		// Get the current slide element
 		var $currentSlide = $(slick.$slides[currentSlide]);
 
-		// Check if the current slide contains the element with ID 'bluebook2'
+		// Check if the current slide contains the bluebook2 animation container
 		var $bluebook2 = $currentSlide.find('#bluebook2');
 
-		// If the bluebook2 div is found, play the animation
 		if ($bluebook2.length) {
-			animation.goToAndPlay(0, true);
+			// Re-initialize the Lottie animation for bluebook2 (since it might be destroyed or hidden)
+			animation.destroy();  // Destroy any previous instance
+			animation = initLottieAnimation();  // Reinitialize the animation
+			animation.goToAndPlay(0, true); // Play the animation
 		}
 	});
+
 
 
 	var animationss = lottie.loadAnimation({
