@@ -561,6 +561,18 @@
 
 animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Play the animation when the element is visible
+            animation.goToAndPlay(0, true);
+        }
+    });
+}, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+// Observe the bluebook2 container
+observer.observe(document.getElementById('bluebook2'));
+
 	var animationss = lottie.loadAnimation({
         container: document.getElementById('redbook1'),
         renderer: 'svg',
