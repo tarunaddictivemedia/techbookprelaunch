@@ -551,26 +551,29 @@
         path: 'images/BLUE_Book_Open_ARI_min.json' // Update this path
     });
 
-    var animations = lottie.loadAnimation({
-        container: document.getElementById('bluebook2'),
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: 'images/BLUE_Book_Fold_02_PIE_min.json' // Update this path
-    });
+	// Load the Lottie animation for bluebook2
+	var animation = lottie.loadAnimation({
+		container: document.getElementById('bluebook2'),
+		renderer: 'svg',
+		loop: false,
+		autoplay: false, // Set autoplay to false to control manually
+		path: 'images/BLUE_Book_Fold_02_PIE_min.json'
+	});
 
-animations.setSpeed(0.5); // Set to 0.5 for half speed, adjust as needed
+	// Set animation speed
+	animation.setSpeed(0.5);
 
-// Play the animation when the corresponding slide comes into view
-$('.bookslider').on('afterChange', function(event, slick, currentSlide) {
-    // Check if the current slide is the one with bluebook2
-    var $currentSlide = $(slick.$slides[currentSlide]);
-    
-    if ($currentSlide.find('#bluebook2').length) {
-        // Reset and play the animation
-        animation.goToAndPlay(0, true);
-    }
-});
+	// Play the animation when the corresponding slide comes into view
+	$('.bookslider').on('afterChange', function(event, slick, currentSlide) {
+		// Check if the current slide is the one with bluebook2
+		var $currentSlide = $(slick.$slides[currentSlide]);
+		
+		if ($currentSlide.find('#bluebook2').length) {
+			// Reset and play the animation
+			animation.goToAndPlay(0, true);
+		}
+	});
+
 
 	var animationss = lottie.loadAnimation({
         container: document.getElementById('redbook1'),
