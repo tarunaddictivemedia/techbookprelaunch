@@ -1066,7 +1066,7 @@ label.hs-error-msg.hs-main-font-element {
 .bookpdfloading {
     min-height: 16rem;
     background-image: url(../images/loader.gif);
-    background-size: contain;
+    background-size: 30px;
     background-position: center;
     background-repeat: no-repeat;
 }
