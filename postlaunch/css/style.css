@@ -1064,10 +1064,11 @@ label.hs-error-msg.hs-main-font-element {
     top: 2px;
 }
 .bookpdfloading {
-    min-height: 50px;
-    background-image: url(./images/loading.gif);
-    background-size: cover;
+    min-height: 16rem;
+    background-image: url(../images/loading.gif);
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
 }
 @media(max-width: 2560px) {
     .threetechbook ul li img {
