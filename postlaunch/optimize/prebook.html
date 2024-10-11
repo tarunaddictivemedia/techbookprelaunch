@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="icon" href="images/logo.ico" type="image/x-icon">
+       <title>Techbook: PRE-BOOK</title>
+       <link rel="stylesheet" type="text/css" href="css/style.min.css">
+       <link rel="stylesheet" href="css/slick.min.css">
+       <link rel="stylesheet" href="css/slick-theme.min.css">
+    </head>
+<body>
+	<header class="siteheader">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-3">
+					<div class="logo"><a href="index.html"><img loading="lazy" src="images/logo.png" alt="logo"></a></div>
+				</div>
+				<div class="col-7">
+					<div class="humburgur" style="display: none;">
+						<svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" fill="#000000"/>
+						</svg>
+					</div>
+					<div class="menu">
+						<ul>
+							<li class="dropdown">
+								<a href="javascript:;">Product</a>
+								<ul class="submenu">
+									<li class="sciencebook"><a href="index.html#sciencebook"><img loading="lazy" src="images/logo.png" alt="logo"> Science</a></li>
+									<li class="englishbook"><a href="index.html#englishbook"><img loading="lazy" src="images/logo.png" alt="logo"> English</a></li>
+									<li class="mathbook"><a href="index.html#mathbook"><img loading="lazy" src="images/logo.png" alt="logo"> Math</a></li>
+								</ul>
+							</li>
+							<li class="active"><a href="javascript:;">Pre-book</a></li>
+							<li class="demorequest"><a href="index.html#demorequestsec">Demo Request</a></li>
+							<li class="faq"><a href="index.html#faqsection">FAQs</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+ 
+
+
+	<!-- Curious to learn more? Start -->
+	 <section class="curiouslearnsec bgstyle" id="curiouslearnsec" style="background-image: url(images/background.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-5">
+					<div class="image">
+						<img loading="lazy" src="images/techBooksgroup.png" alt="Books">
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="content">
+
+                        <div class="curiouscontainer" id="curiouscontainer1" style="display: none;">
+                            <h2>Curious to learn more?</h2>
+                            <aside>
+                                <span onclick="requestDemo();" class="curiousFormSubmit">Request a demo</span>
+                            </aside>
+                        </div>
+
+                        <div class="curiouscontainer" id="curiouscontainer2" style="display: block;">
+                            <div class="curiouscontainerbox">
+                                <div class="curiouscontainerinnr">  
+                                    <h2 class="left">Pre-book now to secure<br />Techbook for your school.</h2>
+                                    <div class="curiousholder">
+                                        <dl id="invitecodeholder">
+                                            <dt id="have_InviteCode" class="active" onclick="setInviteCode('have');">I have an Invite Code</dt>
+                                            <dt id="need_InviteCode" onclick="setInviteCode('need');">I need an Invite Code</dt>
+                                        </dl>
+                                        <article id="curious_congratulations" style="display: none;">
+                                            <p>
+                                                <span>Congratulations!</span>
+                                                <b>Your Invite Code is successfully validated.</b>
+                                            </p>
+                                            <aside>
+                                                <span class="curiousFormSubmit" onclick="window.open('https://pages.razorpay.com/techbook','_self');">Pay Now</span>
+                                            </aside>
+                                        </article>
+                                        <article id="curious_oops" style="display: none;">
+                                            <p>
+                                                <span>Oops!</span>
+                                                <b id="curious_msg">The invite code you entered is invalid.</b> 
+                                            </p>
+                                            <aside>
+                                                <span class="curiousFormSubmit" onclick="setInviteCode('have');" style="margin-right: 10px;">Try Again</span>
+                                                <span class="curiousFormSubmit" onclick="setInviteCode('need');">Request An Invite Code</span>
+                                            </aside>
+                                        </article> 
+                                        
+                                        
+                                        <div class="curiousinfo" id="screen_curioushaveandneed" style="display:block;">
+                                            <h6>Enter your exclusive Invite Code</h6>
+                                            <span class="tbfront"><input class="curiousFormInput cfi2" type="text" name="checkinvitecode" id="checkinvitecode" maxlength="6"/></span>
+                                            <span class="curiousFormError cfe2" id="error_checkinvitecode" style="display:none;"></span>
+                                            <aside>
+                                                <span class="curiousFormSubmit cfs2" onclick="invitecodeHandler();">Pay Now</span>
+                                            </aside>
+                                        </div>
+                                        
+
+                                        <!-- form  start -->
+                                        <div class="curiousinfo" id="screen_curiousform" style="display:none;">
+                                            <p>Please share your details to complete the pre-booking process</p>
+                                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                                            <script>
+                                            hbspt.forms.create({
+                                                region: "na1",
+                                                portalId: "8143162",
+                                                formId: "d6f73584-ff71-4699-a3c1-72ac86117862"
+                                              });
+                                            </script>
+                                            <p>You can also <a href="tel:9355994229">Call Us</a> for the same.</p>
+                                        </div>
+                                        <!-- form start -->
+
+                                        <!-- thank start -->
+                                        <div class="curiousinfo" id="screen_thankyou" style="display:none;">
+                                            <h4>
+                                                <span>Thank you</span>
+                                                for submitting your details!<br><br>
+                                                We've added you to our waitlist. <br>
+                                                Keep an eye on your inbox or WhatsApp for updates!
+                                            </h4>
+                                        </div>
+                                        <!-- thank end -->
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Curious to learn more? End -->
+    <!-- pageloader start -->
+    <div class="pageloader" id="pageloader">
+        <div>
+          <aside></aside>
+          <h2>Loading...</h2>
+        </div>
+    </div>
+    <!-- pageloader End -->
+    <script src="js/jquery.min.js"></script>
+	<script>
+        var currentdate = new Date(); 
+        var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+        $("#datetime").val(datetime);
+ 
+        function requestDemo()
+        {
+            $("#curiouscontainer1").slideUp(300);
+            $("#curiouscontainer2").slideDown(300);
+        }
+        function setInviteCode(value) {
+            $("#curious_congratulations, #curious_oops, #screen_thankyou").hide();
+            $("#checkinvitecode").val('');
+            $("#error_checkinvitecode, .curiousFormError").hide().html('');
+            $("#contact-form").find('input').val('');
+            $("#contact-form").find('select').val('select');
+
+            $("#invitecodeholder dt").removeClass('active');
+            $("#" + value + "_InviteCode").addClass('active');
+            
+            if (value == 'have') {
+                $("#screen_curioushaveandneed").slideDown(300);
+                $("#screen_curiousform").slideUp(300);
+            } else if (value == 'need') {
+                $("#screen_curioushaveandneed").slideUp(300);
+                $("#screen_curiousform").slideDown(300);
+            } else {
+                // nothing
+            }
+        }
+
+        // Function to check the URL and set the invite code accordingly
+        $(document).ready(function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('needinvitecode')) {
+                
+                $("#screen_curiousform").slideDown(300);
+                setInviteCode('need'); 
+                $("#screen_curioushaveandneed").slideUp(300);
+                $("#" + value + "_InviteCode").addClass('active');
+            }
+        });
+
+
+        $('#checkinvitecode').keyup(function() {
+            $(this).val($(this).val().toUpperCase());
+        });
+
+        function invitecodeHandler()
+        {
+          //  const regexCode = /^[T][B][-][0-9]{6}$/i;
+            $("#error_checkinvitecode").hide().html('');
+            let inputvaluecode = $("#checkinvitecode").val().trim();
+            if(inputvaluecode == '')
+            {
+                $("#error_checkinvitecode").show().html('Please enter invite code');
+                return false;
+            }
+            else 
+            {    
+                $("#pageloader").fadeIn(300);
+                const url = 'https://ada.leadschool.in/api/techbook/validate-coupon';
+                let fetchData = {
+                    method: 'POST',
+                    body: JSON.stringify({ "coupon_code": inputvaluecode}),
+                    headers: new Headers({ 'Content-Type': 'application/json; charset=UTF-8'})
+                }
+                fetch(url, fetchData)
+                .then(response => {
+                    $("#pageloader").fadeOut(300); 
+                    if (!response.ok) { 
+                        alert('Network response was not ok'); 
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    if (data.success) 
+                    {
+                        $("#curious_congratulations").show();
+                        $("#curious_oops").hide();
+                        sessionStorage.setItem('invitecode', inputvaluecode);
+                        setTimeout(function() {
+                            window.location.href = 'https://pages.razorpay.com/techbook';
+                        }, 1000);// 2000 milliseconds = 2 seconds
+                    } 
+                    else 
+                    {
+                        $("#curious_congratulations").hide();
+                        $("#curious_oops").show();
+                        $("#curious_msg").text(data.message);
+                        $("#checkinvitecode").val('');
+                    }
+                    $("#error_checkinvitecode").hide().html('');
+                    // $("#invitecodeholder").addClass('disabled');
+                    // $("#screen_curiousform").slideDown(300);
+                    $("#screen_curioushaveandneed").slideUp(300);
+                    $("#pageloader").fadeOut(300);
+                })
+                .catch(error => {
+                    alert('fetch Failed : ', error);
+                    $("#pageloader").fadeOut(300);
+                });
+                return true;
+            }
+        }
+        $('.humburgur').click(function() {
+            $('.menu').slideToggle();
+            $(this).toggleClass('active');
+
+        });
+	</script>
+</body>
+</html>
